@@ -1,0 +1,48 @@
+{% extends "base.html.twig" %}
+
+{% block main %}
+    {% if app.user is not null and is_granted("ROLE_ADMIN") %}
+        <a href="#" style="color: white">
+            <button class="btn btn-primary">Ajouter</button>
+        </a>
+    {% endif %}
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Nom</th>
+            <th scope="col">Prix</th>
+            <th scope="col">Photo</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Date de lancement</th>
+            <th scope="col">Type produit</th>
+            {% if app.user is not null and is_granted("ROLE_ADMIN") %}
+                <th scope="col" colspan="2">Operation</th>
+            {% endif %}
+        </tr>
+        </thead>
+        <tbody>
+        {% for produit in produits %}
+            <tr>
+                <th>{{ produit.nom }}</th>
+                <td>{{ produit.prix }}</td>
+                <td>{{ produit.photo }}</td>
+                <td>{{ produit.stock }}</td>
+                <td>{{ produit.dateLancement | date("d/m/Y")}}</td>
+                <td>{{ produit.typeProduit.libelle }}</td>
+                {% if app.user is not null and is_granted("ROLE_ADMIN") %}
+                    <td>
+                        <a href="#" style="color: white">
+                            <button class="btn btn-primary">Modifier</button>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#" style="color: white">
+                            <button class="btn btn-danger">Supprimer</button>
+                        </a>
+                    </td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
