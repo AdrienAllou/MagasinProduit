@@ -2,7 +2,7 @@
 
 {% block main %}
     {% if app.user is not null and is_granted("ROLE_ADMIN") %}
-        <a href="#" style="color: white">
+        <a href="{{ path('add') }}" style="color: white">
             <button class="btn btn-primary">Ajouter</button>
         </a>
     {% endif %}

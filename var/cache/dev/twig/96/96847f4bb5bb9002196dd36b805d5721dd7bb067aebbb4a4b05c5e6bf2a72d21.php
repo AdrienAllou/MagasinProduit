@@ -68,7 +68,9 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
         echo "    ";
         if (( !(null === twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 4, $this->source); })()), "user", [], "any", false, false, false, 4)) && $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN"))) {
             // line 5
-            echo "        <a href=\"#\" style=\"color: white\">
+            echo "        <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add");
+            echo "\" style=\"color: white\">
             <button class=\"btn btn-primary\">Ajouter</button>
         </a>
     ";
@@ -172,7 +174,7 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
 
     public function getDebugInfo()
     {
-        return array (  152 => 46,  145 => 44,  132 => 33,  130 => 32,  126 => 31,  122 => 30,  118 => 29,  114 => 28,  110 => 27,  106 => 26,  103 => 25,  99 => 24,  94 => 21,  90 => 19,  88 => 18,  77 => 9,  71 => 5,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  154 => 46,  147 => 44,  134 => 33,  132 => 32,  128 => 31,  124 => 30,  120 => 29,  116 => 28,  112 => 27,  108 => 26,  105 => 25,  101 => 24,  96 => 21,  92 => 19,  90 => 18,  79 => 9,  71 => 5,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -181,7 +183,7 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
 
 {% block main %}
     {% if app.user is not null and is_granted(\"ROLE_ADMIN\") %}
-        <a href=\"#\" style=\"color: white\">
+        <a href=\"{{ path('add') }}\" style=\"color: white\">
             <button class=\"btn btn-primary\">Ajouter</button>
         </a>
     {% endif %}
@@ -224,6 +226,6 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
         {% endfor %}
         </tbody>
     </table>
-{% endblock %}", "produit/index.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/MagasinDeProduit/templates/produit/index.html.twig");
+{% endblock %}", "produit/index.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/MagasinProduit/templates/produit/index.html.twig");
     }
 }
