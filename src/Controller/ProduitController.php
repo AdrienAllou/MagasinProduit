@@ -66,4 +66,16 @@ class ProduitController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstr
         return $this->render("produit/addProduit.html.twig", ["form" => $form->createView()]);
     }
 
+    /**
+     * @Route("/delete",name="delete", methods={"DELETE"})
+     * @param Request $request
+     * @param ProduitRepository $produitRepository
+     */
+    public function delete(Request $request, ProduitRepository $produitRepository){
+        $id = $request->request->get("id");
+        $this->getDoctrine()->getManager()->remove($produitRepository->find($id));
+        $this->getDoctrine()->getManager()->flush();
+        return $this->redirectToRoute("index");
+    }
+
 }
