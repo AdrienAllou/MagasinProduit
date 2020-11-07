@@ -5,18 +5,28 @@ namespace App\DataFixtures;
 use App\Entity\Etat;
 use App\Entity\Produit;
 use App\Entity\TypeProduit;
+use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class AppFixtures extends Fixture
 {
+    private $passwordEncoder;
+
+    public function __construct(UserPasswordEncoderInterface $passwordEncoder)
+    {
+        $this->passwordEncoder = $passwordEncoder;
+    }
+
     public function load(ObjectManager $manager)
     {
         // $product = new Product();
         // $manager->persist($product);
         $this->typeProduit($manager);
         $this->produit($manager);
-        $this->etat();
+        $this->etat($manager);
+        $this->user($manager);
         $manager->flush();
     }
 
@@ -74,17 +84,35 @@ class AppFixtures extends Fixture
         }
     }
 
-    public function etat(){
+    public function etat(ObjectManager $manager){
         $datas = [
             ["libelle" => "En preparation"],
-            ["libelle" => "Attente d'envoie"],
-            ["libelle" => "Envoie"],
-            ["libelle" => "Arriver"],
+            ["libelle" => "Expédier"],
         ];
 
         foreach ($datas as $data){
             $etat = new Etat();
             $etat->setNom($data["libelle"]);
+            $manager->persist($etat);
+            $manager->flush();
         }
+    }
+
+    public function user(ObjectManager $manager){
+        $datas = [
+            ["username" => "admin", "mdp" => "admin", "role" => ["ROLE_ADMIN"]],
+            ["username" => "user1", "mdp" => "user1", "role" => ["ROLE_USER"]],
+            ["username" => "user2", "mdp" => "user2", "role" => ["ROLE_USER"]],
+        ];
+
+        foreach ($datas as $data){
+            $user = new User();
+            $user->setUsername($data["username"]);
+            $user->setRoles($data["role"]);
+            $user->setPassword($this->passwordEncoder->encodePassword($user,$data["mdp"]));
+            $manager->persist($user);
+            $manager->flush();
+        }
+
     }
 }
