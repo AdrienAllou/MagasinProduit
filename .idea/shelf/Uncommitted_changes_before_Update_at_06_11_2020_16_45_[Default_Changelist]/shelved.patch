@@ -1,0 +1,88 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"BranchesTreeState\">\n    <expand>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n      <path>\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\n      </path>\n    </expand>\n    <select />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"074fb307-b094-4f7d-86ef-eb292289b3f6\" name=\"Default Changelist\" comment=\"Install projet\">\n      <change afterPath=\"$PROJECT_DIR$/.env\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.env.test\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ComposerSettings\" doNotAsk=\"true\" synchronizationState=\"SYNCHRONIZE\">\n    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>\n    <execution />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"PhpWorkspaceProjectConfiguration\">\n    <include_path>\n      <path value=\"$PROJECT_DIR$/vendor/symfony/security-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/form\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/twig-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/dbal\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/intl\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/web-profiler-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/maker-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/options-resolver\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/monolog-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-client-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/nikic/php-parser\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/property-info\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/mime\" />\n      <path value=\"$PROJECT_DIR$/vendor/psr/container\" />\n      <path value=\"$PROJECT_DIR$/vendor/composer\" />\n      <path value=\"$PROJECT_DIR$/vendor/ocramius/proxy-manager\" />\n      <path value=\"$PROJECT_DIR$/vendor/egulias/email-validator\" />\n      <path value=\"$PROJECT_DIR$/vendor/monolog/monolog\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-client\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/phpunit-bridge\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/translation\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/css-selector\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/serializer\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/mailer\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/filesystem\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/lexer\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/sql-formatter\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/orm\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/property-access\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/error-handler\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/string\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/reflection-common\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/var-dumper\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/stopwatch\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/var-exporter\" />\n      <path value=\"$PROJECT_DIR$/vendor/twig/extra-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/notifier\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/common\" />\n      <path value=\"$PROJECT_DIR$/vendor/twig/twig\" />\n      <path value=\"$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/collections\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/doctrine-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/instantiator\" />\n      <path value=\"$PROJECT_DIR$/vendor/laminas/laminas-code\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/expression-language\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/framework-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/dotenv\" />\n      <path value=\"$PROJECT_DIR$/vendor/webmozart/assert\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/security-core\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/debug-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/twig-bridge\" />\n      <path value=\"$PROJECT_DIR$/vendor/psr/cache\" />\n      <path value=\"$PROJECT_DIR$/vendor/psr/log\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/console\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/validator\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/dependency-injection\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/routing\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/security-http\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-foundation\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/cache\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/config\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/translation-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/finder\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/doctrine-bridge\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/data-fixtures\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/yaml\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/persistence\" />\n      <path value=\"$PROJECT_DIR$/vendor/phpdocumentor/type-resolver\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/security-guard\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/service-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/migrations\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php73\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/dom-crawler\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/process\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/asset\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/cache-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/browser-kit\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/deprecation-contracts\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/event-dispatcher\" />\n      <path value=\"$PROJECT_DIR$/vendor/webimpress/safe-writer\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/security-csrf\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/cache\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-mbstring\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/inflector\" />\n      <path value=\"$PROJECT_DIR$/vendor/psr/link\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-php80\" />\n      <path value=\"$PROJECT_DIR$/vendor/sensio/framework-extra-bundle\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/http-kernel\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/monolog-bridge\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer\" />\n      <path value=\"$PROJECT_DIR$/vendor/psr/event-dispatcher\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/event-manager\" />\n      <path value=\"$PROJECT_DIR$/vendor/laminas/laminas-eventmanager\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/flex\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme\" />\n      <path value=\"$PROJECT_DIR$/vendor/symfony/web-link\" />\n      <path value=\"$PROJECT_DIR$/vendor/doctrine/annotations\" />\n    </include_path>\n  </component>\n  <component name=\"ProjectId\" id=\"1jvEVRBNLudhaqzpPv1eS5bVm2W\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"074fb307-b094-4f7d-86ef-eb292289b3f6\" name=\"Default Changelist\" comment=\"\" />\n      <created>1604676188140</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1604676188140</updated>\n      <workItem from=\"1604676189271\" duration=\"58000\" />\n      <workItem from=\"1604676293991\" duration=\"445000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Install projet\">\n      <created>1604676645931</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1604676645931</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"2\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Install projet\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Install projet\" />\n  </component>\n  <component name=\"WindowStateProjectService\">\n    <state x=\"769\" y=\"432\" width=\"444\" height=\"249\" key=\"#Composer\" timestamp=\"1604676211710\">\n      <screen x=\"72\" y=\"27\" width=\"1848\" height=\"1053\" />\n    </state>\n    <state x=\"769\" y=\"432\" width=\"444\" height=\"249\" key=\"#Composer/72.27.1848.1053@72.27.1848.1053\" timestamp=\"1604676211710\" />\n    <state x=\"591\" y=\"289\" width=\"800\" height=\"535\" key=\"Vcs.Push.Dialog.v2\" timestamp=\"1604676654219\">\n      <screen x=\"72\" y=\"27\" width=\"1848\" height=\"1053\" />\n    </state>\n    <state x=\"591\" y=\"289\" width=\"800\" height=\"535\" key=\"Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053\" timestamp=\"1604676654219\" />\n    <state x=\"695\" y=\"270\" width=\"592\" height=\"573\" key=\"com.intellij.openapi.vcs.changes.SpecificFilesViewDialog\" timestamp=\"1604676380358\">\n      <screen x=\"72\" y=\"27\" width=\"1848\" height=\"1053\" />\n    </state>\n    <state x=\"695\" y=\"270\" width=\"592\" height=\"573\" key=\"com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/72.27.1848.1053@72.27.1848.1053\" timestamp=\"1604676380358\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision c3182bb97dbdee5828baadbf7fd38777e26a0103)
++++ .idea/workspace.xml	(date 1604677466297)
+@@ -19,9 +19,7 @@
+     <select />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="074fb307-b094-4f7d-86ef-eb292289b3f6" name="Default Changelist" comment="Install projet">
+-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.env.test" afterDir="false" />
++    <list default="true" id="074fb307-b094-4f7d-86ef-eb292289b3f6" name="Default Changelist" comment="env">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -149,9 +147,11 @@
+     <option name="showLibraryContents" value="true" />
+   </component>
+   <component name="PropertiesComponent">
++    <property name="DatabaseDriversLRU" value="mysql" />
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
++    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+     <property name="vue.rearranger.settings.migration" value="true" />
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+@@ -163,7 +163,8 @@
+       <option name="presentableId" value="Default" />
+       <updated>1604676188140</updated>
+       <workItem from="1604676189271" duration="58000" />
+-      <workItem from="1604676293991" duration="445000" />
++      <workItem from="1604676293991" duration="687000" />
++      <workItem from="1604676989301" duration="477000" />
+     </task>
+     <task id="LOCAL-00001" summary="Install projet">
+       <created>1604676645931</created>
+@@ -172,7 +173,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1604676645931</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="env">
++      <created>1604676749599</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1604676749599</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -192,17 +200,26 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Install projet" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Install projet" />
++    <MESSAGE value="env" />
++    <option name="LAST_COMMIT_MESSAGE" value="env" />
+   </component>
+   <component name="WindowStateProjectService">
+     <state x="769" y="432" width="444" height="249" key="#Composer" timestamp="1604676211710">
+       <screen x="72" y="27" width="1848" height="1053" />
+     </state>
+     <state x="769" y="432" width="444" height="249" key="#Composer/72.27.1848.1053@72.27.1848.1053" timestamp="1604676211710" />
+-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604676654219">
++    <state x="591" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604677080454">
++      <screen x="72" y="27" width="1848" height="1053" />
++    </state>
++    <state x="591" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1604677080454" />
++    <state x="485" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1604677465785">
+       <screen x="72" y="27" width="1848" height="1053" />
+     </state>
+-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1604676654219" />
++    <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1604677465785" />
++    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604676754289">
++      <screen x="72" y="27" width="1848" height="1053" />
++    </state>
++    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1604676754289" />
+     <state x="695" y="270" width="592" height="573" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1604676380358">
+       <screen x="72" y="27" width="1848" height="1053" />
+     </state>
