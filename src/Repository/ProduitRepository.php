@@ -36,6 +36,34 @@ class ProduitRepository extends ServiceEntityRepository
     }
     */
 
+    public function getReelStock(){
+        return $this->createQueryBuilder('p')
+            ->select(["p.nom", "p.stock"])
+            ->getQuery()->getResult();
+    }
+
+    public function getLastStockInPanier(){
+        return $this->createQueryBuilder('p')
+            ->select(["p.nom", "COALESCE(p.stock - paniers.quantite, p.stock) as quantiter"])
+            ->leftJoin("p.paniers","paniers",["p.id = paniers.produit_id"])
+            ->getQuery()->getResult();
+    }
+
+    public function getLastStockInLineCommande(){
+        return $this->createQueryBuilder('p')
+            ->select(["p.nom", "COALESCE(p.stock - lc.quantite, p.stock) as quantiter"])
+            ->leftJoin("p.ligneCommandes","lc",["p.id = lc.produit_id"])
+            ->getQuery()->getResult();
+    }
+
+    public function getStockSend(){
+        /*SELECT produit.nom, COALESCE(produit.stock - lc.quantite, produit.stock) as quantiterRestante FROM produit
+LEFT JOIN ligne_commande lc on produit.id = lc.produit_id
+LEFT JOIN commande c on lc.commande_id = c.id
+LEFT JOIN etat e on e.nom = 'Envoie'
+WHERE e.nom = 'Envoie' or produit.id > 0;*/
+    }
+
     /*
     public function findOneBySomeField($value): ?Produit
     {
