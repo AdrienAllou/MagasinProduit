@@ -66,6 +66,13 @@ class ProduitRepository extends ServiceEntityRepository
             ->getQuery()->getResult();
     }
 
+    public function getDisponibiliter(){
+        return $this->createQueryBuilder('p')
+            ->select(["nom", "prix", "photo", "disponible", "date_lancement", "stock"])
+            ->addSelect(["(CASE WHEN stock < 10 THEN 'Il reste peu de produit' ELSE 'Disponible' END) as Disponibilite"])
+            ->getQuery()->getResult();
+    }
+
     /*
     public function findOneBySomeField($value): ?Produit
     {
