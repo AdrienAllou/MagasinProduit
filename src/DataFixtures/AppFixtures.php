@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Etat;
 use App\Entity\Produit;
 use App\Entity\TypeProduit;
 use Doctrine\Bundle\FixturesBundle\Fixture;
@@ -15,6 +16,7 @@ class AppFixtures extends Fixture
         // $manager->persist($product);
         $this->typeProduit($manager);
         $this->produit($manager);
+        $this->etat();
         $manager->flush();
     }
 
@@ -69,6 +71,20 @@ class AppFixtures extends Fixture
             $produit->setTypeProduit($type_produit);
             $manager->persist($produit);
             $manager->flush();
+        }
+    }
+
+    public function etat(){
+        $datas = [
+            ["libelle" => "En preparation"],
+            ["libelle" => "Attente d'envoie"],
+            ["libelle" => "Envoie"],
+            ["libelle" => "Arriver"],
+        ];
+
+        foreach ($datas as $data){
+            $etat = new Etat();
+            $etat->setNom($data["libelle"]);
         }
     }
 }

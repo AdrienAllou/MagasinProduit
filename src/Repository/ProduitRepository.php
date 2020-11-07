@@ -57,11 +57,12 @@ class ProduitRepository extends ServiceEntityRepository
     }
 
     public function getStockSend(){
-        /*SELECT produit.nom, COALESCE(produit.stock - lc.quantite, produit.stock) as quantiterRestante FROM produit
-LEFT JOIN ligne_commande lc on produit.id = lc.produit_id
-LEFT JOIN commande c on lc.commande_id = c.id
-LEFT JOIN etat e on e.nom = 'Envoie'
-WHERE e.nom = 'Envoie' or produit.id > 0;*/
+        return $this->createQueryBuilder('produit')
+            ->select(["produit.nom","IF(e.id = 3, produit.stock - lc.quantite, produit.stock) AS quantiterRestante"])
+            ->leftJoin("produit.ligneCommandes", "lc",["produit.id = lc.produit_id"])
+            ->leftJoin("lc.commande", "c", ["c.id = lc.commande_id"])
+            ->leftJoin("c.etat", "e", ["e.id = c.etat_id"])
+            ->getQuery()->getResult();
     }
 
     /*
