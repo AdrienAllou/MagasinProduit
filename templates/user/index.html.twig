@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <div class="card" style="width: 18rem; margin: auto; background:#fff; border-radius: 6px;box-shadow: 0 .5em 1em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);padding: 1.25rem">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <a href="#">Voir les commande</a>
+            </li>
+            <li class="list-group-item">
+                <a href="#">Voir le panier</a>
+            </li>
+            <li class="list-group-item">
+                <a href="#">Voir les commenaitre</a>
+            </li>
+        </ul>
+        {% if is_granted("ROLE_ADMIN") %}
+            <div class="card-header">
+                Admin pannel
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <a href="#">Voir toutes les commandes</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="">Voir tout les panier</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="">Voir tout les commentaires</a>
+                </li>
+            </ul>
+        {% endif %}
+    </div>
+{% endblock %}
