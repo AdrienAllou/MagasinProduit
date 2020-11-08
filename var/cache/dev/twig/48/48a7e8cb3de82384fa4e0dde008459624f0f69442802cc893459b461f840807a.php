@@ -51,15 +51,12 @@ class __TwigTemplate_4615bd8ecace526083563986e9dccfd8ed39091821ef61ad75570258e1d
             <li class=\"nav-item active\">
                 <a class=\"nav-link\" href=\"#\">Les produits <span class=\"sr-only\">(current)</span></a>
             </li>
-            <li class=\"nav-item\">
-                <a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>
-            </li>
         </ul>
         <ul class=\"navbar-nav\">
             ";
-        // line 17
-        if ( !(null === twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "user", [], "any", false, false, false, 17))) {
-            // line 18
+        // line 14
+        if ( !(null === twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 14, $this->source); })()), "user", [], "any", false, false, false, 14))) {
+            // line 15
             echo "                <li class=\"nav-item dropdown\" style=\"margin-right: 150px\">
                     <a class=\"nav-link dropdown-toggle active\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
                         Profile
@@ -69,29 +66,29 @@ class __TwigTemplate_4615bd8ecace526083563986e9dccfd8ed39091821ef61ad75570258e1d
                         <a class=\"dropdown-item\" href=\"#\">Paramettre</a>
                         <div class=\"dropdown-divider\"></div>
                         <a class=\"nav-link active\" href=\"";
-            // line 26
+            // line 23
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">Deconnexion</a>
                     </div>
                 </li>
             ";
         } else {
-            // line 30
+            // line 27
             echo "                <li class=\"nav-item\">
                     <a class=\"nav-link active\" href=\"";
-            // line 31
+            // line 28
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_inscription");
             echo "\">Inscription</a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link active\" href=\"";
-            // line 34
+            // line 31
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\">Connexion</a>
                 </li>
             ";
         }
-        // line 37
+        // line 34
         echo "        </ul>
     </div>
 </nav>";
@@ -115,7 +112,7 @@ class __TwigTemplate_4615bd8ecace526083563986e9dccfd8ed39091821ef61ad75570258e1d
 
     public function getDebugInfo()
     {
-        return array (  95 => 37,  89 => 34,  83 => 31,  80 => 30,  73 => 26,  63 => 18,  61 => 17,  43 => 1,);
+        return array (  92 => 34,  86 => 31,  80 => 28,  77 => 27,  70 => 23,  60 => 15,  58 => 14,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -130,9 +127,6 @@ class __TwigTemplate_4615bd8ecace526083563986e9dccfd8ed39091821ef61ad75570258e1d
         <ul class=\"navbar-nav mr-auto\">
             <li class=\"nav-item active\">
                 <a class=\"nav-link\" href=\"#\">Les produits <span class=\"sr-only\">(current)</span></a>
-            </li>
-            <li class=\"nav-item\">
-                <a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>
             </li>
         </ul>
         <ul class=\"navbar-nav\">

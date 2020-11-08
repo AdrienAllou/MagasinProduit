@@ -5363,10 +5363,11 @@
         <argument key="passwordEncoder" type="service" id="security.user_password_encoder.generic"/>
       </argument>
     </service>
-    <service id=".service_locator.aE9Tnv6" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.yWGwoBd" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\PanierController::addOnPanier" type="service" id=".service_locator.vM0xZZb"/>
+        <argument key="App\Controller\PanierController::deleteOnPanier" type="service" id=".service_locator.BHo36d5"/>
         <argument key="App\Controller\ProduitController::addProduit" type="service" id=".service_locator.1cFtlgg"/>
         <argument key="App\Controller\ProduitController::delete" type="service" id=".service_locator.VP68NKc"/>
         <argument key="App\Controller\ProduitController::index" type="service" id=".service_locator.BHo36d5"/>
@@ -5380,6 +5381,7 @@
         <argument key="kernel::registerContainerConfiguration" type="service" id=".service_locator.C9JCBPC"/>
         <argument key="kernel::terminate" type="service" id=".service_locator.beq5mCo"/>
         <argument key="App\Controller\PanierController:addOnPanier" type="service" id=".service_locator.vM0xZZb"/>
+        <argument key="App\Controller\PanierController:deleteOnPanier" type="service" id=".service_locator.BHo36d5"/>
         <argument key="App\Controller\ProduitController:addProduit" type="service" id=".service_locator.1cFtlgg"/>
         <argument key="App\Controller\ProduitController:delete" type="service" id=".service_locator.VP68NKc"/>
         <argument key="App\Controller\ProduitController:index" type="service" id=".service_locator.BHo36d5"/>
@@ -5871,12 +5873,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.aE9Tnv6"/>
+      <argument type="service" id=".service_locator.yWGwoBd"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.aE9Tnv6"/>
+      <argument type="service" id=".service_locator.yWGwoBd"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6276,7 +6278,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.WaGDpDt" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.aE9Tnv6"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.yWGwoBd"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

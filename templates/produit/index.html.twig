@@ -13,6 +13,7 @@
             <tr>
                 <th>Nom</th>
                 <th>Quantiter</th>
+                <th>Supprimer</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,13 @@
             <tr>
                 <th>{{ panier.produit.nom }}</th>
                 <th>{{ panier.quantite }}</th>
+                <th>
+                    <form action="{{ path('delete_panier', {'id': panier.produit.id}) }}" method="post">
+                        <input type="submit" class="btn btn-danger" value="Supprimer">
+                        <input type="hidden" value="{{ csrf_token("deleteProduitOnPanier") }}" name="token">
+                        <input type="hidden" value="DELETE" name="_method">
+                    </form>
+                </th>
             </tr>
         {% endfor %}
         </tbody>
@@ -48,7 +56,7 @@
         {% for produit in produits %}
             <tr>
                 <th>{{ produit.nom }}</th>
-                <td>{{ produit.prix }}</td>
+                <td>{{ produit.prix }}€</td>
                 <td>{{ produit.photo }}</td>
                 <td>{{ produit.stock }}</td>
                 <td>{{ produit.dateLancement | date("d/m/Y")}}</td>

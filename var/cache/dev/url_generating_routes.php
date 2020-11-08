@@ -16,6 +16,7 @@ return [
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     'addProduit' => [['id'], ['_controller' => 'App\\Controller\\PanierController::addOnPanier'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/add/produit']], [], []],
+    'delete_panier' => [['id'], ['_controller' => 'App\\Controller\\PanierController::deleteOnPanier'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/delete/produit']], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\ProduitController::index'], [], [['text', '/']], [], []],
     'add' => [[], ['_controller' => 'App\\Controller\\ProduitController::addProduit'], [], [['text', '/addProduit']], [], []],
     'delete' => [[], ['_controller' => 'App\\Controller\\ProduitController::delete'], [], [['text', '/delete']], [], []],
