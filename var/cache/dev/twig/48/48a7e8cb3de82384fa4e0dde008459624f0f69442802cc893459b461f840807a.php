@@ -49,7 +49,10 @@ class __TwigTemplate_4615bd8ecace526083563986e9dccfd8ed39091821ef61ad75570258e1d
     <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
         <ul class=\"navbar-nav mr-auto\">
             <li class=\"nav-item active\">
-                <a class=\"nav-link\" href=\"#\">Les produits <span class=\"sr-only\">(current)</span></a>
+                <a class=\"nav-link\" href=\"";
+        // line 10
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
+        echo "\">Les produits <span class=\"sr-only\">(current)</span></a>
             </li>
         </ul>
         <ul class=\"navbar-nav\">
@@ -115,7 +118,7 @@ class __TwigTemplate_4615bd8ecace526083563986e9dccfd8ed39091821ef61ad75570258e1d
 
     public function getDebugInfo()
     {
-        return array (  95 => 34,  89 => 31,  83 => 28,  80 => 27,  73 => 23,  67 => 20,  60 => 15,  58 => 14,  43 => 1,);
+        return array (  98 => 34,  92 => 31,  86 => 28,  83 => 27,  76 => 23,  70 => 20,  63 => 15,  61 => 14,  54 => 10,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -129,7 +132,7 @@ class __TwigTemplate_4615bd8ecace526083563986e9dccfd8ed39091821ef61ad75570258e1d
     <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
         <ul class=\"navbar-nav mr-auto\">
             <li class=\"nav-item active\">
-                <a class=\"nav-link\" href=\"#\">Les produits <span class=\"sr-only\">(current)</span></a>
+                <a class=\"nav-link\" href=\"{{ path('index') }}\">Les produits <span class=\"sr-only\">(current)</span></a>
             </li>
         </ul>
         <ul class=\"navbar-nav\">

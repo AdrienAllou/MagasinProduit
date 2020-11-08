@@ -20,6 +20,7 @@ return [
         '/inscription' => [[['_route' => 'app_inscription', '_controller' => 'App\\Controller\\SecurityController::inscription'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/user' => [[['_route' => 'user_index', '_controller' => 'App\\Controller\\UserController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/user/commande' => [[['_route' => 'user_commande', '_controller' => 'App\\Controller\\UserController::pageCommande'], null, ['GET' => 0], null, false, false, null]],
         '/admin' => [[['_route' => 'admin_main', '_controller' => 'App\\Controller\\admin\\AdminController::stat'], null, ['GET' => 0], null, true, false, null]],
         '/admin/index' => [[['_route' => 'admin_index', '_controller' => 'App\\Controller\\admin\\AdminController::stat'], null, ['GET' => 0], null, false, false, null]],
     ],

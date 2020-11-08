@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <a href="{{ path('user_index') }}"><button class="btn btn-primary">Retour</button></a>
+    {% for commande in commandes %}
+        {% set totalPriceCommande = 0 %}
+        <h1 style="text-align: center">Commande n°{{ commande.id }}</h1>
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <th>Nom produit</th>
+                <th>Quantité</th>
+                <th>Etat</th>
+                <th>Prix</th>
+                <th>Prix Total</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for lc in commande.ligneCommandes %}
+                    <tr>
+                        <td>{{ lc.produit.nom }}</td>
+                        <td>{{ lc.quantite }}</td>
+                        <td>{{ commande.etat.nom }}</td>
+                        <td>{{ lc.prix }}€</td>
+                        {% set totalPriceCommande = totalPriceCommande + lc.quantite * lc.prix %}
+                        <td>{{ lc.quantite * lc.prix }}€</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="4"></td>
+                <td>{{ totalPriceCommande }}€</td>
+            </tr>
+            </tfoot>
+        </table>
+    {% endfor %}
+{% endblock %}
+
