@@ -20,20 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="074fb307-b094-4f7d-86ef-eb292289b3f6" name="Default Changelist" comment="UserMenu">
-      <change afterPath="$PROJECT_DIR$/templates/user/commandes.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_header.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/produit/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/produit/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.xml.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/48/48a7e8cb3de82384fa4e0dde008459624f0f69442802cc893459b461f840807a.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/48/48a7e8cb3de82384fa4e0dde008459624f0f69442802cc893459b461f840807a.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/96/96847f4bb5bb9002196dd36b805d5721dd7bb067aebbb4a4b05c5e6bf2a72d21.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/96/96847f4bb5bb9002196dd36b805d5721dd7bb067aebbb4a4b05c5e6bf2a72d21.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/url_generating_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/url_generating_routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/url_matching_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/url_matching_routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +180,8 @@
       <workItem from="1604784123449" duration="4449000" />
       <workItem from="1604833173939" duration="595000" />
       <workItem from="1604839196023" duration="9710000" />
-      <workItem from="1604855394916" duration="2662000" />
+      <workItem from="1604855394916" duration="2763000" />
+      <workItem from="1604866644296" duration="201000" />
     </task>
     <task id="LOCAL-00001" summary="Install projet">
       <created>1604676645931</created>
@@ -290,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604854183650</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Affichage des commandes">
+      <created>1604858144135</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1604858144135</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +321,8 @@
     <MESSAGE value="Ajout de la suppression" />
     <MESSAGE value="Commit var" />
     <MESSAGE value="UserMenu" />
-    <option name="LAST_COMMIT_MESSAGE" value="UserMenu" />
+    <MESSAGE value="Affichage des commandes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Affichage des commandes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="769" y="432" width="444" height="249" key="#Composer" timestamp="1604676211710">
@@ -374,10 +373,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1604746168222" />
-    <state x="309" y="318" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604854188184">
+    <state x="309" y="318" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1604858145904">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="309" y="318" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1604854188184" />
+    <state x="309" y="318" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1604858145904" />
     <state x="928" y="501" width="136" height="111" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1604765369790">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>

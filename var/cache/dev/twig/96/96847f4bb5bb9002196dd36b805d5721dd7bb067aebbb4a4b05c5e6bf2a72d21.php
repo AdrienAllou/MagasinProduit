@@ -186,49 +186,50 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
             // line 63
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 63), "html", null, true);
             echo "€</td>
+                <!--A refaire-->
                 <td><img src=\"";
-            // line 64
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/image/produits/" . twig_get_attribute($this->env, $this->source, $context["produit"], "photo", [], "any", false, false, false, 64))), "html", null, true);
-            echo "\" alt=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 64), "html", null, true);
-            echo "\"></td>
-                <td>";
             // line 65
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "stock", [], "any", false, false, false, 65), "html", null, true);
-            echo "</td>
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/images/produits/" . twig_get_attribute($this->env, $this->source, $context["produit"], "photo", [], "any", false, false, false, 65))), "html", null, true);
+            echo "\" alt=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 65), "html", null, true);
+            echo "\" style=\"width: 200px; height: 200px\"></td>
                 <td>";
             // line 66
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "dateLancement", [], "any", false, false, false, 66), "d/m/Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "stock", [], "any", false, false, false, 66), "html", null, true);
             echo "</td>
                 <td>";
             // line 67
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produit"], "typeProduit", [], "any", false, false, false, 67), "libelle", [], "any", false, false, false, 67), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "dateLancement", [], "any", false, false, false, 67), "d/m/Y"), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 68
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produit"], "typeProduit", [], "any", false, false, false, 68), "libelle", [], "any", false, false, false, 68), "html", null, true);
             echo "</td>
                 ";
-            // line 68
-            if ( !(null === twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 68, $this->source); })()), "user", [], "any", false, false, false, 68))) {
-                // line 69
+            // line 69
+            if ( !(null === twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 69, $this->source); })()), "user", [], "any", false, false, false, 69))) {
+                // line 70
                 echo "                    ";
                 if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
-                    // line 70
+                    // line 71
                     echo "                        <td>
                             <form action=\"";
-                    // line 71
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addProduit", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 71)]), "html", null, true);
+                    // line 72
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addProduit", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 72)]), "html", null, true);
                     echo "\" method=\"post\">
                                 <input type=\"submit\" class=\"btn btn-primary\" value=\"Ajouter au panier\">
                                 <input type=\"hidden\" value=\"";
-                    // line 73
+                    // line 74
                     echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("addProduitOnPanier"), "html", null, true);
                     echo "\" name=\"token\">
                             </form>
                         </td>
                     ";
                 }
-                // line 77
+                // line 78
                 echo "                    ";
                 if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-                    // line 78
+                    // line 79
                     echo "                        <td>
                             <a href=\"#\" style=\"color: white\">
                                 <button class=\"btn btn-primary\">Modifier</button>
@@ -241,17 +242,17 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
                         </td>
                     ";
                 }
-                // line 89
+                // line 90
                 echo "                ";
             }
-            // line 90
+            // line 91
             echo "            </tr>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 92
+        // line 93
         echo "        </tbody>
     </table>
 ";
@@ -275,7 +276,7 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
 
     public function getDebugInfo()
     {
-        return array (  255 => 92,  248 => 90,  245 => 89,  232 => 78,  229 => 77,  222 => 73,  217 => 71,  214 => 70,  211 => 69,  209 => 68,  205 => 67,  201 => 66,  197 => 65,  191 => 64,  187 => 63,  183 => 62,  180 => 61,  176 => 60,  171 => 57,  168 => 56,  164 => 54,  160 => 52,  156 => 50,  153 => 49,  151 => 48,  140 => 39,  137 => 38,  132 => 35,  120 => 29,  115 => 27,  110 => 25,  106 => 24,  103 => 23,  99 => 22,  87 => 12,  84 => 11,  82 => 10,  79 => 9,  71 => 5,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  256 => 93,  249 => 91,  246 => 90,  233 => 79,  230 => 78,  223 => 74,  218 => 72,  215 => 71,  212 => 70,  210 => 69,  206 => 68,  202 => 67,  198 => 66,  192 => 65,  187 => 63,  183 => 62,  180 => 61,  176 => 60,  171 => 57,  168 => 56,  164 => 54,  160 => 52,  156 => 50,  153 => 49,  151 => 48,  140 => 39,  137 => 38,  132 => 35,  120 => 29,  115 => 27,  110 => 25,  106 => 24,  103 => 23,  99 => 22,  87 => 12,  84 => 11,  82 => 10,  79 => 9,  71 => 5,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -343,7 +344,8 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
             <tr>
                 <th>{{ produit.nom }}</th>
                 <td>{{ produit.prix }}€</td>
-                <td><img src=\"{{ asset('uploads/image/produits/' ~ produit.photo) }}\" alt=\"{{ produit.nom }}\"></td>
+                <!--A refaire-->
+                <td><img src=\"{{ asset('uploads/images/produits/' ~ produit.photo) }}\" alt=\"{{ produit.nom }}\" style=\"width: 200px; height: 200px\"></td>
                 <td>{{ produit.stock }}</td>
                 <td>{{ produit.dateLancement | date(\"d/m/Y\")}}</td>
                 <td>{{ produit.typeProduit.libelle }}</td>

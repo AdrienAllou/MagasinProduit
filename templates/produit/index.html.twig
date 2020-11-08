@@ -62,7 +62,7 @@
                 <th>{{ produit.nom }}</th>
                 <td>{{ produit.prix }}€</td>
                 <!--A refaire-->
-                <td><img src="{{ asset('uploads/image/produits/' ~ produit.photo) }}" alt="{{ produit.nom }}"></td>
+                <td><img src="{{ asset('uploads/images/produits/' ~ produit.photo) }}" alt="{{ produit.nom }}" style="width: 200px; height: 200px"></td>
                 <td>{{ produit.stock }}</td>
                 <td>{{ produit.dateLancement | date("d/m/Y")}}</td>
                 <td>{{ produit.typeProduit.libelle }}</td>
