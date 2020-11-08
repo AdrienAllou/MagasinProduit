@@ -6,6 +6,24 @@
             <button class="btn btn-primary">Ajouter</button>
         </a>
     {% endif %}
+    <!--A refaire-->
+    <h1>Panier</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Quantiter</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for panier in paniers %}
+            <tr>
+                <th>{{ panier.produit.nom }}</th>
+                <th>{{ panier.quantite }}</th>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
     <table class="table">
         <thead class="thead-dark">
         <tr>
@@ -15,8 +33,14 @@
             <th scope="col">Stock</th>
             <th scope="col">Date de lancement</th>
             <th scope="col">Type produit</th>
-            {% if app.user is not null and is_granted("ROLE_ADMIN") %}
-                <th scope="col" colspan="2">Operation</th>
+            {% if app.user is not null %}
+                {% if is_granted("ROLE_USER") and is_granted("ROLE_ADMIN") %}
+                    <th scope="col" colspan="3">Operation</th>
+                {% elseif is_granted("ROLE_USER") %}
+                    <th scope="col">Operation</th>
+                {% elseif is_granted("ROLE_ADMIN") %}
+                    <th scope="col" colspan="2">Operation</th>
+                {% endif %}
             {% endif %}
         </tr>
         </thead>
@@ -29,17 +53,27 @@
                 <td>{{ produit.stock }}</td>
                 <td>{{ produit.dateLancement | date("d/m/Y")}}</td>
                 <td>{{ produit.typeProduit.libelle }}</td>
-                {% if app.user is not null and is_granted("ROLE_ADMIN") %}
-                    <td>
-                        <a href="#" style="color: white">
-                            <button class="btn btn-primary">Modifier</button>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="#" style="color: white">
-                            <button class="btn btn-danger">Supprimer</button>
-                        </a>
-                    </td>
+                {% if app.user is not null %}
+                    {% if is_granted("ROLE_USER") %}
+                        <td>
+                            <form action="{{ path('addProduit', {'id': produit.id}) }}" method="post">
+                                <input type="submit" class="btn btn-primary" value="Ajouter au panier">
+                                <input type="hidden" value="{{ csrf_token("addProduitOnPanier") }}" name="token">
+                            </form>
+                        </td>
+                    {% endif %}
+                    {% if is_granted("ROLE_ADMIN") %}
+                        <td>
+                            <a href="#" style="color: white">
+                                <button class="btn btn-primary">Modifier</button>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#" style="color: white">
+                                <button class="btn btn-danger">Supprimer</button>
+                            </a>
+                        </td>
+                    {% endif %}
                 {% endif %}
             </tr>
         {% endfor %}

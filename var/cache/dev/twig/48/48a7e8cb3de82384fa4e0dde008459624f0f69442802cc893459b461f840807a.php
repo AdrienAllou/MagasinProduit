@@ -51,50 +51,47 @@ class __TwigTemplate_4615bd8ecace526083563986e9dccfd8ed39091821ef61ad75570258e1d
             <li class=\"nav-item active\">
                 <a class=\"nav-link\" href=\"#\">Les produits <span class=\"sr-only\">(current)</span></a>
             </li>
-            <li class=\"nav-item active\">
-                <a class=\"nav-link\" href=\"#\">Link</a>
-            </li>
-            <li class=\"nav-item dropdown\">
-                <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                    Dropdown
-                </a>
-                <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
-                    <a class=\"dropdown-item\" href=\"#\">Action</a>
-                    <a class=\"dropdown-item\" href=\"#\">Another action</a>
-                    <div class=\"dropdown-divider\"></div>
-                    <a class=\"dropdown-item\" href=\"#\">Something else here</a>
-                </div>
-            </li>
             <li class=\"nav-item\">
                 <a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>
             </li>
         </ul>
         <ul class=\"navbar-nav\">
             ";
-        // line 31
-        if ( !(null === twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 31, $this->source); })()), "user", [], "any", false, false, false, 31))) {
-            // line 32
-            echo "                <li class=\"nav-item\">
-                    <a class=\"nav-link active\" href=\"#\">Deconnexion</a>
+        // line 17
+        if ( !(null === twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "user", [], "any", false, false, false, 17))) {
+            // line 18
+            echo "                <li class=\"nav-item dropdown\" style=\"margin-right: 150px\">
+                    <a class=\"nav-link dropdown-toggle active\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                        Profile
+                    </a>
+                    <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
+                        <a class=\"dropdown-item\" href=\"#\">Profils</a>
+                        <a class=\"dropdown-item\" href=\"#\">Paramettre</a>
+                        <div class=\"dropdown-divider\"></div>
+                        <a class=\"nav-link active\" href=\"";
+            // line 26
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            echo "\">Deconnexion</a>
+                    </div>
                 </li>
             ";
         } else {
-            // line 36
+            // line 30
             echo "                <li class=\"nav-item\">
                     <a class=\"nav-link active\" href=\"";
-            // line 37
+            // line 31
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_inscription");
             echo "\">Inscription</a>
                 </li>
                 <li class=\"nav-item\">
                     <a class=\"nav-link active\" href=\"";
-            // line 40
+            // line 34
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\">Connexion</a>
                 </li>
             ";
         }
-        // line 43
+        // line 37
         echo "        </ul>
     </div>
 </nav>";
@@ -118,7 +115,7 @@ class __TwigTemplate_4615bd8ecace526083563986e9dccfd8ed39091821ef61ad75570258e1d
 
     public function getDebugInfo()
     {
-        return array (  98 => 43,  92 => 40,  86 => 37,  83 => 36,  77 => 32,  75 => 31,  43 => 1,);
+        return array (  95 => 37,  89 => 34,  83 => 31,  80 => 30,  73 => 26,  63 => 18,  61 => 17,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -134,28 +131,22 @@ class __TwigTemplate_4615bd8ecace526083563986e9dccfd8ed39091821ef61ad75570258e1d
             <li class=\"nav-item active\">
                 <a class=\"nav-link\" href=\"#\">Les produits <span class=\"sr-only\">(current)</span></a>
             </li>
-            <li class=\"nav-item active\">
-                <a class=\"nav-link\" href=\"#\">Link</a>
-            </li>
-            <li class=\"nav-item dropdown\">
-                <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                    Dropdown
-                </a>
-                <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
-                    <a class=\"dropdown-item\" href=\"#\">Action</a>
-                    <a class=\"dropdown-item\" href=\"#\">Another action</a>
-                    <div class=\"dropdown-divider\"></div>
-                    <a class=\"dropdown-item\" href=\"#\">Something else here</a>
-                </div>
-            </li>
             <li class=\"nav-item\">
                 <a class=\"nav-link disabled\" href=\"#\" tabindex=\"-1\" aria-disabled=\"true\">Disabled</a>
             </li>
         </ul>
         <ul class=\"navbar-nav\">
             {% if app.user is not null %}
-                <li class=\"nav-item\">
-                    <a class=\"nav-link active\" href=\"#\">Deconnexion</a>
+                <li class=\"nav-item dropdown\" style=\"margin-right: 150px\">
+                    <a class=\"nav-link dropdown-toggle active\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                        Profile
+                    </a>
+                    <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
+                        <a class=\"dropdown-item\" href=\"#\">Profils</a>
+                        <a class=\"dropdown-item\" href=\"#\">Paramettre</a>
+                        <div class=\"dropdown-divider\"></div>
+                        <a class=\"nav-link active\" href=\"{{ path('app_logout') }}\">Deconnexion</a>
+                    </div>
                 </li>
             {% else %}
                 <li class=\"nav-item\">
@@ -167,6 +158,6 @@ class __TwigTemplate_4615bd8ecace526083563986e9dccfd8ed39091821ef61ad75570258e1d
             {% endif %}
         </ul>
     </div>
-</nav>", "_header.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/MagasinDeProduit/templates/_header.html.twig");
+</nav>", "_header.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/MagasinProduit/templates/_header.html.twig");
     }
 }

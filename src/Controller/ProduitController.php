@@ -4,9 +4,13 @@
 namespace App\Controller;
 
 
+use App\Entity\Panier;
 use App\Entity\Produit;
+use App\Entity\User;
 use App\Form\ProduitType;
+use App\Repository\PanierRepository;
 use App\Repository\ProduitRepository;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -14,7 +18,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
-class ProduitController extends \Symfony\Bundle\FrameworkBundle\Controller\AbstractController
+class ProduitController extends AbstractController
 {
 
     /**
@@ -22,8 +26,13 @@ class ProduitController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstr
      * @param ProduitRepository $produitRepository
      * @return Response
      */
-    public function index(ProduitRepository $produitRepository){
-        return $this->render("produit/index.html.twig", ["produits" => $produitRepository->findBy(["disponible" => 1])]);
+    public function index(ProduitRepository $produitRepository, PanierRepository $panierRepository){
+        //dd();
+        $paniers = $panierRepository->findBy(["user" => $this->getUser()]);
+        return $this->render("produit/index.html.twig", [
+            "produits" => $produitRepository->findBy(["disponible" => 1]),
+            "paniers" => $paniers
+        ]);
     }
 
     /**
@@ -70,6 +79,7 @@ class ProduitController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstr
      * @Route("/delete",name="delete", methods={"DELETE"})
      * @param Request $request
      * @param ProduitRepository $produitRepository
+     * @return RedirectResponse
      */
     public function delete(Request $request, ProduitRepository $produitRepository){
         $id = $request->request->get("id");
