@@ -23,6 +23,7 @@ return [
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
     'app_inscription' => [[], ['_controller' => 'App\\Controller\\SecurityController::inscription'], [], [['text', '/inscription']], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
+    'user_index' => [[], ['_controller' => 'App\\Controller\\UserController::index'], [], [['text', '/user/']], [], []],
     'admin_main' => [[], ['_controller' => 'App\\Controller\\admin\\AdminController::stat'], [], [['text', '/admin/']], [], []],
     'admin_index' => [[], ['_controller' => 'App\\Controller\\admin\\AdminController::stat'], [], [['text', '/admin/index']], [], []],
 ];
