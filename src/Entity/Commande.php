@@ -41,9 +41,12 @@ class Commande
      */
     private $user;
 
-    public function __construct()
+    public function __construct($user = null, $etat = null)
     {
         $this->ligneCommandes = new ArrayCollection();
+        $this->setUser($user);
+        $this->setDate(new \DateTime());
+        $this->setEtat($etat);
     }
 
     public function getId(): ?int
