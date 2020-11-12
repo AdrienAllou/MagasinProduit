@@ -10,7 +10,9 @@ use App\Repository\CommandeRepository;
 use App\Repository\EtatRepository;
 use App\Repository\PanierRepository;
 use App\Repository\UserRepository;
+use Doctrine\Persistence\ObjectManager;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -24,9 +26,16 @@ class LigneCommandeController extends \Symfony\Bundle\FrameworkBundle\Controller
 
     /**
      * @Route("/add",name="add", methods={"GET"})
+     * @param PanierRepository $panierRepository
+     * @param CommandeRepository $commandeRepository
+     * @param EtatRepository $etatRepository
+     * @param UserRepository $userRepository
+     * @param ObjectManager $manager
+     * @return RedirectResponse
      */
     public function add(PanierRepository $panierRepository, CommandeRepository $commandeRepository, EtatRepository $etatRepository,
                 UserRepository $userRepository){
+        $manager = $this->getDoctrine()->getManager();
         $articleOnPanier = $panierRepository->findBy([
             "user" => $this->getUser()
         ]);
@@ -39,6 +48,8 @@ class LigneCommandeController extends \Symfony\Bundle\FrameworkBundle\Controller
         if ($commande == null){
             $commande = new Commande($userRepository->findOneBy(["username" => $this->getUser()->getUsername()]));
             $commande->setEtat($etatRepository->findOneBy(["nom" => "En preparation"]));
+            $this->getDoctrine()->getManager()->persist($commande);
+            $this->getDoctrine()->getManager()->flush();
         }
 
         foreach ($articleOnPanier as $article) {
@@ -46,7 +57,13 @@ class LigneCommandeController extends \Symfony\Bundle\FrameworkBundle\Controller
             $ligne_Commendande->setQuantite($article->getQuantite());
             $ligne_Commendande->setProduit($article->getProduit());
             $ligne_Commendande->setPrix($article->getQuantite() * $article->getProduit()->getPrix());
-
+            $ligne_Commendande->setCommande($commande);
+            $this->getDoctrine()->getManager()->persist($ligne_Commendande);
+            $this->getDoctrine()->getManager()->flush();
+            $manager->remove($article);
+            $manager->flush();
         }
+
+        return $this->redirectToRoute("index");
     }
 }
