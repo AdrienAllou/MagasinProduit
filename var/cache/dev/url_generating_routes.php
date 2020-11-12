@@ -15,6 +15,7 @@ return [
     '_profiler_router' => [['token'], ['_controller' => 'web_profiler.controller.router::panelAction'], [], [['text', '/router'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::body'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
+    'commande_index' => [[], ['_controller' => 'App\\Controller\\CommandeController::index'], [], [['text', '/commande/index']], [], []],
     'ligne_commande_add' => [[], ['_controller' => 'App\\Controller\\LigneCommandeController::add'], [], [['text', '/ligneCommande/add']], [], []],
     'addProduit' => [['id'], ['_controller' => 'App\\Controller\\PanierController::addOnPanier'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/add/produit']], [], []],
     'delete_panier' => [['id'], ['_controller' => 'App\\Controller\\PanierController::deleteOnPanier'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/delete/produit']], [], []],

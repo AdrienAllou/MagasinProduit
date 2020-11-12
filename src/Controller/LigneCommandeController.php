@@ -30,7 +30,6 @@ class LigneCommandeController extends \Symfony\Bundle\FrameworkBundle\Controller
      * @param CommandeRepository $commandeRepository
      * @param EtatRepository $etatRepository
      * @param UserRepository $userRepository
-     * @param ObjectManager $manager
      * @return RedirectResponse
      */
     public function add(PanierRepository $panierRepository, CommandeRepository $commandeRepository, EtatRepository $etatRepository,

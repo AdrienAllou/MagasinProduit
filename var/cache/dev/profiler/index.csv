@@ -1342,3 +1342,7 @@ ef8ed9,127.0.0.1,GET,http://127.0.0.1:8000/uploads/images/produits/pinceMultipri
 1ec08c,127.0.0.1,GET,http://127.0.0.1:8000/uploads/images/produits/pinceMultiprise.jpg,1605195558,,404
 e3e9fd,127.0.0.1,GET,http://127.0.0.1:8000/uploads/images/produits/perceuse.jpg,1605195558,576b82,404
 576b82,127.0.0.1,GET,http://127.0.0.1:8000/uploads/images/produits/perceuse.jpg,1605195558,,404
+2d2069,127.0.0.1,GET,http://127.0.0.1:8000/user/,1605196711,,200
+342436,127.0.0.1,GET,http://127.0.0.1:8000/user/commande,1605196713,,200
+df9e91,127.0.0.1,GET,http://127.0.0.1:8000/user/,1605196733,,200
+917691,127.0.0.1,GET,http://127.0.0.1:8000/user/commande,1605196736,,200

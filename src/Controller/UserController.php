@@ -30,7 +30,6 @@ class UserController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstract
      * @param CommandeRepository $commandeRepository
      */
     public function pageCommande(CommandeRepository $commandeRepository){
-        /**@var Commande[] $commande */
         $commande = $commandeRepository->findBy([
             "user" => $this->getUser()
         ],[
