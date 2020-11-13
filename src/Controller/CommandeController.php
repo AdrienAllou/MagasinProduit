@@ -23,10 +23,22 @@ class CommandeController extends \Symfony\Bundle\FrameworkBundle\Controller\Abst
      * @return Response
      */
     public function index(CommandeRepository $commandeRepository){
-        $commandes = $commandeRepository->findOneBy([
-            "user" => $this->getUser()
-        ]);
+        $commandes = $commandeRepository->findAll();
         return $this->render("user/commandes.html.twig", ["commandes" => $commandes]);
+    }
+
+    /**
+     * @Route("/user",name="find_by_user", methods={"GET"})
+     * @param CommandeRepository $commandeRepository
+     * @return Response
+     */
+    public function indexForUser(CommandeRepository $commandeRepository){
+        $commande = $commandeRepository->findBy([
+            "user" => $this->getUser()
+        ],[
+            "date" => "ASC"
+        ]);
+        return $this->render("user/commandes.html.twig", ["commandes" => $commande]);
     }
 
 }

@@ -9,13 +9,27 @@ use App\Repository\PanierRepository;
 use App\Repository\ProduitRepository;
 use App\Repository\UserRepository;
 use Doctrine\Persistence\ObjectManager;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * Class PanierController
+ * @package App\Controller
+ * @Route("/panier",name="panier_")
+ */
 class PanierController extends \Symfony\Bundle\FrameworkBundle\Controller\AbstractController
 {
 
+    /**
+     * @IsGranted ("ROLE_ADMIN")
+     * @Route("/index",name="index", methods={"GET"})
+     */
+    public function index(PanierRepository $panierRepository){
+        return $this->render("panier/index.html.twig", ["paniers" => $panierRepository->findAll()]);
+    }
+    
     /**
      * @Route("/add/produit/{id}",name="addProduit", methods={"POST"})
      * @param $id

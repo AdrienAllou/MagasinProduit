@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block main %}
+    <div>
+        {% for panier in paniers %}
+            <h1>Panier {{ panier.id }} de {{ panier.user.username }}</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>prix</th>
+                        <th>Quantiter</th>
+                        <th>Date achat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>{{ panier.produit.nom }}</th>
+                        <th>{{ panier.produit.prix }}</th>
+                        <th>{{ panier.quantite }}</th>
+                        <th>{{ panier.dateAchat | date('d/m/Y') }}</th>
+                    </tr>
+                </tbody>
+            </table>
+        {% endfor %}
+    </div>
+{% endblock %}

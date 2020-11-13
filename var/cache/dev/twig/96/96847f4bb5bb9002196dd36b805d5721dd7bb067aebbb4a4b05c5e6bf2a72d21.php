@@ -112,7 +112,7 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
                         <th>
                             <form action=\"";
                     // line 27
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_panier", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["panier"], "produit", [], "any", false, false, false, 27), "id", [], "any", false, false, false, 27)]), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("panier_delete_panier", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["panier"], "produit", [], "any", false, false, false, 27), "id", [], "any", false, false, false, 27)]), "html", null, true);
                     echo "\" method=\"post\">
                                 <input type=\"submit\" class=\"btn btn-danger\" value=\"Supprimer\">
                                 <input type=\"hidden\" value=\"";
@@ -219,7 +219,7 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
                     echo "                        <td>
                             <form action=\"";
                     // line 73
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addProduit", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 73)]), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("panier_addProduit", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 73)]), "html", null, true);
                     echo "\" method=\"post\">
                                 <input type=\"submit\" class=\"btn btn-primary\" value=\"Ajouter au panier\">
                                 <input type=\"hidden\" value=\"";
@@ -311,7 +311,7 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
                         <th>{{ panier.produit.nom }}</th>
                         <th>{{ panier.quantite }}</th>
                         <th>
-                            <form action=\"{{ path('delete_panier', {'id': panier.produit.id}) }}\" method=\"post\">
+                            <form action=\"{{ path('panier_delete_panier', {'id': panier.produit.id}) }}\" method=\"post\">
                                 <input type=\"submit\" class=\"btn btn-danger\" value=\"Supprimer\">
                                 <input type=\"hidden\" value=\"{{ csrf_token(\"deleteProduitOnPanier\") }}\" name=\"token\">
                                 <input type=\"hidden\" value=\"DELETE\" name=\"_method\">
@@ -357,7 +357,7 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
                 {% if app.user is not null %}
                     {% if is_granted(\"ROLE_USER\") %}
                         <td>
-                            <form action=\"{{ path('addProduit', {'id': produit.id}) }}\" method=\"post\">
+                            <form action=\"{{ path('panier_addProduit', {'id': produit.id}) }}\" method=\"post\">
                                 <input type=\"submit\" class=\"btn btn-primary\" value=\"Ajouter au panier\">
                                 <input type=\"hidden\" value=\"{{ csrf_token(\"addProduitOnPanier\") }}\" name=\"token\">
                             </form>

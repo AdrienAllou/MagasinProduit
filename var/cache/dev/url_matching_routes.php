@@ -14,7 +14,9 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/commande/index' => [[['_route' => 'commande_index', '_controller' => 'App\\Controller\\CommandeController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/commande/user' => [[['_route' => 'commande_find_by_user', '_controller' => 'App\\Controller\\CommandeController::indexForUser'], null, ['GET' => 0], null, false, false, null]],
         '/ligneCommande/add' => [[['_route' => 'ligne_commande_add', '_controller' => 'App\\Controller\\LigneCommandeController::add'], null, ['GET' => 0], null, false, false, null]],
+        '/panier/index' => [[['_route' => 'panier_index', '_controller' => 'App\\Controller\\PanierController::index'], null, ['GET' => 0], null, false, false, null]],
         '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\ProduitController::index'], null, ['GET' => 0], null, false, false, null]],
         '/addProduit' => [[['_route' => 'add', '_controller' => 'App\\Controller\\ProduitController::addProduit'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/delete' => [[['_route' => 'delete', '_controller' => 'App\\Controller\\ProduitController::delete'], null, ['DELETE' => 0], null, false, false, null]],
@@ -22,7 +24,6 @@ return [
         '/inscription' => [[['_route' => 'app_inscription', '_controller' => 'App\\Controller\\SecurityController::inscription'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/user' => [[['_route' => 'user_index', '_controller' => 'App\\Controller\\UserController::index'], null, ['GET' => 0], null, true, false, null]],
-        '/user/commande' => [[['_route' => 'user_commande', '_controller' => 'App\\Controller\\UserController::pageCommande'], null, ['GET' => 0], null, false, false, null]],
         '/admin' => [[['_route' => 'admin_main', '_controller' => 'App\\Controller\\admin\\AdminController::stat'], null, ['GET' => 0], null, true, false, null]],
         '/admin/index' => [[['_route' => 'admin_index', '_controller' => 'App\\Controller\\admin\\AdminController::stat'], null, ['GET' => 0], null, false, false, null]],
     ],
@@ -43,8 +44,10 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/add/produit/([^/]++)(*:190)'
-                .'|/delete/produit/([^/]++)(*:222)'
+                .'|/panier/(?'
+                    .'|add/produit/([^/]++)(*:200)'
+                    .'|delete/produit/([^/]++)(*:231)'
+                .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -55,9 +58,9 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        190 => [[['_route' => 'addProduit', '_controller' => 'App\\Controller\\PanierController::addOnPanier'], ['id'], ['POST' => 0], null, false, true, null]],
-        222 => [
-            [['_route' => 'delete_panier', '_controller' => 'App\\Controller\\PanierController::deleteOnPanier'], ['id'], ['DELETE' => 0], null, false, true, null],
+        200 => [[['_route' => 'panier_addProduit', '_controller' => 'App\\Controller\\PanierController::addOnPanier'], ['id'], ['POST' => 0], null, false, true, null]],
+        231 => [
+            [['_route' => 'panier_delete_panier', '_controller' => 'App\\Controller\\PanierController::deleteOnPanier'], ['id'], ['DELETE' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

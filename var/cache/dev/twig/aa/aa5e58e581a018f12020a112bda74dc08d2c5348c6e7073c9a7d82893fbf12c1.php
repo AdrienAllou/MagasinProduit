@@ -70,7 +70,7 @@ class __TwigTemplate_adeb2cab66131c7ddfb459a2d7d19a44c1155ad1a4cf5c4491be47d3e01
             <li class=\"list-group-item\">
                 <a href=\"";
         // line 7
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_commande");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("commande_find_by_user");
         echo "\">Voir les commande</a>
             </li>
             <li class=\"list-group-item\">
@@ -89,10 +89,16 @@ class __TwigTemplate_adeb2cab66131c7ddfb459a2d7d19a44c1155ad1a4cf5c4491be47d3e01
             </div>
             <ul class=\"list-group list-group-flush\">
                 <li class=\"list-group-item\">
-                    <a href=\"#\">Voir toutes les commandes</a>
+                    <a href=\"";
+            // line 22
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("commande_index");
+            echo "\">Voir toutes les commandes</a>
                 </li>
                 <li class=\"list-group-item\">
-                    <a href=\"\">Voir tout les panier</a>
+                    <a href=\"";
+            // line 25
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("panier_index");
+            echo "\">Voir tout les panier</a>
                 </li>
                 <li class=\"list-group-item\">
                     <a href=\"\">Voir tout les commentaires</a>
@@ -123,7 +129,7 @@ class __TwigTemplate_adeb2cab66131c7ddfb459a2d7d19a44c1155ad1a4cf5c4491be47d3e01
 
     public function getDebugInfo()
     {
-        return array (  104 => 32,  87 => 17,  85 => 16,  73 => 7,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  110 => 32,  100 => 25,  94 => 22,  87 => 17,  85 => 16,  73 => 7,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -134,7 +140,7 @@ class __TwigTemplate_adeb2cab66131c7ddfb459a2d7d19a44c1155ad1a4cf5c4491be47d3e01
     <div class=\"card\" style=\"width: 18rem; margin: auto; background:#fff; border-radius: 6px;box-shadow: 0 .5em 1em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);padding: 1.25rem\">
         <ul class=\"list-group list-group-flush\">
             <li class=\"list-group-item\">
-                <a href=\"{{ path('user_commande') }}\">Voir les commande</a>
+                <a href=\"{{ path('commande_find_by_user') }}\">Voir les commande</a>
             </li>
             <li class=\"list-group-item\">
                 <a href=\"#\">Voir le panier</a>
@@ -149,10 +155,10 @@ class __TwigTemplate_adeb2cab66131c7ddfb459a2d7d19a44c1155ad1a4cf5c4491be47d3e01
             </div>
             <ul class=\"list-group list-group-flush\">
                 <li class=\"list-group-item\">
-                    <a href=\"#\">Voir toutes les commandes</a>
+                    <a href=\"{{ path('commande_index') }}\">Voir toutes les commandes</a>
                 </li>
                 <li class=\"list-group-item\">
-                    <a href=\"\">Voir tout les panier</a>
+                    <a href=\"{{ path('panier_index') }}\">Voir tout les panier</a>
                 </li>
                 <li class=\"list-group-item\">
                     <a href=\"\">Voir tout les commentaires</a>
