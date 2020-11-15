@@ -70,6 +70,25 @@ class PanierController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstra
     }
 
     /**
+     * @param Request $request
+     * @param PanierRepository $panierRepository
+     * @return RedirectResponse
+     * @Route("/delete/all",name="delete_all", methods={"DELETE"})
+     */
+    public function deleteAllOnPanier(Request $request, PanierRepository $panierRepository){
+        if (!$this->isCsrfTokenValid("deleteAllProduitOnPanier", $request->request->get("token")))
+            $this->createAccessDeniedException("Erreur CSRFTokent");
+        $paniers = $panierRepository->findBy([
+            "user" => $this->getUser()
+        ]);
+        foreach ($paniers as $panier){
+            $this->getDoctrine()->getManager()->remove($panier);
+            $this->getDoctrine()->getManager()->flush();
+        }
+        return $this->redirectToRoute("index");
+    }
+
+    /**
      * @Route("/delete/produit/{id}",name="delete_panier", methods={"DELETE"})
      */
     public function deleteOnPanier($id, Request $request, ProduitRepository $produitRepository, PanierRepository $panierRepository){

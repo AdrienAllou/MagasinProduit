@@ -13,6 +13,7 @@ use App\Repository\UserRepository;
 use Doctrine\Persistence\ObjectManager;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -25,15 +26,18 @@ class LigneCommandeController extends \Symfony\Bundle\FrameworkBundle\Controller
 {
 
     /**
-     * @Route("/add",name="add", methods={"GET"})
+     * @Route("/add",name="add", methods={"GET", "POST"})
      * @param PanierRepository $panierRepository
      * @param CommandeRepository $commandeRepository
      * @param EtatRepository $etatRepository
      * @param UserRepository $userRepository
+     * @param Request $request
      * @return RedirectResponse
      */
     public function add(PanierRepository $panierRepository, CommandeRepository $commandeRepository, EtatRepository $etatRepository,
-                UserRepository $userRepository){
+                UserRepository $userRepository, Request $request){
+        if (!$this->isCsrfTokenValid("convertionOnCommande", $request->request->get("token")))
+            $this->createAccessDeniedException("Error CsrfToken");
         $manager = $this->getDoctrine()->getManager();
         $articleOnPanier = $panierRepository->findBy([
             "user" => $this->getUser()

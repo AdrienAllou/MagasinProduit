@@ -20,6 +20,7 @@ return [
     'ligne_commande_add' => [[], ['_controller' => 'App\\Controller\\LigneCommandeController::add'], [], [['text', '/ligneCommande/add']], [], []],
     'panier_index' => [[], ['_controller' => 'App\\Controller\\PanierController::index'], [], [['text', '/panier/index']], [], []],
     'panier_addProduit' => [['id'], ['_controller' => 'App\\Controller\\PanierController::addOnPanier'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/panier/add/produit']], [], []],
+    'panier_delete_all' => [[], ['_controller' => 'App\\Controller\\PanierController::deleteAllOnPanier'], [], [['text', '/panier/delete/all']], [], []],
     'panier_delete_panier' => [['id'], ['_controller' => 'App\\Controller\\PanierController::deleteOnPanier'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/panier/delete/produit']], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\ProduitController::index'], [], [['text', '/']], [], []],
     'add' => [[], ['_controller' => 'App\\Controller\\ProduitController::addProduit'], [], [['text', '/addProduit']], [], []],

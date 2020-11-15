@@ -34,7 +34,17 @@
                 {% endfor %}
                 </tbody>
             </table>
-            <a href="{{ path('ligne_commande_add') }}" class="btn btn-success">Convertion</a>
+            <div>
+                <form action="{{ path('ligne_commande_add') }}" method="post">
+                    <input type="submit" class="btn btn-success" value="Convertion">
+                    <input type="hidden" value="{{ csrf_token("convertionOnCommande") }}" name="token">
+                </form>
+                <form action="{{ path('panier_delete_all') }}" method="post">
+                    <input type="submit" class="btn btn-danger" value="Vider le panier">
+                    <input type="hidden" value="{{ csrf_token("deleteAllProduitOnPanier") }}" name="token">
+                    <input type="hidden" value="DELETE" name="_method">
+                </form>
+            </div>
         {% endif %}
     {% endif %}
     <table class="table">
