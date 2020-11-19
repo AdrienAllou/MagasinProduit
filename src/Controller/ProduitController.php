@@ -3,7 +3,6 @@
 
 namespace App\Controller;
 
-
 use App\Entity\Panier;
 use App\Entity\Produit;
 use App\Entity\User;
@@ -112,21 +111,25 @@ class ProduitController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             /** @var UploadedFile $image */
             $image = $form->get("photo")->getData();
+            if ($image) {
+                $originalFilename = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
+                // this is needed to safely include the file name as part of the URL
+                $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
+                $newFilename = $safeFilename.'-'.uniqid().'.'.$image->guessExtension();
 
-            if ($image){
-                $originalPath = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
-                $safeFileName = $slugger->slug($originalPath);
-                $newFileName = $safeFileName . '-' . uniqid() . '.'. $image->guessClientExtension();
-
+                // Move the file to the directory where brochures are stored
                 try {
                     $image->move(
-                        $this->getParameter('image_produit_path'), $newFileName
+                        $this->getParameter('image_produit_path'),
+                        $newFilename
                     );
-                }catch (\Exception $e){
+                } catch (FileException $e) {
                     throw $this->createNotFoundException("Fail upload image");
                 }
 
-                $produit->setPhoto($newFileName);
+                // updates the 'brochureFilename' property to store the PDF file name
+                // instead of its contents
+                $produit->setPhoto($newFilename);
             }
             $produit = $form->getData();
             $this->getDoctrine()->getManager()->persist($produit);
@@ -138,5 +141,4 @@ class ProduitController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
-
 }

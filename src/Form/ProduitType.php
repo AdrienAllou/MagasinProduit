@@ -22,6 +22,8 @@ class ProduitType extends AbstractType
             ->add('nom')
             ->add('prix')
             ->add('photo', FileType::class, [
+                'mapped' => false,
+                'required' => false,
                 "constraints" => [
                     new File([
                         "maxSize" => "1024k",
