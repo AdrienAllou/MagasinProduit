@@ -4,7 +4,9 @@
 namespace App\Controller;
 
 use App\Repository\CommandeRepository;
+use App\Repository\EtatRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -39,6 +41,19 @@ class CommandeController extends \Symfony\Bundle\FrameworkBundle\Controller\Abst
             "date" => "ASC"
         ]);
         return $this->render("user/commandes.html.twig", ["commandes" => $commande]);
+    }
+
+    /**
+     * @Route("/valide/{id}",name="valide_commande", methods={"POST"})
+     * @param $id
+     * @param CommandeRepository $commandeRepository
+     * @param EtatRepository $etatRepository
+     * @return RedirectResponse
+     */
+    public function valideCommande($id, CommandeRepository $commandeRepository, EtatRepository $etatRepository){
+        $commande = $commandeRepository->find($id);
+        $commande->setEtat($etatRepository->findOneBy(["nom" => "Expédier"]));
+        return $this->redirectToRoute("commande_index");
     }
 
 }
