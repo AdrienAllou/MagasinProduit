@@ -45,6 +45,7 @@ class CommandeController extends \Symfony\Bundle\FrameworkBundle\Controller\Abst
 
     /**
      * @Route("/valide/{id}",name="valide_commande", methods={"POST"})
+     * @IsGranted ("ROLE_ADMIN")
      * @param $id
      * @param CommandeRepository $commandeRepository
      * @param EtatRepository $etatRepository
@@ -53,6 +54,7 @@ class CommandeController extends \Symfony\Bundle\FrameworkBundle\Controller\Abst
     public function valideCommande($id, CommandeRepository $commandeRepository, EtatRepository $etatRepository){
         $commande = $commandeRepository->find($id);
         $commande->setEtat($etatRepository->findOneBy(["nom" => "Expédier"]));
+        $this->getDoctrine()->getManager()->flush();
         return $this->redirectToRoute("commande_index");
     }
 
