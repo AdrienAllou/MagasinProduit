@@ -14,7 +14,7 @@
                 <thead>
                 <tr>
                     <th>Nom</th>
-                    <th>Quantiter</th>
+                    <th>Quantité</th>
                     <th>Supprimer</th>
                 </tr>
                 </thead>
@@ -58,11 +58,11 @@
             <th scope="col">Type produit</th>
             {% if app.user is not null %}
                 {% if is_granted("ROLE_USER") and is_granted("ROLE_ADMIN") %}
-                    <th scope="col" colspan="3">Operation</th>
+                    <th scope="col" colspan="3">Opérations</th>
                 {% elseif is_granted("ROLE_USER") %}
-                    <th scope="col">Operation</th>
+                    <th scope="col">Opérations</th>
                 {% elseif is_granted("ROLE_ADMIN") %}
-                    <th scope="col" colspan="2">Operation</th>
+                    <th scope="col" colspan="2">Opérations</th>
                 {% endif %}
             {% endif %}
         </tr>
@@ -88,14 +88,14 @@
                     {% endif %}
                     {% if is_granted("ROLE_ADMIN") %}
                         <td>
-                            <a href="#" style="color: white">
-                                <button class="btn btn-primary">Modifier</button>
-                            </a>
+                            <a href="{{ path('edit', {id: produit.id}) }}" class="btn btn-primary">Modifier</a>
                         </td>
                         <td>
-                            <a href="#" style="color: white">
-                                <button class="btn btn-danger">Supprimer</button>
-                            </a>
+                            <form action="{{ path('delete') }}" method="POST" style="display:inline">
+                                <input type="hidden" name="id" value="{{ produit.id }}">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-warning" onclick="if(!confirm('Êtes-vous sûr ?')) { return false; }">Supprimer</button>
+                            </form>
                         </td>
                     {% endif %}
                 {% endif %}

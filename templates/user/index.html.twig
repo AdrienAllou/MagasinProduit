@@ -4,13 +4,13 @@
     <div class="card" style="width: 18rem; margin: auto; background:#fff; border-radius: 6px;box-shadow: 0 .5em 1em -.125em rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.02);padding: 1.25rem">
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
-                <a href="{{ path('commande_find_by_user') }}">Voir les commande</a>
+                <a href="{{ path('commande_find_by_user') }}">Voir les commandes</a>
             </li>
             <li class="list-group-item">
                 <a href="#">Voir le panier</a>
             </li>
             <li class="list-group-item">
-                <a href="#">Voir les commentaire</a>
+                <a href="#">Voir les commentaires</a>
             </li>
         </ul>
         {% if is_granted("ROLE_ADMIN") %}
@@ -22,10 +22,10 @@
                     <a href="{{ path('commande_index') }}">Voir toutes les commandes</a>
                 </li>
                 <li class="list-group-item">
-                    <a href="{{ path('panier_index') }}">Voir tout les panier</a>
+                    <a href="{{ path('panier_index') }}">Voir tout les paniers</a>
                 </li>
                 <li class="list-group-item">
-                    <a href="">Voir tout les commentaires</a>
+                    <a href="">Voir tous les commentaires</a>
                 </li>
             </ul>
         {% endif %}

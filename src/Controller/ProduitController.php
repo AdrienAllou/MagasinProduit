@@ -10,6 +10,7 @@ use App\Entity\User;
 use App\Form\ProduitType;
 use App\Repository\PanierRepository;
 use App\Repository\ProduitRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -86,6 +87,35 @@ class ProduitController extends AbstractController
         $this->getDoctrine()->getManager()->remove($produitRepository->find($id));
         $this->getDoctrine()->getManager()->flush();
         return $this->redirectToRoute("index");
+    }
+
+    /**
+     * @Route("/edit/{id}/produit", name="edit",  methods={"GET"})
+     * @Route("/edit/produit", name="edit_valid",  methods={"PUT"})
+     * @IsGranted("ROLE_ADMIN")
+     */
+    public function edit(Request $request, $id=null)
+    {
+        $produit = $this->getDoctrine()->getRepository(Produit::class)->find($id);
+        if (!$produit)  throw $this->createNotFoundException('No produit found for id '.$id);
+
+        $form = $this->createForm(ProduitType::class, $produit , [
+            'action' => $this->generateUrl('edit' , ['id'=>$id]),
+            'method' =>'GET',
+        ]);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $produit = $form->getData();
+            $this->getDoctrine()->getManager()->persist($produit);
+            $this->getDoctrine()->getManager()->flush();
+            return $this->redirectToRoute('index');
+
+        }
+        return $this->render('/produit/editProduit.html.twig', [
+            'form' => $form->createView(),
+        ]);
     }
 
 }
