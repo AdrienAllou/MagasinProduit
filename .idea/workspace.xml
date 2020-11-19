@@ -22,9 +22,6 @@
     <list default="true" id="074fb307-b094-4f7d-86ef-eb292289b3f6" name="Default Changelist" comment="Est ce que tu as editProduit.html.twig ?">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProduitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProduitController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/produit/addProduit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/produit/addProduit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/produit/editProduit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/produit/editProduit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/url_generating_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/url_generating_routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/url_matching_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/url_matching_routes.php" afterDir="false" />
@@ -199,7 +196,7 @@
       <workItem from="1605765064070" duration="3662000" />
       <workItem from="1605768858407" duration="151000" />
       <workItem from="1605769037156" duration="5200000" />
-      <workItem from="1605776714562" duration="521000" />
+      <workItem from="1605776714562" duration="643000" />
     </task>
     <task id="LOCAL-00001" summary="Install projet">
       <created>1604676645931</created>
@@ -376,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605776981191</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Bootstrap">
+      <created>1605777262581</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1605777262581</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,7 +423,8 @@
     <MESSAGE value="Modification commandes" />
     <MESSAGE value="Marche pas pour l'image" />
     <MESSAGE value="Est ce que tu as editProduit.html.twig ?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Est ce que tu as editProduit.html.twig ?" />
+    <MESSAGE value="Bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bootstrap" />
   </component>
   <component name="WindowStateProjectService">
     <state x="769" y="432" width="444" height="249" key="#Composer" timestamp="1604676211710">
@@ -442,10 +447,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1604772004362" />
-    <state x="368" y="11" key="CommitChangelistDialog2" timestamp="1605776978979">
+    <state x="368" y="11" key="CommitChangelistDialog2" timestamp="1605777261822">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="368" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605776978979" />
+    <state x="368" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605777261822" />
     <state width="1479" height="265" key="GridCell.Tab.0.bottom" timestamp="1604770422917">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>

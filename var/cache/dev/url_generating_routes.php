@@ -25,7 +25,7 @@ return [
     'index' => [[], ['_controller' => 'App\\Controller\\ProduitController::index'], [], [['text', '/']], [], []],
     'add' => [[], ['_controller' => 'App\\Controller\\ProduitController::addProduit'], [], [['text', '/addProduit']], [], []],
     'delete' => [[], ['_controller' => 'App\\Controller\\ProduitController::delete'], [], [['text', '/delete']], [], []],
-    'edit' => [['id'], ['id' => null, '_controller' => 'App\\Controller\\ProduitController::edit'], [], [['text', '/produit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/edit']], [], []],
+    'edit' => [['id'], ['_controller' => 'App\\Controller\\ProduitController::edit'], [], [['text', '/produit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/edit']], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
     'app_inscription' => [[], ['_controller' => 'App\\Controller\\SecurityController::inscription'], [], [['text', '/inscription']], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
