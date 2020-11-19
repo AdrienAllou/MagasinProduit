@@ -36,7 +36,7 @@
             </table>
             <div>
                 <form action="{{ path('ligne_commande_add') }}" method="post">
-                    <input type="submit" class="btn btn-success" value="Convertion">
+                    <input type="submit" class="btn btn-success" value="Convertion" {% if not isValide %}disabled{% endif %}>
                     <input type="hidden" value="{{ csrf_token("convertionOnCommande") }}" name="token">
                 </form>
                 <form action="{{ path('panier_delete_all') }}" method="post">
@@ -73,7 +73,7 @@
                 <th>{{ produit.nom }}</th>
                 <td>{{ produit.prix }}€</td>
                 <!--A refaire-->
-                <td><img src="{{ asset('uploads/images/produits/' ~ produit.photo) }}" alt="{{ produit.nom }}" style="width: 200px; height: 200px"></td>
+                <td><img src="{{ asset('uploads/images/produits/' ~ produit.photo) }}" alt="{{ produit.nom }}" style="max-width: 200px; max-height: 200px"></td>
                 <td>{{ produit.stock }}</td>
                 <td>{{ produit.dateLancement | date("d/m/Y")}}</td>
                 <td>{{ produit.typeProduit.libelle }}</td>

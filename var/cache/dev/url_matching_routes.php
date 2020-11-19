@@ -45,11 +45,12 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
+                .'|/commande/valide/([^/]++)(*:194)'
                 .'|/panier/(?'
-                    .'|add/produit/([^/]++)(*:200)'
-                    .'|delete/produit/([^/]++)(*:231)'
+                    .'|add/produit/([^/]++)(*:233)'
+                    .'|delete/produit/([^/]++)(*:264)'
                 .')'
-                .'|/edit/([^/]++)/produit(*:262)'
+                .'|/edit/([^/]++)/produit(*:295)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -60,9 +61,10 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        200 => [[['_route' => 'panier_addProduit', '_controller' => 'App\\Controller\\PanierController::addOnPanier'], ['id'], ['POST' => 0], null, false, true, null]],
-        231 => [[['_route' => 'panier_delete_panier', '_controller' => 'App\\Controller\\PanierController::deleteOnPanier'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        262 => [
+        194 => [[['_route' => 'commande_valide_commande', '_controller' => 'App\\Controller\\CommandeController::valideCommande'], ['id'], ['POST' => 0], null, false, true, null]],
+        233 => [[['_route' => 'panier_addProduit', '_controller' => 'App\\Controller\\PanierController::addOnPanier'], ['id'], ['POST' => 0], null, false, true, null]],
+        264 => [[['_route' => 'panier_delete_panier', '_controller' => 'App\\Controller\\PanierController::deleteOnPanier'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        295 => [
             [['_route' => 'edit', '_controller' => 'App\\Controller\\ProduitController::edit'], ['id'], ['GET' => 0], null, false, false, null],
             [null, null, null, null, false, false, 0],
         ],

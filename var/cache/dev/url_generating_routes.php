@@ -17,6 +17,7 @@ return [
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     'commande_index' => [[], ['_controller' => 'App\\Controller\\CommandeController::index'], [], [['text', '/commande/index']], [], []],
     'commande_find_by_user' => [[], ['_controller' => 'App\\Controller\\CommandeController::indexForUser'], [], [['text', '/commande/user']], [], []],
+    'commande_valide_commande' => [['id'], ['_controller' => 'App\\Controller\\CommandeController::valideCommande'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/commande/valide']], [], []],
     'ligne_commande_add' => [[], ['_controller' => 'App\\Controller\\LigneCommandeController::add'], [], [['text', '/ligneCommande/add']], [], []],
     'panier_index' => [[], ['_controller' => 'App\\Controller\\PanierController::index'], [], [['text', '/panier/index']], [], []],
     'panier_addProduit' => [['id'], ['_controller' => 'App\\Controller\\PanierController::addOnPanier'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/panier/add/produit']], [], []],

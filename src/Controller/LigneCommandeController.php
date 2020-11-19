@@ -9,6 +9,7 @@ use App\Entity\LigneCommande;
 use App\Repository\CommandeRepository;
 use App\Repository\EtatRepository;
 use App\Repository\PanierRepository;
+use App\Repository\ProduitRepository;
 use App\Repository\UserRepository;
 use Doctrine\Persistence\ObjectManager;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
@@ -32,10 +33,11 @@ class LigneCommandeController extends \Symfony\Bundle\FrameworkBundle\Controller
      * @param EtatRepository $etatRepository
      * @param UserRepository $userRepository
      * @param Request $request
+     * @param ProduitRepository $produitRepository
      * @return RedirectResponse
      */
     public function add(PanierRepository $panierRepository, CommandeRepository $commandeRepository, EtatRepository $etatRepository,
-                UserRepository $userRepository, Request $request){
+                UserRepository $userRepository, Request $request, ProduitRepository $produitRepository){
         if (!$this->isCsrfTokenValid("convertionOnCommande", $request->request->get("token")))
             $this->createAccessDeniedException("Error CsrfToken");
         $manager = $this->getDoctrine()->getManager();
@@ -61,7 +63,10 @@ class LigneCommandeController extends \Symfony\Bundle\FrameworkBundle\Controller
             $ligne_Commendande->setProduit($article->getProduit());
             $ligne_Commendande->setPrix($article->getQuantite() * $article->getProduit()->getPrix());
             $ligne_Commendande->setCommande($commande);
+            $article->getProduit()->setStock($article->getProduit()->getStock() - $article->getQuantite());
             $this->getDoctrine()->getManager()->persist($ligne_Commendande);
+            $this->getDoctrine()->getManager()->flush();
+            $this->getDoctrine()->getManager()->persist($article->getProduit());
             $this->getDoctrine()->getManager()->flush();
             $manager->remove($article);
             $manager->flush();

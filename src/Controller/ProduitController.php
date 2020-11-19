@@ -3,9 +3,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Panier;
 use App\Entity\Produit;
-use App\Entity\User;
 use App\Form\ProduitType;
 use App\Repository\PanierRepository;
 use App\Repository\ProduitRepository;
@@ -29,9 +27,16 @@ class ProduitController extends AbstractController
     public function index(ProduitRepository $produitRepository, PanierRepository $panierRepository){
         //dd();
         $paniers = $panierRepository->findBy(["user" => $this->getUser()]);
+        $isValide = true;
+        $erreur = [];
+        foreach ($paniers as $panier){
+            $produit = $produitRepository->find($panier->getId());
+            if ($panier->getQuantite() > $produit->getStock()) $isValide = false;
+        }
         return $this->render("produit/index.html.twig", [
             "produits" => $produitRepository->findBy(["disponible" => 1]),
-            "paniers" => $paniers
+            "paniers" => $paniers,
+            "isValide" => $isValide
         ]);
     }
 

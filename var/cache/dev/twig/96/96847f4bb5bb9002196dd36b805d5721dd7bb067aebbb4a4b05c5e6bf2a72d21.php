@@ -89,7 +89,7 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
                 <thead>
                 <tr>
                     <th>Nom</th>
-                    <th>Quantiter</th>
+                    <th>Quantité</th>
                     <th>Supprimer</th>
                 </tr>
                 </thead>
@@ -136,7 +136,12 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
                 // line 38
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ligne_commande_add");
                 echo "\" method=\"post\">
-                    <input type=\"submit\" class=\"btn btn-success\" value=\"Convertion\">
+                    <input type=\"submit\" class=\"btn btn-success\" value=\"Convertion\" ";
+                // line 39
+                if ( !(isset($context["isValide"]) || array_key_exists("isValide", $context) ? $context["isValide"] : (function () { throw new RuntimeError('Variable "isValide" does not exist.', 39, $this->source); })())) {
+                    echo "disabled";
+                }
+                echo ">
                     <input type=\"hidden\" value=\"";
                 // line 40
                 echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("convertionOnCommande"), "html", null, true);
@@ -176,15 +181,15 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
             echo "                ";
             if (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER") && $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN"))) {
                 // line 61
-                echo "                    <th scope=\"col\" colspan=\"3\">Operation</th>
+                echo "                    <th scope=\"col\" colspan=\"3\">Opérations</th>
                 ";
             } elseif ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
                 // line 63
-                echo "                    <th scope=\"col\">Operation</th>
+                echo "                    <th scope=\"col\">Opérations</th>
                 ";
             } elseif ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
                 // line 65
-                echo "                    <th scope=\"col\" colspan=\"2\">Operation</th>
+                echo "                    <th scope=\"col\" colspan=\"2\">Opérations</th>
                 ";
             }
             // line 67
@@ -215,7 +220,7 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/images/produits/" . twig_get_attribute($this->env, $this->source, $context["produit"], "photo", [], "any", false, false, false, 76))), "html", null, true);
             echo "\" alt=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 76), "html", null, true);
-            echo "\" style=\"width: 200px; height: 200px\"></td>
+            echo "\" style=\"max-width: 200px; max-height: 200px\"></td>
                 <td>";
             // line 77
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "stock", [], "any", false, false, false, 77), "html", null, true);
@@ -254,14 +259,23 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
                 if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
                     // line 90
                     echo "                        <td>
-                            <a href=\"#\" style=\"color: white\">
-                                <button class=\"btn btn-primary\">Modifier</button>
-                            </a>
+                            <a href=\"";
+                    // line 91
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 91)]), "html", null, true);
+                    echo "\" class=\"btn btn-primary\">Modifier</a>
                         </td>
                         <td>
-                            <a href=\"#\" style=\"color: white\">
-                                <button class=\"btn btn-danger\">Supprimer</button>
-                            </a>
+                            <form action=\"";
+                    // line 94
+                    echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete");
+                    echo "\" method=\"POST\" style=\"display:inline\">
+                                <input type=\"hidden\" name=\"id\" value=\"";
+                    // line 95
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 95), "html", null, true);
+                    echo "\">
+                                <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
+                                <button type=\"submit\" class=\"btn btn-warning\" onclick=\"if(!confirm('Êtes-vous sûr ?')) { return false; }\">Supprimer</button>
+                            </form>
                         </td>
                     ";
                 }
@@ -299,7 +313,7 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
 
     public function getDebugInfo()
     {
-        return array (  279 => 104,  272 => 102,  269 => 101,  256 => 90,  253 => 89,  246 => 85,  241 => 83,  238 => 82,  235 => 81,  233 => 80,  229 => 79,  225 => 78,  221 => 77,  215 => 76,  210 => 74,  206 => 73,  203 => 72,  199 => 71,  194 => 68,  191 => 67,  187 => 65,  183 => 63,  179 => 61,  176 => 60,  174 => 59,  163 => 50,  160 => 49,  152 => 44,  147 => 42,  142 => 40,  137 => 38,  132 => 35,  120 => 29,  115 => 27,  110 => 25,  106 => 24,  103 => 23,  99 => 22,  87 => 12,  84 => 11,  82 => 10,  79 => 9,  71 => 5,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  293 => 104,  286 => 102,  283 => 101,  274 => 95,  270 => 94,  264 => 91,  261 => 90,  258 => 89,  251 => 85,  246 => 83,  243 => 82,  240 => 81,  238 => 80,  234 => 79,  230 => 78,  226 => 77,  220 => 76,  215 => 74,  211 => 73,  208 => 72,  204 => 71,  199 => 68,  196 => 67,  192 => 65,  188 => 63,  184 => 61,  181 => 60,  179 => 59,  168 => 50,  165 => 49,  157 => 44,  152 => 42,  147 => 40,  141 => 39,  137 => 38,  132 => 35,  120 => 29,  115 => 27,  110 => 25,  106 => 24,  103 => 23,  99 => 22,  87 => 12,  84 => 11,  82 => 10,  79 => 9,  71 => 5,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -320,7 +334,7 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
                 <thead>
                 <tr>
                     <th>Nom</th>
-                    <th>Quantiter</th>
+                    <th>Quantité</th>
                     <th>Supprimer</th>
                 </tr>
                 </thead>
@@ -342,7 +356,7 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
             </table>
             <div>
                 <form action=\"{{ path('ligne_commande_add') }}\" method=\"post\">
-                    <input type=\"submit\" class=\"btn btn-success\" value=\"Convertion\">
+                    <input type=\"submit\" class=\"btn btn-success\" value=\"Convertion\" {% if not isValide %}disabled{% endif %}>
                     <input type=\"hidden\" value=\"{{ csrf_token(\"convertionOnCommande\") }}\" name=\"token\">
                 </form>
                 <form action=\"{{ path('panier_delete_all') }}\" method=\"post\">
@@ -364,11 +378,11 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
             <th scope=\"col\">Type produit</th>
             {% if app.user is not null %}
                 {% if is_granted(\"ROLE_USER\") and is_granted(\"ROLE_ADMIN\") %}
-                    <th scope=\"col\" colspan=\"3\">Operation</th>
+                    <th scope=\"col\" colspan=\"3\">Opérations</th>
                 {% elseif is_granted(\"ROLE_USER\") %}
-                    <th scope=\"col\">Operation</th>
+                    <th scope=\"col\">Opérations</th>
                 {% elseif is_granted(\"ROLE_ADMIN\") %}
-                    <th scope=\"col\" colspan=\"2\">Operation</th>
+                    <th scope=\"col\" colspan=\"2\">Opérations</th>
                 {% endif %}
             {% endif %}
         </tr>
@@ -379,7 +393,7 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
                 <th>{{ produit.nom }}</th>
                 <td>{{ produit.prix }}€</td>
                 <!--A refaire-->
-                <td><img src=\"{{ asset('uploads/images/produits/' ~ produit.photo) }}\" alt=\"{{ produit.nom }}\" style=\"width: 200px; height: 200px\"></td>
+                <td><img src=\"{{ asset('uploads/images/produits/' ~ produit.photo) }}\" alt=\"{{ produit.nom }}\" style=\"max-width: 200px; max-height: 200px\"></td>
                 <td>{{ produit.stock }}</td>
                 <td>{{ produit.dateLancement | date(\"d/m/Y\")}}</td>
                 <td>{{ produit.typeProduit.libelle }}</td>
@@ -394,14 +408,14 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
                     {% endif %}
                     {% if is_granted(\"ROLE_ADMIN\") %}
                         <td>
-                            <a href=\"#\" style=\"color: white\">
-                                <button class=\"btn btn-primary\">Modifier</button>
-                            </a>
+                            <a href=\"{{ path('edit', {id: produit.id}) }}\" class=\"btn btn-primary\">Modifier</a>
                         </td>
                         <td>
-                            <a href=\"#\" style=\"color: white\">
-                                <button class=\"btn btn-danger\">Supprimer</button>
-                            </a>
+                            <form action=\"{{ path('delete') }}\" method=\"POST\" style=\"display:inline\">
+                                <input type=\"hidden\" name=\"id\" value=\"{{ produit.id }}\">
+                                <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
+                                <button type=\"submit\" class=\"btn btn-warning\" onclick=\"if(!confirm('Êtes-vous sûr ?')) { return false; }\">Supprimer</button>
+                            </form>
                         </td>
                     {% endif %}
                 {% endif %}

@@ -20,13 +20,265 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="074fb307-b094-4f7d-86ef-eb292289b3f6" name="Default Changelist" comment="Est ce que tu as editProduit.html.twig ?">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LigneCommandeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LigneCommandeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProduitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProduitController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ProduitType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProduitType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/ON7b-jBqO0/P/J/0RqMk3w+FGx5MfVNy9kg" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/pools/ON7b-jBqO0/P/J/0RqMk3w+FGx5MfVNy9kg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/produit/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/produit/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.preload.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.preload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.xml.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainerCompiler.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainerCompiler.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainerDeprecations.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainerDeprecations.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK.legacy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/App_KernelDevDebugContainer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getAdminControllerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getAnnotations_CacheService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getAnnotations_CacheWarmerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getAuthenticatorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getCacheClearerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getCachePoolClearer_CacheWarmerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getCacheWarmerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getCache_AppClearerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getCache_GlobalClearerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getCache_SystemClearerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getCommandeControllerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getCommandeRepositoryService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_CommandLoaderService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_AboutService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_AssetsInstallService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_CacheClearService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_CachePoolClearService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_CachePoolDeleteService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_CachePoolListService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_CachePoolPruneService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_CacheWarmupService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_ConfigDebugService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_ConfigDumpReferenceService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_ContainerDebugService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_ContainerLintService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_DebugAutowiringService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_EventDispatcherDebugService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_FormDebugService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_RouterDebugService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_RouterMatchService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_SecretsDecryptToLocalService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_SecretsEncryptFromLocalService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_SecretsGenerateKeyService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_SecretsListService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_SecretsRemoveService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_SecretsSetService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_TranslationDebugService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_TranslationUpdateService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_XliffLintService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_Command_YamlLintService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getConsole_ErrorListenerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getContainer_EnvVarProcessorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getContainer_EnvVarProcessorsLocatorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getContainer_GetenvService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDebug_ArgumentResolver_DefaultService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDebug_ArgumentResolver_NotTaggedControllerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDebug_ArgumentResolver_RequestAttributeService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDebug_ArgumentResolver_RequestService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDebug_ArgumentResolver_ServiceService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDebug_ArgumentResolver_SessionService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDebug_ArgumentResolver_VariadicService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDebug_DumpListenerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDebug_FileLinkFormatter_UrlFormatService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDebug_Security_UserValueResolverService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDebug_Security_Voter_Security_Access_AuthenticatedVoterService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDebug_Security_Voter_Security_Access_ExpressionVoterService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDebug_Security_Voter_Security_Access_SimpleRoleVoterService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDebug_Security_Voter_VoteListenerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrineMigrations_CurrentCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrineMigrations_DiffCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrineMigrations_DumpSchemaCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrineMigrations_ExecuteCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrineMigrations_GenerateCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrineMigrations_LatestCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrineMigrations_MigrateCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrineMigrations_RollupCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrineMigrations_StatusCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrineMigrations_SyncMetadataCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrineMigrations_UpToDateCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrineMigrations_VersionCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrineMigrations_VersionsCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_CacheClearMetadataCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_CacheClearQueryCacheCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_CacheClearResultCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_CacheCollectionRegionCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_ClearEntityRegionCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_ClearQueryRegionCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_DatabaseCreateCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_DatabaseDropCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_DatabaseImportCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_EnsureProductionSettingsCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_FixturesLoadCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_MappingConvertCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_MappingImportCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_MappingInfoCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_Migrations_DependencyFactoryService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_Orm_DefaultEntityManager_PropertyInfoExtractorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_Orm_DefaultListeners_AttachEntityListenersService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_Orm_ProxyCacheWarmerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_Orm_Validator_UniqueService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_QueryDqlCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_QuerySqlCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_SchemaCreateCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_SchemaDropCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_SchemaUpdateCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getDoctrine_SchemaValidateCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getErrorControllerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getErrorHandler_ErrorRenderer_HtmlService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getEtatRepositoryService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getFilesystemService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getForm_ChoiceListFactory_CachedService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getForm_FactoryService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getForm_RegistryService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getForm_ServerParamsService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getForm_TypeExtension_CsrfService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getForm_TypeExtension_Form_DataCollectorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getForm_TypeExtension_Form_HttpFoundationService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getForm_TypeExtension_Form_TransformationFailureHandlingService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getForm_TypeExtension_Form_ValidatorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getForm_TypeExtension_Upload_ValidatorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getForm_TypeGuesser_DoctrineService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getForm_TypeGuesser_ValidatorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getForm_Type_ChoiceService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getForm_Type_ColorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getForm_Type_EntityService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getForm_Type_FileService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getForm_Type_FormService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getFragment_Renderer_InlineService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getLigneCommandeControllerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getLigneCommandeRepositoryService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getLoaderInterfaceService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeAuthService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeCommandService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeControllerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeCrudService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeDockerDatabaseService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeEntityService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeFixturesService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeFormService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeFunctionalTestService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeMessageService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeMessengerMiddlewareService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeMigrationService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeRegistrationFormService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeResetPasswordService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeSerializerEncoderService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeSerializerNormalizerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeSubscriberService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeTwigExtensionService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeUnitTestService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeUserService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeValidatorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_AutoCommand_MakeVoterService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_DoctrineHelperService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_EntityClassGeneratorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_FileManagerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_GeneratorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMaker_Renderer_FormTypeRendererService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMimeTypesService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMonolog_Command_ServerLogService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getMonolog_Logger_SecurityService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getPanierControllerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getPanierRepositoryService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getProduitControllerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getProduitRepositoryService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getProduitTypeService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getPropertyAccessorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getPropertyInfo_SerializerExtractorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getRedirectControllerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getResponseService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getRouter_CacheWarmerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getRouting_LoaderService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecrets_VaultService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurityControllerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_AccessListenerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_AuthenticationUtilsService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_Authentication_Listener_Anonymous_MainService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_Authentication_Listener_Guard_MainService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_Authentication_Provider_Guard_MainService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_ChannelListenerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_Command_UserPasswordEncoderService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_ContextListener_0Service.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_Csrf_TokenManagerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_Csrf_TokenStorageService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_EncoderFactory_GenericService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_Firewall_Map_Context_DevService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_Firewall_Map_Context_MainService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_HttpUtilsService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_Logout_Listener_CsrfTokenClearingService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_Logout_Listener_Default_MainService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_PasswordEncoderService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_User_Provider_Concrete_AppUserProviderService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSecurity_Validator_UserPasswordService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSerializerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSerializer_Mapping_CacheClassMetadataFactoryService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSerializer_Mapping_CacheWarmerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getServicesResetterService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSessionService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSession_Storage_NativeService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getSluggerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTemplateControllerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTranslation_ExtractorService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTranslation_Loader_CsvService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTranslation_Loader_DatService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTranslation_Loader_IniService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTranslation_Loader_JsonService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTranslation_Loader_MoService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTranslation_Loader_PhpService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTranslation_Loader_PoService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTranslation_Loader_QtService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTranslation_Loader_ResService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTranslation_Loader_XliffService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTranslation_Loader_YmlService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTranslation_ReaderService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTranslation_WarmerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTwig_Command_DebugService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTwig_Command_LintService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTwig_Form_RendererService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTwig_Mailer_MessageListenerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTwig_Runtime_HttpkernelService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTwig_Runtime_SecurityCsrfService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTwig_TemplateCacheWarmerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTypeProduitRepositoryService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getTypeProduitTypeService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getUserControllerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getUserRepositoryService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getUserTypeService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getValidator_EmailService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getValidator_ExpressionService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getValidator_Mapping_CacheWarmerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getValidator_NotCompromisedPasswordService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getVarDumper_Command_ServerDumpService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getVarDumper_ContextualizedCliDumper_InnerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getWebProfiler_Controller_ExceptionPanelService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getWebProfiler_Controller_ProfilerService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/getWebProfiler_Controller_RouterService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/get_ServiceLocator_1cFtlggService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/get_ServiceLocator_5Bc9YuWService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/get_ServiceLocator_BHo36d5Service.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/get_ServiceLocator_Beq5mCoService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/get_ServiceLocator_C9JCBPCService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/get_ServiceLocator_G9CqTPpService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/get_ServiceLocator_GpZpCLoService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/get_ServiceLocator_J5BHjDService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/get_ServiceLocator_N3dpdY9Service.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/get_ServiceLocator_SkBt_Q7Service.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/get_ServiceLocator_VM0xZZbService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/get_ServiceLocator_VP68NKcService.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/get_ServiceLocator_XA8Fw_Service.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/ContainerRk9RBFK/removed-ids.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/96/96847f4bb5bb9002196dd36b805d5721dd7bb067aebbb4a4b05c5e6bf2a72d21.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/96/96847f4bb5bb9002196dd36b805d5721dd7bb067aebbb4a4b05c5e6bf2a72d21.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/url_generating_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/url_generating_routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/url_generating_routes.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/url_generating_routes.php.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/url_matching_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/url_matching_routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/url_matching_routes.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/url_matching_routes.php.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,9 +288,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -167,7 +417,7 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
   </component>
@@ -400,13 +650,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Install projet" />
@@ -484,14 +733,18 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1605176935971" />
+    <state x="622" y="237" width="737" height="640" key="RollbackChangesDialog" timestamp="1605784453571">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="622" y="237" width="737" height="640" key="RollbackChangesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1605784453571" />
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1604746168222">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1604746168222" />
-    <state x="309" y="318" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1605260635116">
+    <state x="309" y="318" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1605784848168">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="309" y="318" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1605260635116" />
+    <state x="309" y="318" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1605784848168" />
     <state x="928" y="501" width="136" height="111" key="com.intellij.database.run.ParametersPanel.Standalone" timestamp="1604765369790">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -508,11 +761,11 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="695" y="270" width="592" height="573" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1605195971034" />
-    <state x="580" y="331" width="427" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605776894568">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="770" y="450" width="437" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605784851058">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605776894568" />
-    <state x="770" y="450" width="427" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053@72.27.1848.1053" timestamp="1605176068538" />
+    <state x="770" y="450" width="437" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053@72.27.1848.1053" timestamp="1605784851058" />
     <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1605177543602">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
