@@ -29,7 +29,6 @@
       <change beforePath="$PROJECT_DIR$/migrations/Version20201106135949.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/migrations/Version20201112102443.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/migrations/Version20201112120549.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/commandes.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/commandes.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.preload.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.preload.php" afterDir="false" />
@@ -742,7 +741,7 @@
       <workItem from="1605764931992" duration="119000" />
       <workItem from="1605765064070" duration="3662000" />
       <workItem from="1605768858407" duration="151000" />
-      <workItem from="1605769037156" duration="2387000" />
+      <workItem from="1605769037156" duration="5200000" />
     </task>
     <task id="LOCAL-00001" summary="Install projet">
       <created>1604676645931</created>
@@ -898,7 +897,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605770067083</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Modification commandes">
+      <created>1605771470458</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1605771470458</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Marche pas pour l'image">
+      <created>1605773741949</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1605773741949</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -939,7 +952,9 @@
     <MESSAGE value="CommandeController.php" />
     <MESSAGE value="Modif" />
     <MESSAGE value="Est ce que tu as editProduit.html.twig ?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Est ce que tu as editProduit.html.twig ?" />
+    <MESSAGE value="Modification commandes" />
+    <MESSAGE value="Marche pas pour l'image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Marche pas pour l'image" />
   </component>
   <component name="WindowStateProjectService">
     <state x="769" y="432" width="444" height="249" key="#Composer" timestamp="1604676211710">
@@ -962,10 +977,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1604772004362" />
-    <state x="368" y="11" key="CommitChangelistDialog2" timestamp="1605771088997">
+    <state x="368" y="11" key="CommitChangelistDialog2" timestamp="1605773740609">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="368" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605771088997" />
+    <state x="368" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605773740609" />
     <state width="1479" height="265" key="GridCell.Tab.0.bottom" timestamp="1604770422917">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -1002,10 +1017,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="928" y="501" width="136" height="111" key="com.intellij.database.run.ParametersPanel.Standalone/72.27.1848.1053@72.27.1848.1053" timestamp="1604765369790" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1605769038285">
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1605776714697">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1605769038285" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1605776714697" />
     <state x="610" y="182" width="762" height="749" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604785119793">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -1014,10 +1029,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="695" y="270" width="592" height="573" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1605195971034" />
-    <state x="580" y="331" width="427" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605771097488">
+    <state x="580" y="331" width="427" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605776894568">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605771097488" />
+    <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605776894568" />
     <state x="770" y="450" width="427" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053@72.27.1848.1053" timestamp="1605176068538" />
     <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1605177543602">
       <screen x="72" y="27" width="1848" height="1053" />

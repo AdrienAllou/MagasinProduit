@@ -49,6 +49,7 @@ return [
                     .'|add/produit/([^/]++)(*:200)'
                     .'|delete/produit/([^/]++)(*:231)'
                 .')'
+                .'|/edit/([^/]++)/produit(*:262)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -60,8 +61,9 @@ return [
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         200 => [[['_route' => 'panier_addProduit', '_controller' => 'App\\Controller\\PanierController::addOnPanier'], ['id'], ['POST' => 0], null, false, true, null]],
-        231 => [
-            [['_route' => 'panier_delete_panier', '_controller' => 'App\\Controller\\PanierController::deleteOnPanier'], ['id'], ['DELETE' => 0], null, false, true, null],
+        231 => [[['_route' => 'panier_delete_panier', '_controller' => 'App\\Controller\\PanierController::deleteOnPanier'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        262 => [
+            [['_route' => 'edit', 'id' => null, '_controller' => 'App\\Controller\\ProduitController::edit'], ['id'], ['GET' => 0], null, false, false, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
