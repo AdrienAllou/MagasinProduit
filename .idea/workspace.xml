@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="074fb307-b094-4f7d-86ef-eb292289b3f6" name="Default Changelist" comment="Modif">
+    <list default="true" id="074fb307-b094-4f7d-86ef-eb292289b3f6" name="Default Changelist" comment="Est ce que tu as editProduit.html.twig ?">
+      <change afterPath="$PROJECT_DIR$/templates/produit/editProduit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/67b2fef9-5b5a-4436-9c9f-c7d09d77d467.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_11_2020_16_45__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_06_11_2020_16_45__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
@@ -31,13 +30,6 @@
       <change beforePath="$PROJECT_DIR$/migrations/Version20201106135949.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/migrations/Version20201112102443.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/migrations/Version20201112120549.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProduitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProduitController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_header.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/panier/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/panier/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/produit/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/produit/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/commandes.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/commandes.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/translations/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.preload.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.preload.php" afterDir="false" />
@@ -749,7 +741,7 @@
       <workItem from="1605764931992" duration="119000" />
       <workItem from="1605765064070" duration="3662000" />
       <workItem from="1605768858407" duration="151000" />
-      <workItem from="1605769037156" duration="729000" />
+      <workItem from="1605769037156" duration="1006000" />
     </task>
     <task id="LOCAL-00001" summary="Install projet">
       <created>1604676645931</created>
@@ -891,7 +883,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605260630624</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Est ce que tu as editProduit.html.twig ?">
+      <created>1605769917842</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1605769917842</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -931,7 +930,8 @@
     <MESSAGE value="Fin de l'ajout de produit" />
     <MESSAGE value="CommandeController.php" />
     <MESSAGE value="Modif" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modif" />
+    <MESSAGE value="Est ce que tu as editProduit.html.twig ?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Est ce que tu as editProduit.html.twig ?" />
   </component>
   <component name="WindowStateProjectService">
     <state x="769" y="432" width="444" height="249" key="#Composer" timestamp="1604676211710">
@@ -954,10 +954,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1604772004362" />
-    <state x="368" y="11" key="CommitChangelistDialog2" timestamp="1605769870489">
+    <state x="368" y="11" key="CommitChangelistDialog2" timestamp="1605770029667">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="368" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605769870489" />
+    <state x="368" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1605770029667" />
     <state width="1479" height="265" key="GridCell.Tab.0.bottom" timestamp="1604770422917">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
