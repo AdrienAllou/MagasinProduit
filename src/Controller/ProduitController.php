@@ -97,7 +97,7 @@ class ProduitController extends AbstractController
      * @param SluggerInterface $slugger
      * @return RedirectResponse|Response
      */
-    public function edit(Request $request, $id=null, SluggerInterface $slugger)
+    public function edit(Request $request, $id, SluggerInterface $slugger)
     {
         $produit = $this->getDoctrine()->getRepository(Produit::class)->find($id);
         if (!$produit)  throw $this->createNotFoundException('No produit found for id '.$id);
