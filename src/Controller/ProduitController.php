@@ -91,10 +91,13 @@ class ProduitController extends AbstractController
 
     /**
      * @Route("/edit/{id}/produit", name="edit",  methods={"GET"})
-     * @Route("/edit/produit", name="edit_valid",  methods={"PUT"})
      * @IsGranted("ROLE_ADMIN")
+     * @param Request $request
+     * @param null $id
+     * @param SluggerInterface $slugger
+     * @return RedirectResponse|Response
      */
-    public function edit(Request $request, $id=null)
+    public function edit(Request $request, $id=null, SluggerInterface $slugger)
     {
         $produit = $this->getDoctrine()->getRepository(Produit::class)->find($id);
         if (!$produit)  throw $this->createNotFoundException('No produit found for id '.$id);
@@ -107,6 +110,24 @@ class ProduitController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            /** @var UploadedFile $image */
+            $image = $form->get("photo")->getData();
+
+            if ($image){
+                $originalPath = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
+                $safeFileName = $slugger->slug($originalPath);
+                $newFileName = $safeFileName . '-' . uniqid() . '.'. $image->guessClientExtension();
+
+                try {
+                    $image->move(
+                        $this->getParameter('image_produit_path'), $newFileName
+                    );
+                }catch (\Exception $e){
+                    throw $this->createNotFoundException("Fail upload image");
+                }
+
+                $produit->setPhoto($newFileName);
+            }
             $produit = $form->getData();
             $this->getDoctrine()->getManager()->persist($produit);
             $this->getDoctrine()->getManager()->flush();
