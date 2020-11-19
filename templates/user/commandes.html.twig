@@ -26,9 +26,8 @@
                         {% set totalPriceCommande = totalPriceCommande + lc.quantite * lc.prix %}
                         <td>{{ lc.quantite * lc.prix }}€</td>
                         <td>
-                            <form action="{{ path('panier_addProduit', {'id': produit.id}) }}" method="post">
-                                <input type="submit" class="btn btn-primary" value="Ajouter au panier">
-                                <input type="hidden" value="{{ csrf_token("addProduitOnPanier") }}" name="token">
+                            <form action="#" method="post">
+                                <input type="submit" class="btn btn-primary" value="Valider">
                             </form>
                         </td>
                     </tr>
