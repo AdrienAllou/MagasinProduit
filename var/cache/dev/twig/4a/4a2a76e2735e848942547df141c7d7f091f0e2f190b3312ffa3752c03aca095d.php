@@ -1176,6 +1176,6 @@ div.sf-toolbar .sf-toolbar-block a:hover {
         display: none !important;
     }
 }
-", "@WebProfiler/Profiler/toolbar.css.twig", "/home/userdepinfo/Documents/Belfort/S3/php/MagasinDeProduit/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar.css.twig");
+", "@WebProfiler/Profiler/toolbar.css.twig", "/home/userdepinfo/Documents/Belfort/S3/php/ProjetMagasinProduit/MagasinProduit/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar.css.twig");
     }
 }

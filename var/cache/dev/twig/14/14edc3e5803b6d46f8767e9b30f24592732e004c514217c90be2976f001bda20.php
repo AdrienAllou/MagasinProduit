@@ -200,6 +200,6 @@ class __TwigTemplate_6b358a3fbbecf742829d1dedaeae1c8b83c0c085fe86dd912bb8ee32ea5
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/MagasinDeProduit/templates/base.html.twig");
+", "base.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/ProjetMagasinProduit/MagasinProduit/templates/base.html.twig");
     }
 }

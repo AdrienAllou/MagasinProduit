@@ -2080,6 +2080,6 @@ class __TwigTemplate_b8e12cc46ca81bea0a2a66f8caefe9abdc7968ed722bcdef6741ac1b881
         {{ tree.form_tree_details(childName, childData, forms_by_hash) }}
     {% endfor %}
 {% endmacro %}
-", "@WebProfiler/Collector/form.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/MagasinDeProduit/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
+", "@WebProfiler/Collector/form.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/ProjetMagasinProduit/MagasinProduit/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
     }
 }

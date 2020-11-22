@@ -710,6 +710,6 @@ class __TwigTemplate_064234bf5bbfc46079cf6ea84ed5b6bdd40a93cbd19026e2990b9b54cd2
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/mailer.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/MagasinDeProduit/vendor/symfony/web-profiler-bundle/Resources/views/Collector/mailer.html.twig");
+", "@WebProfiler/Collector/mailer.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/ProjetMagasinProduit/MagasinProduit/vendor/symfony/web-profiler-bundle/Resources/views/Collector/mailer.html.twig");
     }
 }

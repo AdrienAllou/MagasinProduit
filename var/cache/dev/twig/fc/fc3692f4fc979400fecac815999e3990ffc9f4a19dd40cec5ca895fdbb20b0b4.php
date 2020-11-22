@@ -1289,6 +1289,6 @@ $context["voter_detail"], "vote", [], "array", false, false, false, 353), twig_c
         </table>
     {% endif %}
 {% endblock %}
-", "@Security/Collector/security.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/MagasinDeProduit/vendor/symfony/security-bundle/Resources/views/Collector/security.html.twig");
+", "@Security/Collector/security.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/ProjetMagasinProduit/MagasinProduit/vendor/symfony/security-bundle/Resources/views/Collector/security.html.twig");
     }
 }

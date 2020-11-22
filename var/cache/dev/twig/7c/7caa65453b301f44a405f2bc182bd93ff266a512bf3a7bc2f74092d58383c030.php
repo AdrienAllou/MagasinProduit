@@ -900,6 +900,6 @@ class __TwigTemplate_ea509429d1bc1188179ae2ba77a7c7a50932dece75603451f5e2752987a
         {% endautoescape %}</script>
     </div>
 {% endmacro %}
-", "@WebProfiler/Collector/time.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/MagasinDeProduit/vendor/symfony/web-profiler-bundle/Resources/views/Collector/time.html.twig");
+", "@WebProfiler/Collector/time.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/ProjetMagasinProduit/MagasinProduit/vendor/symfony/web-profiler-bundle/Resources/views/Collector/time.html.twig");
     }
 }

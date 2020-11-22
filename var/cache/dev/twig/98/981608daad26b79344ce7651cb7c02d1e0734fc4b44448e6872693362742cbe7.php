@@ -227,6 +227,6 @@ class __TwigTemplate_5f5ecaa8d2730616e3681a33fdf15a5dab63472085c1dcd16136fcf092d
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/exception.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/MagasinDeProduit/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
+", "@WebProfiler/Collector/exception.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/ProjetMagasinProduit/MagasinProduit/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
     }
 }

@@ -193,6 +193,6 @@ class __TwigTemplate_8779c1270a52a0dd2a12dba926905b409139834d789ce7e357ec9cc1f7d
         {% block body '' %}
     </body>
 </html>
-", "@WebProfiler/Profiler/base.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/MagasinDeProduit/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
+", "@WebProfiler/Profiler/base.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/ProjetMagasinProduit/MagasinProduit/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
     }
 }

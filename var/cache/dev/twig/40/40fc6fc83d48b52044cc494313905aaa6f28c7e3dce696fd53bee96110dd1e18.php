@@ -111,6 +111,6 @@ class __TwigTemplate_440fdc1cca2795262a5fc102b4a1fdb9e1fe4ef933a5ff927965de9756b
         Sfjs.loadToolbar('{{ token }}');
     })();
 /*]]>*/</script>
-", "@WebProfiler/Profiler/toolbar_js.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/MagasinDeProduit/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar_js.html.twig");
+", "@WebProfiler/Profiler/toolbar_js.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/ProjetMagasinProduit/MagasinProduit/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar_js.html.twig");
     }
 }

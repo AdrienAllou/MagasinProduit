@@ -5362,3 +5362,6 @@ b3b4b5,127.0.0.1,GET,http://127.0.0.1:8000/uploads/images/produits/,1605787116,,
 95b7a4,127.0.0.1,GET,http://127.0.0.1:8000/,1605787874,,200
 55d9a4,127.0.0.1,GET,http://127.0.0.1:8000/uploads/images/produits/,1605787874,9d910f,404
 9d910f,127.0.0.1,GET,http://127.0.0.1:8000/uploads/images/produits/,1605787874,,404
+1cbc18,127.0.0.1,GET,http://127.0.0.1:8000/,1606056986,,200
+5ad127,127.0.0.1,GET,http://127.0.0.1:8000/uploads/images/produits/,1606056987,d63cfe,404
+d63cfe,127.0.0.1,GET,http://127.0.0.1:8000/uploads/images/produits/,1606056987,,404

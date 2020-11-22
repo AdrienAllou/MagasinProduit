@@ -607,6 +607,6 @@ $context["key"], "hit_read_ratio"))) {
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/cache.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/MagasinDeProduit/vendor/symfony/web-profiler-bundle/Resources/views/Collector/cache.html.twig");
+", "@WebProfiler/Collector/cache.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/ProjetMagasinProduit/MagasinProduit/vendor/symfony/web-profiler-bundle/Resources/views/Collector/cache.html.twig");
     }
 }

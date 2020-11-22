@@ -46,10 +46,36 @@ class User implements UserInterface
      */
     private $commandes;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $adresse;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $email;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $Ville;
+
+    /**
+     * @ORM\Column(type="decimal", precision=5, scale=0)
+     */
+    private $CodePostal;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Commantaire::class, mappedBy="auteur")
+     */
+    private $commantaires;
+
     public function __construct()
     {
         $this->paniers = new ArrayCollection();
         $this->commandes = new ArrayCollection();
+        $this->commantaires = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -179,6 +205,84 @@ class User implements UserInterface
             // set the owning side to null (unless already changed)
             if ($commande->getUser() === $this) {
                 $commande->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getAdresse(): ?string
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(string $adresse): self
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(string $email): self
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    public function getVille(): ?string
+    {
+        return $this->Ville;
+    }
+
+    public function setVille(string $Ville): self
+    {
+        $this->Ville = $Ville;
+
+        return $this;
+    }
+
+    public function getCodePostal(): ?string
+    {
+        return $this->CodePostal;
+    }
+
+    public function setCodePostal(string $CodePostal): self
+    {
+        $this->CodePostal = $CodePostal;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Commentaire[]
+     */
+    public function getCommantaires(): Collection
+    {
+        return $this->commantaires;
+    }
+
+    public function addCommantaire(Commentaire $commantaire): self
+    {
+        if (!$this->commantaires->contains($commantaire)) {
+            $this->commantaires[] = $commantaire;
+            $commantaire->setAuteur($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCommantaire(Commentaire $commantaire): self
+    {
+        if ($this->commantaires->removeElement($commantaire)) {
+            // set the owning side to null (unless already changed)
+            if ($commantaire->getAuteur() === $this) {
+                $commantaire->setAuteur(null);
             }
         }
 

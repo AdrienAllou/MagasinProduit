@@ -62,14 +62,14 @@ class __TwigTemplate_4615bd8ecace526083563986e9dccfd8ed39091821ef61ad75570258e1d
             // line 15
             echo "                <li class=\"nav-item dropdown\" style=\"margin-right: 150px\">
                     <a class=\"nav-link dropdown-toggle active\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                        Profile
+                        Profil
                     </a>
                     <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
                         <a class=\"dropdown-item\" href=\"";
             // line 20
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_index");
-            echo "\">Profils</a>
-                        <a class=\"dropdown-item\" href=\"#\">Paramettre</a>
+            echo "\">Profil</a>
+                        <a class=\"dropdown-item\" href=\"#\">Paramètres</a>
                         <div class=\"dropdown-divider\"></div>
                         <a class=\"nav-link active\" href=\"";
             // line 23
@@ -139,11 +139,11 @@ class __TwigTemplate_4615bd8ecace526083563986e9dccfd8ed39091821ef61ad75570258e1d
             {% if app.user is not null %}
                 <li class=\"nav-item dropdown\" style=\"margin-right: 150px\">
                     <a class=\"nav-link dropdown-toggle active\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                        Profile
+                        Profil
                     </a>
                     <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
-                        <a class=\"dropdown-item\" href=\"{{ path('user_index') }}\">Profils</a>
-                        <a class=\"dropdown-item\" href=\"#\">Paramettre</a>
+                        <a class=\"dropdown-item\" href=\"{{ path('user_index') }}\">Profil</a>
+                        <a class=\"dropdown-item\" href=\"#\">Paramètres</a>
                         <div class=\"dropdown-divider\"></div>
                         <a class=\"nav-link active\" href=\"{{ path('app_logout') }}\">Deconnexion</a>
                     </div>
@@ -158,6 +158,6 @@ class __TwigTemplate_4615bd8ecace526083563986e9dccfd8ed39091821ef61ad75570258e1d
             {% endif %}
         </ul>
     </div>
-</nav>", "_header.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/MagasinProduit/templates/_header.html.twig");
+</nav>", "_header.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/ProjetMagasinProduit/MagasinProduit/templates/_header.html.twig");
     }
 }

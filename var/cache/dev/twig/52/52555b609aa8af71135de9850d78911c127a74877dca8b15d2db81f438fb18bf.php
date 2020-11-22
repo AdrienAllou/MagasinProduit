@@ -160,6 +160,6 @@ class __TwigTemplate_26632cc68237627b648cf0f5f84b23a02f8cd53e775638e57ec7679e44f
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: profiler_url, name: 'time', status: status_color }) }}
 {% endblock %}
-", "@WebProfiler/Collector/memory.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/MagasinDeProduit/vendor/symfony/web-profiler-bundle/Resources/views/Collector/memory.html.twig");
+", "@WebProfiler/Collector/memory.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/ProjetMagasinProduit/MagasinProduit/vendor/symfony/web-profiler-bundle/Resources/views/Collector/memory.html.twig");
     }
 }

@@ -1882,6 +1882,6 @@ class __TwigTemplate_d766b01d07e45af07fd831a740f7578e80e21690d9e258cb3008d05dcd9
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/MagasinDeProduit/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "/home/userdepinfo/Documents/Belfort/S3/php/ProjetMagasinProduit/MagasinProduit/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
     }
 }

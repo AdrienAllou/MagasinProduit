@@ -65,10 +65,16 @@ class Produit
      */
     private $stock;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Commantaire::class, mappedBy="Produit")
+     */
+    private $commantaires;
+
     public function __construct()
     {
         $this->paniers = new ArrayCollection();
         $this->ligneCommandes = new ArrayCollection();
+        $this->commantaires = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -216,6 +222,36 @@ class Produit
     public function setStock(int $stock): self
     {
         $this->stock = $stock;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Commentaire[]
+     */
+    public function getCommantaires(): Collection
+    {
+        return $this->commantaires;
+    }
+
+    public function addCommantaire(Commentaire $commantaire): self
+    {
+        if (!$this->commantaires->contains($commantaire)) {
+            $this->commantaires[] = $commantaire;
+            $commantaire->setProduit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCommantaire(Commentaire $commantaire): self
+    {
+        if ($this->commantaires->removeElement($commantaire)) {
+            // set the owning side to null (unless already changed)
+            if ($commantaire->getProduit() === $this) {
+                $commantaire->setProduit(null);
+            }
+        }
 
         return $this;
     }
