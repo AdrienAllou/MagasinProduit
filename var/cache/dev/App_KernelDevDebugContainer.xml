@@ -330,13 +330,6 @@
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
     </service>
-    <service id="App\Controller\CommandeController" class="App\Controller\CommandeController" public="true" autowire="true" autoconfigure="true">
-      <tag name="controller.service_arguments"/>
-      <tag name="container.service_subscriber"/>
-      <call method="setContainer">
-        <argument type="service" id=".service_locator.g9CqTPp.App\Controller\CommandeController"/>
-      </call>
-    </service>
     <service id="App\Controller\LigneCommandeController" class="App\Controller\LigneCommandeController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -365,11 +358,25 @@
         <argument type="service" id=".service_locator.g9CqTPp.App\Controller\SecurityController"/>
       </call>
     </service>
-    <service id="App\Controller\UserController" class="App\Controller\UserController" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\User\CommandeController" class="App\Controller\User\CommandeController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.g9CqTPp.App\Controller\UserController"/>
+        <argument type="service" id=".service_locator.g9CqTPp.App\Controller\User\CommandeController"/>
+      </call>
+    </service>
+    <service id="App\Controller\User\CommentaireController" class="App\Controller\User\CommentaireController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.g9CqTPp.App\Controller\User\CommentaireController"/>
+      </call>
+    </service>
+    <service id="App\Controller\User\UserController" class="App\Controller\User\UserController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.g9CqTPp.App\Controller\User\UserController"/>
       </call>
     </service>
     <service id="App\Controller\admin\AdminController" class="App\Controller\admin\AdminController" public="true" autowire="true" autoconfigure="true">
@@ -382,6 +389,9 @@
     <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
       <argument type="service" id="security.user_password_encoder.generic"/>
+    </service>
+    <service id="App\Form\CommentaireType" class="App\Form\CommentaireType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
     </service>
     <service id="App\Form\ProduitType" class="App\Form\ProduitType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
@@ -396,7 +406,7 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
-    <service id="App\Repository\CommantaireRepository" class="App\Repository\CommantaireRepository" autowire="true" autoconfigure="true">
+    <service id="App\Repository\CommentaireRepository" class="App\Repository\CommentaireRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -872,6 +882,7 @@
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\CommentaireType</argument>
         <argument>App\Form\ProduitType</argument>
         <argument>App\Form\TypeProduitType</argument>
         <argument>App\Form\UserType</argument>
@@ -1216,7 +1227,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.Wy779sL"/>
+      <argument type="service" id=".service_locator.x7wJB3P"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -3372,7 +3383,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.eTohdn8"/>
+      <argument type="service" id=".service_locator.Se76YcQ"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -5068,9 +5079,6 @@
     <service id="doctrine.fixtures.purger.orm_purger_factory" class="Doctrine\Bundle\FixturesBundle\Purger\ORMPurgerFactory" public="false">
       <tag name="doctrine.fixtures.purger_factory" alias="default"/>
     </service>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CommandeController" class="App\Controller\CommandeController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CommandeController" class="App\Controller\CommandeController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\CommandeController" class="App\Controller\CommandeController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\LigneCommandeController" class="App\Controller\LigneCommandeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\LigneCommandeController" class="App\Controller\LigneCommandeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\LigneCommandeController" class="App\Controller\LigneCommandeController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5083,14 +5091,22 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UserController" class="App\Controller\UserController" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UserController" class="App\Controller\UserController" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\UserController" class="App\Controller\UserController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\User\CommandeController" class="App\Controller\User\CommandeController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\User\CommandeController" class="App\Controller\User\CommandeController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\User\CommandeController" class="App\Controller\User\CommandeController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\User\CommentaireController" class="App\Controller\User\CommentaireController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\User\CommentaireController" class="App\Controller\User\CommentaireController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\User\CommentaireController" class="App\Controller\User\CommentaireController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\User\UserController" class="App\Controller\User\UserController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\User\UserController" class="App\Controller\User\UserController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\User\UserController" class="App\Controller\User\UserController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\admin\AdminController" class="App\Controller\admin\AdminController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\admin\AdminController" class="App\Controller\admin\AdminController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\admin\AdminController" class="App\Controller\admin\AdminController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CommentaireType" class="App\Form\CommentaireType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\CommentaireType" class="App\Form\CommentaireType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ProduitType" class="App\Form\ProduitType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ProduitType" class="App\Form\ProduitType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\TypeProduitType" class="App\Form\TypeProduitType" autowire="true" abstract="true"/>
@@ -5099,8 +5115,8 @@
     <service id=".abstract.instanceof.App\Form\UserType" class="App\Form\UserType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CommandeRepository" class="App\Repository\CommandeRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\CommandeRepository" class="App\Repository\CommandeRepository" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CommantaireRepository" class="App\Repository\CommantaireRepository" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Repository\CommantaireRepository" class="App\Repository\CommantaireRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CommentaireRepository" class="App\Repository\CommentaireRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\CommentaireRepository" class="App\Repository\CommentaireRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\EtatRepository" class="App\Repository\EtatRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\EtatRepository" class="App\Repository\EtatRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\LigneCommandeRepository" class="App\Repository\LigneCommandeRepository" autowire="true" abstract="true"/>
@@ -5366,19 +5382,6 @@
         <argument key="loader" type="service" id=".errored..service_locator.C9JCBPC.Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
-    <service id=".service_locator.5Bc9YuW" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="commandeRepository" type="service" id="App\Repository\CommandeRepository"/>
-      </argument>
-    </service>
-    <service id=".service_locator.sP0eG_2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="commandeRepository" type="service" id="App\Repository\CommandeRepository"/>
-        <argument key="etatRepository" type="service" id="App\Repository\EtatRepository"/>
-      </argument>
-    </service>
     <service id=".service_locator.CmHNcky" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5434,12 +5437,35 @@
         <argument key="passwordEncoder" type="service" id="security.user_password_encoder.generic"/>
       </argument>
     </service>
-    <service id=".service_locator.GW9vPSR" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.5Bc9YuW" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Controller\CommandeController::index" type="service" id=".service_locator.5Bc9YuW"/>
-        <argument key="App\Controller\CommandeController::indexForUser" type="service" id=".service_locator.5Bc9YuW"/>
-        <argument key="App\Controller\CommandeController::valideCommande" type="service" id=".service_locator.sP0eG_2"/>
+        <argument key="commandeRepository" type="service" id="App\Repository\CommandeRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.sP0eG_2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="commandeRepository" type="service" id="App\Repository\CommandeRepository"/>
+        <argument key="etatRepository" type="service" id="App\Repository\EtatRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.caon_M9" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="commentaireRepository" type="service" id="App\Repository\CommentaireRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.uRYDQ58" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="produitRepository" type="service" id="App\Repository\ProduitRepository"/>
+        <argument key="userRepository" type="service" id="App\Repository\UserRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.IIKcZhh" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
         <argument key="App\Controller\LigneCommandeController::add" type="service" id=".service_locator.CmHNcky"/>
         <argument key="App\Controller\PanierController::addOnPanier" type="service" id=".service_locator.vM0xZZb"/>
         <argument key="App\Controller\PanierController::deleteAllOnPanier" type="service" id=".service_locator.n3dpdY9"/>
@@ -5451,6 +5477,11 @@
         <argument key="App\Controller\ProduitController::index" type="service" id=".service_locator.BHo36d5"/>
         <argument key="App\Controller\SecurityController::inscription" type="service" id=".service_locator.j5_bHjD"/>
         <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.xA8Fw_."/>
+        <argument key="App\Controller\User\CommandeController::index" type="service" id=".service_locator.5Bc9YuW"/>
+        <argument key="App\Controller\User\CommandeController::indexForUser" type="service" id=".service_locator.5Bc9YuW"/>
+        <argument key="App\Controller\User\CommandeController::valideCommande" type="service" id=".service_locator.sP0eG_2"/>
+        <argument key="App\Controller\User\CommentaireController::addCommentaire" type="service" id=".service_locator.uRYDQ58"/>
+        <argument key="App\Controller\User\CommentaireController::index" type="service" id=".service_locator.caon_M9"/>
         <argument key="App\Controller\admin\AdminController::stat" type="service" id=".service_locator.VP68NKc"/>
         <argument key="App\Kernel::loadRoutes" type="service" id=".service_locator.C9JCBPC"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service" id=".service_locator.C9JCBPC"/>
@@ -5458,9 +5489,6 @@
         <argument key="kernel::loadRoutes" type="service" id=".service_locator.C9JCBPC"/>
         <argument key="kernel::registerContainerConfiguration" type="service" id=".service_locator.C9JCBPC"/>
         <argument key="kernel::terminate" type="service" id=".service_locator.beq5mCo"/>
-        <argument key="App\Controller\CommandeController:index" type="service" id=".service_locator.5Bc9YuW"/>
-        <argument key="App\Controller\CommandeController:indexForUser" type="service" id=".service_locator.5Bc9YuW"/>
-        <argument key="App\Controller\CommandeController:valideCommande" type="service" id=".service_locator.sP0eG_2"/>
         <argument key="App\Controller\LigneCommandeController:add" type="service" id=".service_locator.CmHNcky"/>
         <argument key="App\Controller\PanierController:addOnPanier" type="service" id=".service_locator.vM0xZZb"/>
         <argument key="App\Controller\PanierController:deleteAllOnPanier" type="service" id=".service_locator.n3dpdY9"/>
@@ -5472,6 +5500,11 @@
         <argument key="App\Controller\ProduitController:index" type="service" id=".service_locator.BHo36d5"/>
         <argument key="App\Controller\SecurityController:inscription" type="service" id=".service_locator.j5_bHjD"/>
         <argument key="App\Controller\SecurityController:login" type="service" id=".service_locator.xA8Fw_."/>
+        <argument key="App\Controller\User\CommandeController:index" type="service" id=".service_locator.5Bc9YuW"/>
+        <argument key="App\Controller\User\CommandeController:indexForUser" type="service" id=".service_locator.5Bc9YuW"/>
+        <argument key="App\Controller\User\CommandeController:valideCommande" type="service" id=".service_locator.sP0eG_2"/>
+        <argument key="App\Controller\User\CommentaireController:addCommentaire" type="service" id=".service_locator.uRYDQ58"/>
+        <argument key="App\Controller\User\CommentaireController:index" type="service" id=".service_locator.caon_M9"/>
         <argument key="App\Controller\admin\AdminController:stat" type="service" id=".service_locator.VP68NKc"/>
         <argument key="kernel:loadRoutes" type="service" id=".service_locator.C9JCBPC"/>
         <argument key="kernel:registerContainerConfiguration" type="service" id=".service_locator.C9JCBPC"/>
@@ -5537,9 +5570,10 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.Wy779sL" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.x7wJB3P" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\CommentaireType" type="service" id="App\Form\CommentaireType"/>
         <argument key="App\Form\ProduitType" type="service" id="App\Form\ProduitType"/>
         <argument key="App\Form\TypeProduitType" type="service" id="App\Form\TypeProduitType"/>
         <argument key="App\Form\UserType" type="service" id="App\Form\UserType"/>
@@ -5561,11 +5595,11 @@
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
       </argument>
     </service>
-    <service id=".service_locator.eTohdn8" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.Se76YcQ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\CommandeRepository" type="service" id="App\Repository\CommandeRepository"/>
-        <argument key="App\Repository\CommantaireRepository" type="service" id="App\Repository\CommantaireRepository"/>
+        <argument key="App\Repository\CommentaireRepository" type="service" id="App\Repository\CommentaireRepository"/>
         <argument key="App\Repository\EtatRepository" type="service" id="App\Repository\EtatRepository"/>
         <argument key="App\Repository\LigneCommandeRepository" type="service" id="App\Repository\LigneCommandeRepository"/>
         <argument key="App\Repository\PanierRepository" type="service" id="App\Repository\PanierRepository"/>
@@ -5774,12 +5808,6 @@
         <argument key="twig" type="service" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id=".service_locator.g9CqTPp.App\Controller\CommandeController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator_context" id="App\Controller\CommandeController"/>
-      <argument>App\Controller\CommandeController</argument>
-      <argument type="service" id="service_container"/>
-      <factory service=".service_locator.g9CqTPp" method="withContext"/>
-    </service>
     <service id=".service_locator.g9CqTPp.App\Controller\LigneCommandeController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\LigneCommandeController"/>
       <argument>App\Controller\LigneCommandeController</argument>
@@ -5804,9 +5832,21 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.g9CqTPp" method="withContext"/>
     </service>
-    <service id=".service_locator.g9CqTPp.App\Controller\UserController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator_context" id="App\Controller\UserController"/>
-      <argument>App\Controller\UserController</argument>
+    <service id=".service_locator.g9CqTPp.App\Controller\User\CommandeController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\User\CommandeController"/>
+      <argument>App\Controller\User\CommandeController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.g9CqTPp" method="withContext"/>
+    </service>
+    <service id=".service_locator.g9CqTPp.App\Controller\User\CommentaireController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\User\CommentaireController"/>
+      <argument>App\Controller\User\CommentaireController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.g9CqTPp" method="withContext"/>
+    </service>
+    <service id=".service_locator.g9CqTPp.App\Controller\User\UserController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\User\UserController"/>
+      <argument>App\Controller\User\UserController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.g9CqTPp" method="withContext"/>
     </service>
@@ -5977,12 +6017,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.GW9vPSR"/>
+      <argument type="service" id=".service_locator.IIKcZhh"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.GW9vPSR"/>
+      <argument type="service" id=".service_locator.IIKcZhh"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6382,7 +6422,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.WaGDpDt" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.GW9vPSR"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.IIKcZhh"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

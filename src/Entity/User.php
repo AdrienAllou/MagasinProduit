@@ -67,9 +67,9 @@ class User implements UserInterface
     private $CodePostal;
 
     /**
-     * @ORM\OneToMany(targetEntity=Commantaire::class, mappedBy="auteur")
+     * @ORM\OneToMany(targetEntity=Commentaire::class, mappedBy="auteur")
      */
-    private $commantaires;
+    private $commentaires;
 
     public function __construct()
     {
@@ -264,13 +264,13 @@ class User implements UserInterface
      */
     public function getCommantaires(): Collection
     {
-        return $this->commantaires;
+        return $this->commentaires;
     }
 
     public function addCommantaire(Commentaire $commantaire): self
     {
-        if (!$this->commantaires->contains($commantaire)) {
-            $this->commantaires[] = $commantaire;
+        if (!$this->commentaires->contains($commantaire)) {
+            $this->commentaires[] = $commantaire;
             $commantaire->setAuteur($this);
         }
 

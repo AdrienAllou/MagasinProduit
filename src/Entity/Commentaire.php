@@ -23,7 +23,7 @@ class Commentaire
     private $Message;
 
     /**
-     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="commantaires")
+     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="commentaires")
      */
     private $auteur;
 
@@ -33,7 +33,7 @@ class Commentaire
     private $DateEcrit;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Produit::class, inversedBy="commantaires")
+     * @ORM\ManyToOne(targetEntity=Produit::class, inversedBy="commentaires")
      */
     private $Produit;
 

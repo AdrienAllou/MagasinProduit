@@ -58,10 +58,8 @@
             <th scope="col">Type produit</th>
             {% if app.user is not null %}
                 {% if is_granted("ROLE_USER") and is_granted("ROLE_ADMIN") %}
-                    <th scope="col" colspan="3">Opérations</th>
-                {% elseif is_granted("ROLE_USER") %}
-                    <th scope="col">Opérations</th>
-                {% elseif is_granted("ROLE_ADMIN") %}
+                    <th scope="col" colspan="4">Opérations</th>
+                {% elseif is_granted("ROLE_USER") or is_granted("ROLE_ADMIN")  %}
                     <th scope="col" colspan="2">Opérations</th>
                 {% endif %}
             {% endif %}
@@ -83,6 +81,16 @@
                             <form action="{{ path('panier_addProduit', {'id': produit.id}) }}" method="post">
                                 <input type="submit" class="btn btn-primary" value="Ajouter au panier">
                                 <input type="hidden" value="{{ csrf_token("addProduitOnPanier") }}" name="token">
+                            </form>
+                        </td>
+                        <td>
+                            <form action="{{ path('commentaire_add', {"id" : produit.id}) }}" method="post">
+                                <label>
+                                    Votre message
+                                    <input type="text" name="message">
+                                </label>
+                                <input type="submit" class="btn btn-primary" value="Ajouter au panier">
+                                <input type="hidden" value="{{ csrf_token("addCommentaire" ~ produit.id) }}" name="token">
                             </form>
                         </td>
                     {% endif %}

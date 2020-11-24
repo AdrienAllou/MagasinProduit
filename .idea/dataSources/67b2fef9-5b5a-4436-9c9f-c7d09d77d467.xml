@@ -1027,7 +1027,7 @@
     <table id="327" parent="2" name="commande">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <table id="328" parent="2" name="commantaire">
+    <table id="328" parent="2" name="commentaire">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
     <table id="329" parent="2" name="doctrine_migration_versions">
@@ -1119,11 +1119,11 @@
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="350" parent="328" name="IDX_93BF4CAF60BB6FE6">
+    <index id="350" parent="328" name="IDX_67F068BC60BB6FE6">
       <ColNames>auteur_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="351" parent="328" name="IDX_93BF4CAFF347EFB">
+    <index id="351" parent="328" name="IDX_67F068BCF347EFB">
       <ColNames>produit_id</ColNames>
       <Type>btree</Type>
     </index>

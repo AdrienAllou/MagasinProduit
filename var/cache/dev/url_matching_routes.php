@@ -13,8 +13,6 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/commande/index' => [[['_route' => 'commande_index', '_controller' => 'App\\Controller\\CommandeController::index'], null, ['GET' => 0], null, false, false, null]],
-        '/commande/user' => [[['_route' => 'commande_find_by_user', '_controller' => 'App\\Controller\\CommandeController::indexForUser'], null, ['GET' => 0], null, false, false, null]],
         '/ligneCommande/add' => [[['_route' => 'ligne_commande_add', '_controller' => 'App\\Controller\\LigneCommandeController::add'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/panier/index' => [[['_route' => 'panier_index', '_controller' => 'App\\Controller\\PanierController::index'], null, ['GET' => 0], null, false, false, null]],
         '/panier/delete/all' => [[['_route' => 'panier_delete_all', '_controller' => 'App\\Controller\\PanierController::deleteAllOnPanier'], null, ['DELETE' => 0], null, false, false, null]],
@@ -24,7 +22,10 @@ return [
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/inscription' => [[['_route' => 'app_inscription', '_controller' => 'App\\Controller\\SecurityController::inscription'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
-        '/user' => [[['_route' => 'user_index', '_controller' => 'App\\Controller\\UserController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/commande/index' => [[['_route' => 'commande_index', '_controller' => 'App\\Controller\\User\\CommandeController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/commande/user' => [[['_route' => 'commande_find_by_user', '_controller' => 'App\\Controller\\User\\CommandeController::indexForUser'], null, ['GET' => 0], null, false, false, null]],
+        '/commentaire' => [[['_route' => 'commentaire_index', '_controller' => 'App\\Controller\\User\\CommentaireController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/user' => [[['_route' => 'user_index', '_controller' => 'App\\Controller\\User\\UserController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin' => [[['_route' => 'admin_main', '_controller' => 'App\\Controller\\admin\\AdminController::stat'], null, ['GET' => 0], null, true, false, null]],
         '/admin/index' => [[['_route' => 'admin_index', '_controller' => 'App\\Controller\\admin\\AdminController::stat'], null, ['GET' => 0], null, false, false, null]],
     ],
@@ -45,12 +46,15 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/commande/valide/([^/]++)(*:194)'
                 .'|/panier/(?'
-                    .'|add/produit/([^/]++)(*:233)'
-                    .'|delete/produit/([^/]++)(*:264)'
+                    .'|add/produit/([^/]++)(*:200)'
+                    .'|delete/produit/([^/]++)(*:231)'
                 .')'
-                .'|/edit/([^/]++)/produit(*:295)'
+                .'|/edit/([^/]++)/produit(*:262)'
+                .'|/comm(?'
+                    .'|ande/valide/([^/]++)(*:298)'
+                    .'|entaire/add/([^/]++)(*:326)'
+                .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -61,11 +65,12 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        194 => [[['_route' => 'commande_valide_commande', '_controller' => 'App\\Controller\\CommandeController::valideCommande'], ['id'], ['POST' => 0], null, false, true, null]],
-        233 => [[['_route' => 'panier_addProduit', '_controller' => 'App\\Controller\\PanierController::addOnPanier'], ['id'], ['POST' => 0], null, false, true, null]],
-        264 => [[['_route' => 'panier_delete_panier', '_controller' => 'App\\Controller\\PanierController::deleteOnPanier'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        295 => [
-            [['_route' => 'edit', '_controller' => 'App\\Controller\\ProduitController::edit'], ['id'], ['GET' => 0], null, false, false, null],
+        200 => [[['_route' => 'panier_addProduit', '_controller' => 'App\\Controller\\PanierController::addOnPanier'], ['id'], ['POST' => 0], null, false, true, null]],
+        231 => [[['_route' => 'panier_delete_panier', '_controller' => 'App\\Controller\\PanierController::deleteOnPanier'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        262 => [[['_route' => 'edit', '_controller' => 'App\\Controller\\ProduitController::edit'], ['id'], ['GET' => 0], null, false, false, null]],
+        298 => [[['_route' => 'commande_valide_commande', '_controller' => 'App\\Controller\\User\\CommandeController::valideCommande'], ['id'], ['POST' => 0], null, false, true, null]],
+        326 => [
+            [['_route' => 'commentaire_add', '_controller' => 'App\\Controller\\User\\CommentaireController::addCommentaire'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

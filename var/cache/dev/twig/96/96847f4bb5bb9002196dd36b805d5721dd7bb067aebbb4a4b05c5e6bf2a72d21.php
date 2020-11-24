@@ -181,97 +181,109 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
             echo "                ";
             if (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER") && $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN"))) {
                 // line 61
-                echo "                    <th scope=\"col\" colspan=\"3\">Opérations</th>
+                echo "                    <th scope=\"col\" colspan=\"4\">Opérations</th>
                 ";
-            } elseif ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
+            } elseif (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER") || $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN"))) {
                 // line 63
-                echo "                    <th scope=\"col\">Opérations</th>
-                ";
-            } elseif ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-                // line 65
                 echo "                    <th scope=\"col\" colspan=\"2\">Opérations</th>
                 ";
             }
-            // line 67
+            // line 65
             echo "            ";
         }
-        // line 68
+        // line 66
         echo "        </tr>
         </thead>
         <tbody>
         ";
-        // line 71
+        // line 69
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 71, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 69, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 72
+            // line 70
             echo "            <tr>
                 <th>";
-            // line 73
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 73), "html", null, true);
+            // line 71
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 71), "html", null, true);
             echo "</th>
                 <td>";
-            // line 74
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 74), "html", null, true);
+            // line 72
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 72), "html", null, true);
             echo "€</td>
                 <!--A refaire-->
                 <td><img src=\"";
-            // line 76
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/images/produits/" . twig_get_attribute($this->env, $this->source, $context["produit"], "photo", [], "any", false, false, false, 76))), "html", null, true);
+            // line 74
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/images/produits/" . twig_get_attribute($this->env, $this->source, $context["produit"], "photo", [], "any", false, false, false, 74))), "html", null, true);
             echo "\" alt=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 76), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 74), "html", null, true);
             echo "\" style=\"max-width: 200px; max-height: 200px\"></td>
                 <td>";
+            // line 75
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "stock", [], "any", false, false, false, 75), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 76
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "dateLancement", [], "any", false, false, false, 76), "d/m/Y"), "html", null, true);
+            echo "</td>
+                <td>";
             // line 77
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "stock", [], "any", false, false, false, 77), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 78
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "dateLancement", [], "any", false, false, false, 78), "d/m/Y"), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 79
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produit"], "typeProduit", [], "any", false, false, false, 79), "libelle", [], "any", false, false, false, 79), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["produit"], "typeProduit", [], "any", false, false, false, 77), "libelle", [], "any", false, false, false, 77), "html", null, true);
             echo "</td>
                 ";
-            // line 80
-            if ( !(null === twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 80, $this->source); })()), "user", [], "any", false, false, false, 80))) {
-                // line 81
+            // line 78
+            if ( !(null === twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 78, $this->source); })()), "user", [], "any", false, false, false, 78))) {
+                // line 79
                 echo "                    ";
                 if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
-                    // line 82
+                    // line 80
                     echo "                        <td>
                             <form action=\"";
-                    // line 83
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("panier_addProduit", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 83)]), "html", null, true);
+                    // line 81
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("panier_addProduit", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 81)]), "html", null, true);
                     echo "\" method=\"post\">
                                 <input type=\"submit\" class=\"btn btn-primary\" value=\"Ajouter au panier\">
                                 <input type=\"hidden\" value=\"";
-                    // line 85
+                    // line 83
                     echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("addProduitOnPanier"), "html", null, true);
+                    echo "\" name=\"token\">
+                            </form>
+                        </td>
+                        <td>
+                            <form action=\"";
+                    // line 87
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("commentaire_add", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 87)]), "html", null, true);
+                    echo "\" method=\"post\">
+                                <label>
+                                    Votre message
+                                    <input type=\"text\" name=\"message\">
+                                </label>
+                                <input type=\"submit\" class=\"btn btn-primary\" value=\"Ajouter au panier\">
+                                <input type=\"hidden\" value=\"";
+                    // line 93
+                    echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("addCommentaire" . twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 93))), "html", null, true);
                     echo "\" name=\"token\">
                             </form>
                         </td>
                     ";
                 }
-                // line 89
+                // line 97
                 echo "                    ";
                 if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-                    // line 90
+                    // line 98
                     echo "                        <td>
                             <a href=\"";
-                    // line 91
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 91)]), "html", null, true);
+                    // line 99
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 99)]), "html", null, true);
                     echo "\" class=\"btn btn-primary\">Modifier</a>
                         </td>
                         <td>
                             <form action=\"";
-                    // line 94
+                    // line 102
                     echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete");
                     echo "\" method=\"POST\" style=\"display:inline\">
                                 <input type=\"hidden\" name=\"id\" value=\"";
-                    // line 95
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 95), "html", null, true);
+                    // line 103
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 103), "html", null, true);
                     echo "\">
                                 <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
                                 <button type=\"submit\" class=\"btn btn-warning\" onclick=\"if(!confirm('Êtes-vous sûr ?')) { return false; }\">Supprimer</button>
@@ -279,17 +291,17 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
                         </td>
                     ";
                 }
-                // line 101
+                // line 109
                 echo "                ";
             }
-            // line 102
+            // line 110
             echo "            </tr>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 104
+        // line 112
         echo "        </tbody>
     </table>
 ";
@@ -313,7 +325,7 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
 
     public function getDebugInfo()
     {
-        return array (  293 => 104,  286 => 102,  283 => 101,  274 => 95,  270 => 94,  264 => 91,  261 => 90,  258 => 89,  251 => 85,  246 => 83,  243 => 82,  240 => 81,  238 => 80,  234 => 79,  230 => 78,  226 => 77,  220 => 76,  215 => 74,  211 => 73,  208 => 72,  204 => 71,  199 => 68,  196 => 67,  192 => 65,  188 => 63,  184 => 61,  181 => 60,  179 => 59,  168 => 50,  165 => 49,  157 => 44,  152 => 42,  147 => 40,  141 => 39,  137 => 38,  132 => 35,  120 => 29,  115 => 27,  110 => 25,  106 => 24,  103 => 23,  99 => 22,  87 => 12,  84 => 11,  82 => 10,  79 => 9,  71 => 5,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  305 => 112,  298 => 110,  295 => 109,  286 => 103,  282 => 102,  276 => 99,  273 => 98,  270 => 97,  263 => 93,  254 => 87,  247 => 83,  242 => 81,  239 => 80,  236 => 79,  234 => 78,  230 => 77,  226 => 76,  222 => 75,  216 => 74,  211 => 72,  207 => 71,  204 => 70,  200 => 69,  195 => 66,  192 => 65,  188 => 63,  184 => 61,  181 => 60,  179 => 59,  168 => 50,  165 => 49,  157 => 44,  152 => 42,  147 => 40,  141 => 39,  137 => 38,  132 => 35,  120 => 29,  115 => 27,  110 => 25,  106 => 24,  103 => 23,  99 => 22,  87 => 12,  84 => 11,  82 => 10,  79 => 9,  71 => 5,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -378,10 +390,8 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
             <th scope=\"col\">Type produit</th>
             {% if app.user is not null %}
                 {% if is_granted(\"ROLE_USER\") and is_granted(\"ROLE_ADMIN\") %}
-                    <th scope=\"col\" colspan=\"3\">Opérations</th>
-                {% elseif is_granted(\"ROLE_USER\") %}
-                    <th scope=\"col\">Opérations</th>
-                {% elseif is_granted(\"ROLE_ADMIN\") %}
+                    <th scope=\"col\" colspan=\"4\">Opérations</th>
+                {% elseif is_granted(\"ROLE_USER\") or is_granted(\"ROLE_ADMIN\")  %}
                     <th scope=\"col\" colspan=\"2\">Opérations</th>
                 {% endif %}
             {% endif %}
@@ -403,6 +413,16 @@ class __TwigTemplate_10aa0cf9cd636ff4062735a21dd21e796c999aafe6e971b2b9ae93fb06e
                             <form action=\"{{ path('panier_addProduit', {'id': produit.id}) }}\" method=\"post\">
                                 <input type=\"submit\" class=\"btn btn-primary\" value=\"Ajouter au panier\">
                                 <input type=\"hidden\" value=\"{{ csrf_token(\"addProduitOnPanier\") }}\" name=\"token\">
+                            </form>
+                        </td>
+                        <td>
+                            <form action=\"{{ path('commentaire_add', {\"id\" : produit.id}) }}\" method=\"post\">
+                                <label>
+                                    Votre message
+                                    <input type=\"text\" name=\"message\">
+                                </label>
+                                <input type=\"submit\" class=\"btn btn-primary\" value=\"Ajouter au panier\">
+                                <input type=\"hidden\" value=\"{{ csrf_token(\"addCommentaire\" ~ produit.id) }}\" name=\"token\">
                             </form>
                         </td>
                     {% endif %}
