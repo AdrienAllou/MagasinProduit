@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use App\Entity\Produit;
 use App\Form\ProduitType;
+use App\Repository\CommentaireRepository;
 use App\Repository\PanierRepository;
 use App\Repository\ProduitRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
@@ -28,7 +29,6 @@ class ProduitController extends AbstractController
         //dd();
         $paniers = $panierRepository->findBy(["user" => $this->getUser()]);
         $isValide = true;
-        $erreur = [];
         foreach ($paniers as $panier){
             $produit = $produitRepository->find($panier->getId());
             if ($panier->getQuantite() > $produit->getStock()) $isValide = false;
@@ -37,6 +37,29 @@ class ProduitController extends AbstractController
             "produits" => $produitRepository->findBy(["disponible" => 1]),
             "paniers" => $paniers,
             "isValide" => $isValide
+        ]);
+    }
+
+    /**
+     * @Route("/{id}",name="index", methods={"GET"})
+     * @param ProduitRepository $produitRepository
+     * @return Response
+     */
+    public function getProduit($id, ProduitRepository $produitRepository, CommentaireRepository $commentaireRepository){
+        /**@var Produit $produit */
+        $produit = $produitRepository->find($id);
+
+        if ($produit == null)
+            throw $this->createNotFoundException("Le produit n'existe pas");
+        if ($produit->getDisponible() == false)
+            throw $this->createNotFoundException("Le produit n'es plus disponible");
+        //TODO a verif l'écriture du findBy
+        return $this->render(null,[
+            "produit" => $produit,
+            "commentaires" => $commentaireRepository->findBy(
+                ["produit" => $produit],
+                ["date_ecrit" => 'ASC']
+            ),
         ]);
     }
 
