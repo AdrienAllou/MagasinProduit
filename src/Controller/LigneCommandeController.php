@@ -64,6 +64,9 @@ class LigneCommandeController extends \Symfony\Bundle\FrameworkBundle\Controller
             $ligne_Commendande->setPrix($article->getQuantite() * $article->getProduit()->getPrix());
             $ligne_Commendande->setCommande($commande);
             $article->getProduit()->setStock($article->getProduit()->getStock() - $article->getQuantite());
+            if ($article->getProduit()->getStock() <= 0){
+                $article->getProduit()->setDisponible(false);
+            }
             $this->getDoctrine()->getManager()->persist($ligne_Commendande);
             $this->getDoctrine()->getManager()->flush();
             $this->getDoctrine()->getManager()->persist($article->getProduit());
