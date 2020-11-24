@@ -5,6 +5,8 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     image_produit_path : '%kernel.project_dir%/public/uploads/images/produits'
+    GOOGLE_ID : "1048583943036-tsvd2gpmq1pii9gi4bq3dc9di5h2td9r.apps.googleusercontent.com"
+    GOOGLE_SECRET : "ffg3yYyaS0nwxXm7s7fqfZzf"
 
 services:
     # default configuration for services in *this* file

@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\UserType;
+use Google_Client;
+use mysql_xdevapi\Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -20,16 +22,52 @@ class SecurityController extends AbstractController
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
-        // if ($this->getUser()) {
-        //     return $this->redirectToRoute('target_path');
-        // }
+        if ($this->getUser()) {
+            return $this->redirectToRoute('index');
+        }
+
+        $google = new Google_Client();
+
+        $google->setClientId($this->getParameter("GOOGLE_ID"));
+        $google->setClientSecret($this->getParameter("GOOGLE_SECRET"));
+        $google->setRedirectUri("http://127.0.0.1:8000/login");
+        $google->setScopes("email");
+
+        $auth = $google->createAuthUrl();
+
+        $code = isset($_GET["code"]) ? $_GET["code"] : null;
+
+        if ($code != null){
+            try {
+                $token = $google->fetchAccessTokenWithAuthCode($code);
+                $google->setAccessToken($token);
+            }catch (\Exception $e){
+            }
+
+            try {
+                $pay_load = $google->verifyIdToken();
+            }catch (Exception $e){
+            }
+        }
+        else{
+            $pay_load = null;
+        }
+
+        if ($pay_load != null){
+            $email = $pay_load["email"];
+            /*$user = $this->getDoctrine()->getRepository("App:User")->findOneBy([
+                "email" => $email
+            ]);*/
+            return $this->redirectToRoute("index");
+        }
 
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
+        return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error,
+            "lien" => $auth]);
     }
 
     /**
