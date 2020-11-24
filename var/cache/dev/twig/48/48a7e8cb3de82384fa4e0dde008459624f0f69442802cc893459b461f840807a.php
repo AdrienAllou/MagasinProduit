@@ -69,7 +69,10 @@ class __TwigTemplate_4615bd8ecace526083563986e9dccfd8ed39091821ef61ad75570258e1d
             // line 20
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_index");
             echo "\">Profil</a>
-                        <a class=\"dropdown-item\" href=\"#\">Paramètres</a>
+                        <a class=\"dropdown-item\" href=\"";
+            // line 21
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_parameter");
+            echo "\">Paramètres</a>
                         <div class=\"dropdown-divider\"></div>
                         <a class=\"nav-link active\" href=\"";
             // line 23
@@ -118,7 +121,7 @@ class __TwigTemplate_4615bd8ecace526083563986e9dccfd8ed39091821ef61ad75570258e1d
 
     public function getDebugInfo()
     {
-        return array (  98 => 34,  92 => 31,  86 => 28,  83 => 27,  76 => 23,  70 => 20,  63 => 15,  61 => 14,  54 => 10,  43 => 1,);
+        return array (  101 => 34,  95 => 31,  89 => 28,  86 => 27,  79 => 23,  74 => 21,  70 => 20,  63 => 15,  61 => 14,  54 => 10,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -143,7 +146,7 @@ class __TwigTemplate_4615bd8ecace526083563986e9dccfd8ed39091821ef61ad75570258e1d
                     </a>
                     <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
                         <a class=\"dropdown-item\" href=\"{{ path('user_index') }}\">Profil</a>
-                        <a class=\"dropdown-item\" href=\"#\">Paramètres</a>
+                        <a class=\"dropdown-item\" href=\"{{ path('user_parameter') }}\">Paramètres</a>
                         <div class=\"dropdown-divider\"></div>
                         <a class=\"nav-link active\" href=\"{{ path('app_logout') }}\">Deconnexion</a>
                     </div>

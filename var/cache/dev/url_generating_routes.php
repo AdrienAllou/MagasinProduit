@@ -21,6 +21,7 @@ return [
     'panier_delete_all' => [[], ['_controller' => 'App\\Controller\\PanierController::deleteAllOnPanier'], [], [['text', '/panier/delete/all']], [], []],
     'panier_delete_panier' => [['id'], ['_controller' => 'App\\Controller\\PanierController::deleteOnPanier'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/panier/delete/produit']], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\ProduitController::index'], [], [['text', '/']], [], []],
+    'id' => [['id'], ['_controller' => 'App\\Controller\\ProduitController::getProduit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/produit']], [], []],
     'add' => [[], ['_controller' => 'App\\Controller\\ProduitController::addProduit'], [], [['text', '/addProduit']], [], []],
     'delete' => [[], ['_controller' => 'App\\Controller\\ProduitController::delete'], [], [['text', '/delete']], [], []],
     'edit' => [['id'], ['_controller' => 'App\\Controller\\ProduitController::edit'], [], [['text', '/produit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/edit']], [], []],
@@ -35,6 +36,7 @@ return [
     'commentaire_add' => [['id'], ['_controller' => 'App\\Controller\\User\\CommentaireController::addCommentaire'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/commentaire/add']], [], []],
     'commentaire_delete' => [['id'], ['_controller' => 'App\\Controller\\User\\CommentaireController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/commentaire/delete']], [], []],
     'user_index' => [[], ['_controller' => 'App\\Controller\\User\\UserController::index'], [], [['text', '/user/']], [], []],
+    'user_parameter' => [[], ['_controller' => 'App\\Controller\\User\\UserController::parameterProfil'], [], [['text', '/user/parameter']], [], []],
     'admin_main' => [[], ['_controller' => 'App\\Controller\\admin\\AdminController::stat'], [], [['text', '/admin/']], [], []],
     'admin_index' => [[], ['_controller' => 'App\\Controller\\admin\\AdminController::stat'], [], [['text', '/admin/index']], [], []],
 ];
