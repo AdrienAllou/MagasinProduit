@@ -26,9 +26,6 @@
                         {% set totalPriceCommande = totalPriceCommande + lc.quantite * lc.prix %}
                         <td>{{ lc.quantite * lc.prix }}€</td>
                         <td>
-                            <form action="#" method="post">
-                                <input type="submit" class="btn btn-primary" value="Valider">
-                            </form>
                         </td>
                     </tr>
                 {% endfor %}
@@ -38,6 +35,11 @@
                 <td>Toutes les commandes</td>
                 <td colspan="3"></td>
                 <td>{{ totalPriceCommande }}€</td>
+                <td>
+                    <form action="{{ path('commande_valide_commande', {'id': commande.id}) }}" method="post">
+                        <input type="submit" class="btn btn-primary" value="Valider">
+                    </form>
+                </td>
             </tr>
             </tfoot>
         </table>
