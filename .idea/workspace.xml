@@ -19,11 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="074fb307-b094-4f7d-86ef-eb292289b3f6" name="Default Changelist" comment="Update projet">
-      <change afterPath="$PROJECT_DIR$/templates/admin/stats.html.twig" afterDir="false" />
+    <list default="true" id="074fb307-b094-4f7d-86ef-eb292289b3f6" name="Default Changelist" comment="Modification de la disponibiliter">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/commandes.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/commandes.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,6 +201,7 @@
       <workItem from="1606115423169" duration="1663000" />
       <workItem from="1606152019661" duration="271000" />
       <workItem from="1606205266881" duration="17291000" />
+      <workItem from="1606230194730" duration="1256000" />
     </task>
     <task id="LOCAL-00001" summary="Install projet">
       <created>1604676645931</created>
@@ -464,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606225089286</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Modification de la disponibiliter">
+      <created>1606230798963</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1606230798963</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,7 +488,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Commit null" />
     <MESSAGE value="AddDelete on ProduitController.php" />
     <MESSAGE value="Modification du header, Ajout du PanierController.php (juste ajout)" />
     <MESSAGE value="Ajout de la suppression" />
@@ -508,7 +512,8 @@
     <MESSAGE value="Ajout des champs utilisateur et gestion des danger" />
     <MESSAGE value="Modif des compte utilisateur" />
     <MESSAGE value="Update projet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update projet" />
+    <MESSAGE value="Modification de la disponibiliter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification de la disponibiliter" />
   </component>
   <component name="WindowStateProjectService">
     <state x="769" y="432" width="444" height="249" key="#Composer" timestamp="1604676211710">
