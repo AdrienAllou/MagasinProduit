@@ -1,0 +1,37 @@
+{% extends "base.html.twig" %}
+
+{% block main %}
+    <h1>Tous les commentaires</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Commentaire</th>
+            <th>Sur le produit</th>
+            <th>Date écrit</th>
+            {% if(is_granted("ROLE_ADMIN")) %}
+                <th>Utilisateur</th>
+                <th>Operation</th>
+            {% endif %}
+        </tr>
+        </thead>
+        <tbody>
+        {% for commentaire in commentaires %}
+            <tr>
+                <td>{{ commentaire.message }}</td>
+                <td>{{ commentaire.produit.nom }}</td>
+                <td>{{ commentaire.dateEcrit | date("d/m/Y") }}</td>
+                {% if(is_granted("ROLE_ADMIN")) %}
+                    <td>{{ commentaire.auteur.username }}</td>
+                    <td>
+                        <form action="{{ path('commentaire_delete', {'id': commentaire.id}) }}" method="post">
+                            <input type="submit" value="Delete" class="btn btn-danger">
+                            <input type="hidden" value="{{ csrf_token("deleteCommentaire" ~ commentaire.id) }}" name="token">
+                            <input type="hidden" value="DELETE" name="_method">
+                        </form>
+                    </td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

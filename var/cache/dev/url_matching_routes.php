@@ -25,6 +25,7 @@ return [
         '/commande/index' => [[['_route' => 'commande_index', '_controller' => 'App\\Controller\\User\\CommandeController::index'], null, ['GET' => 0], null, false, false, null]],
         '/commande/user' => [[['_route' => 'commande_find_by_user', '_controller' => 'App\\Controller\\User\\CommandeController::indexForUser'], null, ['GET' => 0], null, false, false, null]],
         '/commentaire' => [[['_route' => 'commentaire_index', '_controller' => 'App\\Controller\\User\\CommentaireController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/commentaire/user' => [[['_route' => 'commentaire_index_user', '_controller' => 'App\\Controller\\User\\CommentaireController::indexUser'], null, ['GET' => 0], null, false, false, null]],
         '/user' => [[['_route' => 'user_index', '_controller' => 'App\\Controller\\User\\UserController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin' => [[['_route' => 'admin_main', '_controller' => 'App\\Controller\\admin\\AdminController::stat'], null, ['GET' => 0], null, true, false, null]],
         '/admin/index' => [[['_route' => 'admin_index', '_controller' => 'App\\Controller\\admin\\AdminController::stat'], null, ['GET' => 0], null, false, false, null]],
@@ -53,7 +54,10 @@ return [
                 .'|/edit/([^/]++)/produit(*:262)'
                 .'|/comm(?'
                     .'|ande/valide/([^/]++)(*:298)'
-                    .'|entaire/add/([^/]++)(*:326)'
+                    .'|entaire/(?'
+                        .'|add/([^/]++)(*:329)'
+                        .'|delete/([^/]++)(*:352)'
+                    .')'
                 .')'
             .')/?$}sDu',
     ],
@@ -69,8 +73,9 @@ return [
         231 => [[['_route' => 'panier_delete_panier', '_controller' => 'App\\Controller\\PanierController::deleteOnPanier'], ['id'], ['DELETE' => 0], null, false, true, null]],
         262 => [[['_route' => 'edit', '_controller' => 'App\\Controller\\ProduitController::edit'], ['id'], ['GET' => 0], null, false, false, null]],
         298 => [[['_route' => 'commande_valide_commande', '_controller' => 'App\\Controller\\User\\CommandeController::valideCommande'], ['id'], ['POST' => 0], null, false, true, null]],
-        326 => [
-            [['_route' => 'commentaire_add', '_controller' => 'App\\Controller\\User\\CommentaireController::addCommentaire'], ['id'], ['POST' => 0], null, false, true, null],
+        329 => [[['_route' => 'commentaire_add', '_controller' => 'App\\Controller\\User\\CommentaireController::addCommentaire'], ['id'], ['POST' => 0], null, false, true, null]],
+        352 => [
+            [['_route' => 'commentaire_delete', '_controller' => 'App\\Controller\\User\\CommentaireController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

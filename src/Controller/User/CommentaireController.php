@@ -17,15 +17,29 @@ use Symfony\Component\Routing\Annotation\Route;
  * Class CommentaireController
  * @package App\Controller
  * @Route("/commentaire",name="commentaire_")
+ * @IsGranted ("ROLE_USER")
  */
 class CommentaireController extends \Symfony\Bundle\FrameworkBundle\Controller\AbstractController
 {
 
     /**
      * @Route("/",name="index", methods={"GET"})
+     * @IsGranted ("ROLE_ADMIN")
      */
     public function index(CommentaireRepository $commentaireRepository){
-        return $this->render("commentaire/index.html.twig", ["commentaires" => $commentaireRepository->findAll()]);
+        return $this->render("commentaire/index.html.twig", [
+            "commentaires" => $commentaireRepository->findBy([],["auteur" => "ASC"])
+        ]);
+    }
+
+    /**
+     * @Route("/user",name="index_user", methods={"GET"})
+     * @IsGranted ("ROLE_USER")
+     */
+    public function indexUser(CommentaireRepository $commentaireRepository){
+        return $this->render("commentaire/index.html.twig", [
+            "commentaires" => $commentaireRepository->findBy(["auteur" => $this->getUser()])
+        ]);
     }
 
     /**
@@ -55,4 +69,23 @@ class CommentaireController extends \Symfony\Bundle\FrameworkBundle\Controller\A
         $this->getDoctrine()->getManager()->flush();
         return $this->redirectToRoute("index");
     }
+
+    /**
+     * @Route("/delete/{id}",name="delete", methods={"DELETE"})
+     * @IsGranted ("ROLE_ADMIN")
+     */
+    public function delete($id, Request $request, CommentaireRepository $commentaireRepository){
+        if (!$this->isCsrfTokenValid("deleteCommentaire" . $id, $request->request->get("token")))
+            throw $this->createAccessDeniedException("Csrf invalide");
+
+        $commentaire = $commentaireRepository->find($id);
+        if ($commentaire == null)
+            throw $this->createNotFoundException("Le produit n'existe pas");
+
+        $this->getDoctrine()->getManager()->remove($commentaire);
+        $this->getDoctrine()->getManager()->flush();
+
+        return $this->redirectToRoute("commentaire_index");
+    }
+
 }
