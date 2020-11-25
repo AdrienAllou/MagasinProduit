@@ -4,8 +4,8 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\UserType;
+use Exception;
 use Google_Client;
-use mysql_xdevapi\Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -57,9 +57,10 @@ class SecurityController extends AbstractController
 
         if ($pay_load != null){
             $email = $pay_load["email"];
-            /*$user = $this->getDoctrine()->getRepository("App:User")->findOneBy([
+            $user = $this->getDoctrine()->getRepository("App:User")->findOneBy([
                 "email" => $email
-            ]);*/
+            ]);
+            //$this->get("security.authenticator.json_login")->authenticate()
             return $this->redirectToRoute("index");
         }
 
@@ -94,7 +95,7 @@ class SecurityController extends AbstractController
                     ->setFrom('adrien.allou.dev@gmail.com')
                     ->setTo($user->getEmail())
                     ->setBody(
-                        $this->render("email/inscription.html.twig", ["user" => $user]),
+                        $this->renderView("email/inscription.html.twig", ["user" => $user]),
                         'text/html'
                     )
                 ;
