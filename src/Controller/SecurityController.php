@@ -76,9 +76,10 @@ class SecurityController extends AbstractController
      * @Route("/inscription",name="app_inscription")
      * @param Request $request
      * @param UserPasswordEncoderInterface $passwordEncoder
+     * @param \Swift_Mailer $mailer
      * @return Response
      */
-    public function inscription(Request $request, UserPasswordEncoderInterface $passwordEncoder, MailerInterface $mailer){
+    public function inscription(Request $request, UserPasswordEncoderInterface $passwordEncoder, \Swift_Mailer $mailer){
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
@@ -86,23 +87,24 @@ class SecurityController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()){
             $user->setRoles(["ROLE_USER"]);
             $user->setPassword($passwordEncoder->encodePassword($user, $user->getPassword()));
-            $this->getDoctrine()->getManager()->persist($user);
-            $this->getDoctrine()->getManager()->flush();
-            /*
-            $email = (new Email())
-                ->from('adrien.allou.dev@gmail.com')
-                ->to('adrienalloug@gmail.com')
-                //->cc('cc@example.com')
-                //->bcc('bcc@example.com')
-                //->replyTo('fabien@example.com')
-                //->priority(Email::PRIORITY_HIGH)
-                ->subject('Time for Symfony Mailer!')
-                ->text('Sending emails is fun again!')
-                ->html('<p>See Twig integration for better HTML integration!</p>');
+            try {
+                $this->getDoctrine()->getManager()->persist($user);
+                $this->getDoctrine()->getManager()->flush();
+                $message = (new \Swift_Message('Incription !'))
+                    ->setFrom('adrien.allou.dev@gmail.com')
+                    ->setTo($user->getEmail())
+                    ->setBody(
+                        $this->render("email/inscription.html.twig", ["user" => $user]),
+                        'text/html'
+                    )
+                ;
 
-            $mailer->send($email);
-            */
-            return $this->redirectToRoute("index");
+                $mailer->send($message);
+                return $this->redirectToRoute("index");
+            }catch (\Exception $e){
+                return $this->render("security/inscription.html.twig", ["form" => $form->createView()]);
+            }
+
         }
 
         return $this->render("security/inscription.html.twig", ["form" => $form->createView()]);
