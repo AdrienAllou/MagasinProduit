@@ -9,6 +9,8 @@ use mysql_xdevapi\Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
@@ -76,7 +78,7 @@ class SecurityController extends AbstractController
      * @param UserPasswordEncoderInterface $passwordEncoder
      * @return Response
      */
-    public function inscription(Request $request, UserPasswordEncoderInterface $passwordEncoder){
+    public function inscription(Request $request, UserPasswordEncoderInterface $passwordEncoder, MailerInterface $mailer){
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
@@ -86,6 +88,20 @@ class SecurityController extends AbstractController
             $user->setPassword($passwordEncoder->encodePassword($user, $user->getPassword()));
             $this->getDoctrine()->getManager()->persist($user);
             $this->getDoctrine()->getManager()->flush();
+            /*
+            $email = (new Email())
+                ->from('adrien.allou.dev@gmail.com')
+                ->to('adrienalloug@gmail.com')
+                //->cc('cc@example.com')
+                //->bcc('bcc@example.com')
+                //->replyTo('fabien@example.com')
+                //->priority(Email::PRIORITY_HIGH)
+                ->subject('Time for Symfony Mailer!')
+                ->text('Sending emails is fun again!')
+                ->html('<p>See Twig integration for better HTML integration!</p>');
+
+            $mailer->send($email);
+            */
             return $this->redirectToRoute("index");
         }
 
