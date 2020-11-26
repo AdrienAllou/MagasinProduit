@@ -3,7 +3,7 @@
 {% block main %}
     {% if app.user is not null and is_granted("ROLE_ADMIN") %}
         <a href="{{ path('add') }}" style="color: white">
-            <button class="btn btn-primary">Ajouter</button>
+            <button class="btn btn-primary" style="margin-bottom: 15px; margin-top: 15px">Ajouter un produit</button>
         </a>
     {% endif %}
     <!--A refaire-->
@@ -57,13 +57,16 @@
             <th scope="col">Date de lancement</th>
             <th scope="col">Type produit</th>
             {% if app.user is not null %}
-                {% if is_granted("ROLE_USER") and is_granted("ROLE_ADMIN") %}
+                {% if is_granted("ROLE_USER") and not is_granted("ROLE_ADMIN") %}
                     <th scope="col">Panier</th>
                     <th scope="col" colspan="4">Commentaires</th>
-                {% elseif is_granted("ROLE_USER") or is_granted("ROLE_ADMIN")  %}
+                {% elseif is_granted("ROLE_USER") and not is_granted("ROLE_ADMIN")  %}
                     <th scope="col">Panier</th>
                     <th scope="col" colspan="4">Commentaires</th>
                 {% endif %}
+                {% if is_granted("ROLE_ADMIN") %}
+                    <th scope="col" colspan="2">Opérations</th>
+                    {% endif %}
             {% endif %}
         </tr>
         </thead>
@@ -78,7 +81,7 @@
                 <td>{{ produit.dateLancement | date("d/m/Y")}}</td>
                 <td>{{ produit.typeProduit.libelle }}</td>
                 {% if app.user is not null %}
-                    {% if is_granted("ROLE_USER") %}
+                    {% if is_granted("ROLE_USER") and not is_granted("ROLE_ADMIN") %}
                         <td>
                             <form action="{{ path('panier_addProduit', {'id': produit.id}) }}" method="post">
                                 <input type="submit" class="btn btn-primary" value="Ajouter au panier">
@@ -86,7 +89,7 @@
                             </form>
                         </td>
                         <td>
-                            <a href="{{ path('commentaire_add', {id: produit.id}) }}" class="btn btn-primary">Ajouter un commentaire</a>
+                            <a href="{{ path('commentaire_add', {id: produit.id}) }}" class="btn btn-warning">Ajouter un commentaire</a>
                         </td>
                     {% endif %}
                     {% if is_granted("ROLE_ADMIN") %}
@@ -97,7 +100,7 @@
                             <form action="{{ path('delete') }}" method="POST" style="display:inline">
                                 <input type="hidden" name="id" value="{{ produit.id }}">
                                 <input type="hidden" name="_method" value="DELETE">
-                                <button type="submit" class="btn btn-warning" onclick="if(!confirm('Êtes-vous sûr ?')) { return false; }">Supprimer</button>
+                                <button type="submit" class="btn btn-danger" onclick="if(!confirm('Êtes-vous sûr ?')) { return false; }">Supprimer</button>
                             </form>
                         </td>
                     {% endif %}
