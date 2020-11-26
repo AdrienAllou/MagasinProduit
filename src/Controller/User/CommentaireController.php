@@ -54,8 +54,8 @@ class CommentaireController extends \Symfony\Bundle\FrameworkBundle\Controller\A
      */
     public function addCommentaire($id, Request $request, ProduitRepository $produitRepository, UserRepository $userRepository){
 
-        //if(!$this->isCsrfTokenValid("addCommentaire" . $id, $request->request->get("token")))
-        //    throw $this->createAccessDeniedException("CSRF invalide");
+        if(!$this->isCsrfTokenValid("addCommentaire" . $id, $request->request->get("token")))
+            throw $this->createAccessDeniedException("CSRF invalide");
 
         $produit = $produitRepository->find($id);
         if ($produit == null)

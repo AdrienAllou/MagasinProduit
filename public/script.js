@@ -1,9 +1,12 @@
-let togg1 = document.getElementById("togg1");
-let d1 = document.getElementById("d1");
-togg1.addEventListener("click", () => {
-    if(getComputedStyle(d1).display !== "none"){
-        d1.style.display = "none";
-    } else {
-        d1.style.display = "block";
-    }
-});
+let toutLesBoutton = document.getElementsByClassName("js-button");
+let toutesLesCommande = document.getElementsByClassName("js-commande");
+
+for (let i = 0; i < toutesLesCommande.length; i++){
+    toutLesBoutton[i].addEventListener("click", () => {
+        if(getComputedStyle(toutesLesCommande[i]).display !== "none"){
+            toutesLesCommande[i].style.display = "none";
+        } else {
+            toutesLesCommande[i].style.display = "block";
+        }
+    });
+}
