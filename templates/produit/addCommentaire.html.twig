@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block main %}
+    <article>
+        <h2>{{ produit.nom }}</h2>
+        <div class="content">
+            <img src={{ produit.photo }}  alt="Photo">
+
+            {# <hr> fait une ligne grise horizontale #}
+            <hr>
+        </div>
+    </article>
+
+    {{ form_start(form) }}
+    {{ form(form) }}
+    {{ form_end(form) }}
+{% endblock %}

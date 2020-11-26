@@ -12,9 +12,11 @@ $missingExtensions = array();
 extension_loaded('ctype') || $missingExtensions[] = 'ctype';
 extension_loaded('filter') || $missingExtensions[] = 'filter';
 extension_loaded('iconv') || $missingExtensions[] = 'iconv';
+extension_loaded('json') || $missingExtensions[] = 'json';
 extension_loaded('pdo') || $missingExtensions[] = 'pdo';
 extension_loaded('tokenizer') || $missingExtensions[] = 'tokenizer';
 extension_loaded('xml') || $missingExtensions[] = 'xml';
+extension_loaded('zip') || $missingExtensions[] = 'zip';
 
 if ($missingExtensions) {
     $issues[] = 'Your Composer dependencies require the following PHP extensions to be installed: ' . implode(', ', $missingExtensions);

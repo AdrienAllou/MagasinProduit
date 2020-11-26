@@ -10,12 +10,12 @@
     {% if app.user is not null %}
         {% if paniers is not empty %}
             <h1>Panier</h1>
-            <table>
-                <thead>
+            <table class="table">
+                <thead class="thead-dark">
                 <tr>
-                    <th>Nom</th>
-                    <th>Quantité</th>
-                    <th>Supprimer</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Quantité</th>
+                    <th scope="col">Opérations</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -35,11 +35,11 @@
                 </tbody>
             </table>
             <div>
-                <form action="{{ path('ligne_commande_add') }}" method="post">
-                    <input type="submit" class="btn btn-success" value="Convertion" {% if not isValide %}disabled{% endif %}>
+                <form action="{{ path('ligne_commande_add') }}" method="post" style="padding-bottom: 15px">
+                    <input type="submit" class="btn btn-success" value="Valider le panier" {% if not isValide %}disabled{% endif %}>
                     <input type="hidden" value="{{ csrf_token("convertionOnCommande") }}" name="token">
                 </form>
-                <form action="{{ path('panier_delete_all') }}" method="post">
+                <form action="{{ path('panier_delete_all') }}" method="post" style="padding-bottom: 15px">
                     <input type="submit" class="btn btn-danger" value="Vider le panier">
                     <input type="hidden" value="{{ csrf_token("deleteAllProduitOnPanier") }}" name="token">
                     <input type="hidden" value="DELETE" name="_method">
@@ -58,9 +58,11 @@
             <th scope="col">Type produit</th>
             {% if app.user is not null %}
                 {% if is_granted("ROLE_USER") and is_granted("ROLE_ADMIN") %}
-                    <th scope="col" colspan="4">Opérations</th>
+                    <th scope="col">Panier</th>
+                    <th scope="col" colspan="4">Commentaires</th>
                 {% elseif is_granted("ROLE_USER") or is_granted("ROLE_ADMIN")  %}
-                    <th scope="col" colspan="2">Opérations</th>
+                    <th scope="col">Panier</th>
+                    <th scope="col" colspan="4">Commentaires</th>
                 {% endif %}
             {% endif %}
         </tr>
@@ -84,14 +86,7 @@
                             </form>
                         </td>
                         <td>
-                            <form action="{{ path('commentaire_add', {"id" : produit.id}) }}" method="post">
-                                <label>
-                                    Votre message
-                                    <input type="text" name="message">
-                                </label>
-                                <input type="submit" class="btn btn-primary" value="Publier votre commentaire">
-                                <input type="hidden" value="{{ csrf_token("addCommentaire" ~ produit.id) }}" name="token">
-                            </form>
+                            <a href="{{ path('commentaire_add', {id: produit.id}) }}" class="btn btn-primary">Ajouter un commentaire</a>
                         </td>
                     {% endif %}
                     {% if is_granted("ROLE_ADMIN") %}

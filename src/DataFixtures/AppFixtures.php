@@ -100,9 +100,9 @@ class AppFixtures extends Fixture
 
     public function user(ObjectManager $manager){
         $datas = [
-            ["username" => "admin", "mdp" => "admin", "role" => ["ROLE_ADMIN"]],
-            ["username" => "user1", "mdp" => "user1", "role" => ["ROLE_USER"]],
-            ["username" => "user2", "mdp" => "user2", "role" => ["ROLE_USER"]],
+            ["username" => "admin", "mdp" => "admin", "role" => ["ROLE_ADMIN"], "adresse" => "5", "ville" => "a", "email" => "a@gmail.com", "codePostal" => "90000"],
+            ["username" => "user1", "mdp" => "user1", "role" => ["ROLE_USER"], "adresse" => "6", "ville" => "b", "email" => "b@gmail.com", "codePostal" => "98000"],
+            ["username" => "user2", "mdp" => "user2", "role" => ["ROLE_USER"], "adresse" => "7", "ville" => "c", "email" => "c@gmail.com", "codePostal" => "25000"],
         ];
 
         foreach ($datas as $data){
@@ -110,6 +110,10 @@ class AppFixtures extends Fixture
             $user->setUsername($data["username"]);
             $user->setRoles($data["role"]);
             $user->setPassword($this->passwordEncoder->encodePassword($user,$data["mdp"]));
+            $user->setAdresse($data["adresse"]);
+            $user->setEmail($data["email"]);
+            $user->setVille($data["ville"]);
+            $user->setCodePostal($data["codePostal"]);
             $manager->persist($user);
             $manager->flush();
         }

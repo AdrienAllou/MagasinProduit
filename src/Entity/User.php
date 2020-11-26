@@ -279,7 +279,7 @@ class User implements UserInterface
 
     public function removeCommantaire(Commentaire $commantaire): self
     {
-        if ($this->commantaires->removeElement($commantaire)) {
+        if ($this->commentaires->removeElement($commantaire)) {
             // set the owning side to null (unless already changed)
             if ($commantaire->getAuteur() === $this) {
                 $commantaire->setAuteur(null);

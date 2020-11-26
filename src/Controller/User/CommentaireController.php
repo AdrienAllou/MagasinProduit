@@ -5,6 +5,7 @@ namespace App\Controller\User;
 
 
 use App\Entity\Commentaire;
+use App\Form\CommentaireType;
 use App\Repository\CommentaireRepository;
 use App\Repository\ProduitRepository;
 use App\Repository\UserRepository;
@@ -43,32 +44,40 @@ class CommentaireController extends \Symfony\Bundle\FrameworkBundle\Controller\A
     }
 
     /**
-     * @Route("/add/{id}", name="add", methods={"POST"})
+     * @Route("/add/{id}", name="add", methods={"GET", "POST"})
      * @param $id
      * @param Request $request
      * @param ProduitRepository $produitRepository
      * @param UserRepository $userRepository
-     * @return RedirectResponse
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function addCommentaire($id, Request $request, ProduitRepository $produitRepository, UserRepository $userRepository){
 
-        if(!$this->isCsrfTokenValid("addCommentaire" . $id, $request->request->get("token")))
-            throw $this->createAccessDeniedException("CSRF invalide");
+        //if(!$this->isCsrfTokenValid("addCommentaire" . $id, $request->request->get("token")))
+        //    throw $this->createAccessDeniedException("CSRF invalide");
 
         $produit = $produitRepository->find($id);
         if ($produit == null)
-            throw $this->createNotFoundException("Pas de produit trouver");
+            throw $this->createNotFoundException("Pas de produit trouvé");
 
         $commentaire = new Commentaire();
-        $commentaire->setMessage($request->request->get("message"));
         $commentaire->setProduit($produit);
         $commentaire->setAuteur($userRepository->findOneBy(["username" => $this->getUser()->getUsername()]));
         $commentaire->setDateEcrit(new \DateTime());
+        $form = $this->createForm(CommentaireType::class,$commentaire);
+        $form->handleRequest($request);
 
-        $this->getDoctrine()->getManager()->persist($commentaire);
-        $this->getDoctrine()->getManager()->flush();
-        return $this->redirectToRoute("index");
+        if ($form->isSubmitted() && $form->isValid()){
+            $this->getDoctrine()->getManager()->persist($commentaire);
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute("index");
+        }
+
+        return $this->render("produit/addCommentaire.html.twig", ["form" => $form->createView(), 'produit' => $produit]);
     }
+
+
 
     /**
      * @Route("/delete/{id}",name="delete", methods={"DELETE"})
