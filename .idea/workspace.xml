@@ -24,6 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="074fb307-b094-4f7d-86ef-eb292289b3f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +246,8 @@
       <workItem from="1606296880511" duration="10480000" />
       <workItem from="1606313670932" duration="1557000" />
       <workItem from="1606360169951" duration="9442000" />
-      <workItem from="1606369811363" duration="2787000" />
+      <workItem from="1606369811363" duration="2904000" />
+      <workItem from="1606374931677" duration="334000" />
     </task>
     <task id="LOCAL-00001" summary="Install projet">
       <created>1604676645931</created>
@@ -562,7 +564,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606372437350</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="br">
+      <created>1606372608150</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1606372608150</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -637,10 +646,10 @@
     </state>
     <state x="546" y="222" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606365174612" />
     <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1606214106941" />
-    <state x="368" y="11" key="CommitChangelistDialog2" timestamp="1606372436377">
+    <state x="368" y="11" key="CommitChangelistDialog2" timestamp="1606372607448">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="368" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606372436377" />
+    <state x="368" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606372607448" />
     <state x="731" y="468" width="520" height="178" key="ComposerInitDialogKey" timestamp="1606300079358">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -693,10 +702,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="928" y="501" width="136" height="111" key="com.intellij.database.run.ParametersPanel.Standalone/72.27.1848.1053@72.27.1848.1053" timestamp="1604765369790" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1606369813283">
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1606375649383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1606369813283" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1606375649383" />
     <state x="610" y="182" width="762" height="749" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606213826573">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
