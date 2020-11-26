@@ -3,13 +3,17 @@
 
 namespace App\Controller;
 
+use App\Entity\Commentaire;
 use App\Entity\Produit;
+use App\Form\CommentaireType;
 use App\Form\ProduitType;
 use App\Repository\CommentaireRepository;
 use App\Repository\PanierRepository;
 use App\Repository\ProduitRepository;
+use App\Repository\UserRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -29,10 +33,8 @@ class ProduitController extends AbstractController
         //dd();
         $paniers = $panierRepository->findBy(["user" => $this->getUser()]);
         $isValide = true;
-        foreach ($paniers as $panier){
-            $produit = $produitRepository->find($panier->getId());
-            //if ($panier->getQuantite() > $produit->getStock()) $isValide = false;
-        }
+        foreach ($paniers as $panier)
+            if ($panier->getQuantite() > $panier->getProduit()->getStock()) $isValide = false;
         return $this->render("produit/index.html.twig", [
             "produits" => $produitRepository->findBy(["disponible" => 1]),
             "paniers" => $paniers,
@@ -45,7 +47,8 @@ class ProduitController extends AbstractController
      * @param ProduitRepository $produitRepository
      * @return Response
      */
-    public function getProduit($id, ProduitRepository $produitRepository, CommentaireRepository $commentaireRepository){
+    public function getProduit($id, ProduitRepository $produitRepository, CommentaireRepository $commentaireRepository,
+        UserRepository $userRepository){
         /**@var Produit $produit */
         $produit = $produitRepository->find($id);
 
@@ -53,12 +56,32 @@ class ProduitController extends AbstractController
             throw $this->createNotFoundException("Le produit n'existe pas");
         if ($produit->getDisponible() == false)
             throw $this->createNotFoundException("Le produit n'es plus disponible");
-        //TODO a verif l'écriture du findBy
-        return $this->render(null,[
+
+        $user = $userRepository->findOneBy(["username" => $this->getUser()->getUsername()]);
+
+        $commentaire = new Commentaire();
+        $commentaire->setProduit($produit);
+        $commentaire->setAuteur($user);
+        $commentaire->setDateEcrit(new \DateTime());
+        $form = $this->createForm(CommentaireType::class,$commentaire,[
+            "action" => $this->generateUrl("commentaire_add", ["id" => $id])
+        ]);
+
+        $isAcheter = false;
+        foreach($user->getCommandes() as $commande)
+            foreach ($commande->getLigneCommandes() as $lc)
+                if ($lc->getProduit()->getId() == $id){
+                    $isAcheter = true;
+                    break;
+                }
+
+        return $this->render("produit/afficheProduit.html.twig",[
+            "form" => $form->createView(),
+            "isAcheter" => $isAcheter,
             "produit" => $produit,
             "commentaires" => $commentaireRepository->findBy(
-                ["produit" => $produit],
-                ["date_ecrit" => 'ASC']
+                ["Produit" => $produit],
+                ["DateEcrit" => 'ASC']
             ),
         ]);
     }

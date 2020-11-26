@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block main %}
+    <article>
+        <h2>{{ produit.nom }}</h2>
+        <div class="content">
+            <img src="{{ produit.photo }}"  alt="Photo">
+            <hr>
+        </div>
+    </article>
+    {% for commentaire in commentaires %}
+        <div>
+            {{ commentaire.auteur.username }}
+            <br>
+            {{ commentaire.message | raw }}
+            {{ commentaire.dateEcrit | date("d/m/Y") }}
+        </div>
+        <br>
+    {% endfor %}
+    {% if (isAcheter) %}
+        {{ form_start(form) }}
+        {{ form_rest(form) }}
+        <input type="hidden" value="{{ csrf_token("addCommentaire" ~ produit.id) }}" name="token">
+        {{ form_end(form) }}
+    {% else %}
+    <div style="color: red">Vous devez d'abord acheter le produit</div>
+    {% endif %}
+{% endblock %}
+

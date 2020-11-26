@@ -59,10 +59,10 @@
             {% if app.user is not null %}
                 {% if is_granted("ROLE_USER") and not is_granted("ROLE_ADMIN") %}
                     <th scope="col">Panier</th>
-                    <th scope="col" colspan="4">Commentaires</th>
+                    <th scope="col" colspan="4">Information produit</th>
                 {% elseif is_granted("ROLE_USER") and not is_granted("ROLE_ADMIN")  %}
                     <th scope="col">Panier</th>
-                    <th scope="col" colspan="4">Commentaires</th>
+                    <th scope="col" colspan="4">Information produit</th>
                 {% endif %}
                 {% if is_granted("ROLE_ADMIN") %}
                     <th scope="col" colspan="2">Opérations</th>
@@ -89,7 +89,8 @@
                             </form>
                         </td>
                         <td>
-                            <a href="{{ path('commentaire_add', {id: produit.id}) }}" class="btn btn-warning">Ajouter un commentaire</a>
+
+                            <a href="{{ path('id', {id: produit.id}) }}" class="btn btn-warning">Voir le produit</a>
                         </td>
                     {% endif %}
                     {% if is_granted("ROLE_ADMIN") %}

@@ -17,7 +17,7 @@
         <tbody>
         {% for commentaire in commentaires %}
             <tr>
-                <td>{{ commentaire.message }}</td>
+                <td>{{ commentaire.message | raw }}</td>
                 <td>{{ commentaire.produit.nom }}</td>
                 <td>{{ commentaire.dateEcrit | date("d/m/Y") }}</td>
                 {% if(is_granted("ROLE_ADMIN")) %}

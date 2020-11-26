@@ -12,6 +12,7 @@ use App\Repository\UserRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -49,7 +50,7 @@ class CommentaireController extends \Symfony\Bundle\FrameworkBundle\Controller\A
      * @param Request $request
      * @param ProduitRepository $produitRepository
      * @param UserRepository $userRepository
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @return Response
      */
     public function addCommentaire($id, Request $request, ProduitRepository $produitRepository, UserRepository $userRepository){
 
