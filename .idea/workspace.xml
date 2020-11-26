@@ -23,9 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="074fb307-b094-4f7d-86ef-eb292289b3f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/produit/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/produit/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/user/commandes.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/commandes.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
     </list>
@@ -249,6 +248,7 @@
       <workItem from="1606296880511" duration="10480000" />
       <workItem from="1606313670932" duration="1557000" />
       <workItem from="1606360169951" duration="9442000" />
+      <workItem from="1606369811363" duration="2607000" />
     </task>
     <task id="LOCAL-00001" summary="Install projet">
       <created>1604676645931</created>
@@ -551,7 +551,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606368177408</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="br">
+      <created>1606369859049</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1606369859049</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,7 +579,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit var" />
     <MESSAGE value="UserMenu" />
     <MESSAGE value="Affichage des commandes" />
     <MESSAGE value="Corrige bug img" />
@@ -597,7 +603,8 @@
     <MESSAGE value="Prepare Mailer" />
     <MESSAGE value="Envoie de mail lors de l'inscription" />
     <MESSAGE value="Commentaires" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commentaires" />
+    <MESSAGE value="br" />
+    <option name="LAST_COMMIT_MESSAGE" value="br" />
   </component>
   <component name="WindowStateProjectService">
     <state x="769" y="432" width="444" height="249" key="#Composer" timestamp="1604676211710">
@@ -626,10 +633,10 @@
     </state>
     <state x="546" y="222" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606365174612" />
     <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1606214106941" />
-    <state x="368" y="11" key="CommitChangelistDialog2" timestamp="1606368169048">
+    <state x="368" y="11" key="CommitChangelistDialog2" timestamp="1606369856997">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="368" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606368169048" />
+    <state x="368" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1606369856997" />
     <state x="731" y="468" width="520" height="178" key="ComposerInitDialogKey" timestamp="1606300079358">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>

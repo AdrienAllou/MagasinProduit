@@ -1,11 +1,19 @@
 {% extends 'base.html.twig' %}
 
+{% block javascripts %}
+    <script src="/public/script.js"></script>
+{% endblock %}
+
 {% block main %}
-    <a href="{{ path('user_index') }}"><button class="btn btn-primary" style="margin-top: 15px">Retour</button></a>
+
+
+
+    <a href="{{ path('user_index') }}"><button class="btn btn-primary" style="margin-top: 15px; margin-bottom: 15px">Retour</button></a>
     {% for commande in commandes %}
         {% set totalPriceCommande = 0 %}
-        <h1 style="text-align: center">Commande n°{{ commande.id }}</h1>
-        <table class="table">
+        <h1 style="text-align: center"><button id="togg1", style="display:block;width:100%;height:100%;">Commande n°{{ commande.id }}</button></h1>
+
+        <table id="d1" class="table">
             <thead class="thead-dark">
             <tr>
                 <th>Nom produit</th>
