@@ -36,7 +36,7 @@ class ProduitController extends AbstractController
         foreach ($paniers as $panier)
             if ($panier->getQuantite() > $panier->getProduit()->getStock()) $isValide = false;
         return $this->render("produit/index.html.twig", [
-            "produits" => $produitRepository->findBy(["disponible" => 1]),
+            "produits" => $produitRepository->findAll(),
             "paniers" => $paniers,
             "isValide" => $isValide
         ]);

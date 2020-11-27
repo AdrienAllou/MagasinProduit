@@ -22,12 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="074fb307-b094-4f7d-86ef-eb292289b3f6" name="Default Changelist" comment="Ajout et rectification de bug">
+    <list default="true" id="074fb307-b094-4f7d-86ef-eb292289b3f6" name="Default Changelist" comment="Correction js">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/User/CommentaireController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/User/CommentaireController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user/commandes.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/commandes.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProduitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProduitController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/User/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/produit/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/produit/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -582,7 +584,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606385069716</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Correction js">
+      <created>1606386496998</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1606386496998</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,7 +611,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Affichage des commandes" />
     <MESSAGE value="Corrige bug img" />
     <MESSAGE value="Ajouter des LigneCommandeController.php" />
     <MESSAGE value="Fin de l'ajout de produit" />
@@ -627,7 +635,8 @@
     <MESSAGE value="Commentaires" />
     <MESSAGE value="br" />
     <MESSAGE value="Ajout et rectification de bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout et rectification de bug" />
+    <MESSAGE value="Correction js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correction js" />
   </component>
   <component name="WindowStateProjectService">
     <state x="769" y="432" width="444" height="249" key="#Composer" timestamp="1604676211710">
@@ -651,11 +660,11 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="567" y="164" width="838" height="793" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1606205548474" />
-    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606383942874">
+    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606390415920">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="546" y="222" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606365174612" />
-    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1606383942874" />
+    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1606390415920" />
     <state x="368" y="11" key="CommitChangelistDialog2" timestamp="1606372607448">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -700,10 +709,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1604746168222" />
-    <state x="309" y="318" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606385073669">
+    <state x="309" y="318" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1606386506309">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="309" y="318" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1606385073669" />
+    <state x="309" y="318" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1606386506309" />
     <state x="749" y="371" width="484" height="368" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1606209904181">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -712,6 +721,10 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="928" y="501" width="136" height="111" key="com.intellij.database.run.ParametersPanel.Standalone/72.27.1848.1053@72.27.1848.1053" timestamp="1604765369790" />
+    <state x="803" y="294" width="540" height="597" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1606396336556">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="803" y="294" width="540" height="597" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1606396336556" />
     <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1606375649383">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
