@@ -47,4 +47,13 @@ class CommandeRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function getAllPrice($id){
+        return $this->createQueryBuilder('c')
+            ->select("count(lc.prix)")
+            ->innerJoin("c.ligneCommandes", "lc")
+            ->setParameter("c",$id)
+            ->getQuery()
+            ->getResult();
+    }
 }

@@ -40,7 +40,7 @@ class CommandeController extends \Symfony\Bundle\FrameworkBundle\Controller\Abst
         ],[
             "date" => "ASC"
         ]);
-        return $this->render("user/commandes.html.twig", ["commandes" => $commande]);
+        return $this->render("user/commandes.html.twig", ["commandes" => $commande, "TotalPriceCommande" => $commandeRepository->getAllPrice()]);
     }
 
     /**
