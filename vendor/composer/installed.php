@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '47d006345e24a774d86e348398883a18c8c00398',
+    'reference' => '1d777be6ff6ebff7af58c7499ee01f672eb8dc76',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '47d006345e24a774d86e348398883a18c8c00398',
+      'reference' => '1d777be6ff6ebff7af58c7499ee01f672eb8dc76',
     ),
     'composer/package-versions-deprecated' => 
     array (
@@ -274,12 +274,12 @@
     ),
     'knpuniversity/oauth2-client-bundle' => 
     array (
-      'pretty_version' => 'v2.5.1',
-      'version' => '2.5.1.0',
+      'pretty_version' => 'v2.6.0',
+      'version' => '2.6.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5e5919bf321f76121df93c55fdbf82a0c481bd5f',
+      'reference' => 'a17cf5b059e8d67ef54a94ea277816a5d1810f90',
     ),
     'laminas/laminas-code' => 
     array (
@@ -316,6 +316,15 @@
       array (
       ),
       'reference' => 'badb01e62383430706433191b82506b6df24ad98',
+    ),
+    'league/oauth2-google' => 
+    array (
+      'pretty_version' => '3.0.3',
+      'version' => '3.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '18d1889897a8b18d85ecadacf74c9274d678d943',
     ),
     'monolog/monolog' => 
     array (

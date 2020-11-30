@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dcf914dc9d176c29a8cf7252c6bd5179",
+    "content-hash": "8f6dc70d2ab781464e2839a8929859ee",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -2002,21 +2002,21 @@
         },
         {
             "name": "knpuniversity/oauth2-client-bundle",
-            "version": "v2.5.1",
+            "version": "v2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/knpuniversity/oauth2-client-bundle.git",
-                "reference": "5e5919bf321f76121df93c55fdbf82a0c481bd5f"
+                "reference": "a17cf5b059e8d67ef54a94ea277816a5d1810f90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/knpuniversity/oauth2-client-bundle/zipball/5e5919bf321f76121df93c55fdbf82a0c481bd5f",
-                "reference": "5e5919bf321f76121df93c55fdbf82a0c481bd5f",
+                "url": "https://api.github.com/repos/knpuniversity/oauth2-client-bundle/zipball/a17cf5b059e8d67ef54a94ea277816a5d1810f90",
+                "reference": "a17cf5b059e8d67ef54a94ea277816a5d1810f90",
                 "shasum": ""
             },
             "require": {
                 "league/oauth2-client": "^1.0|^2.0",
-                "php": "^7.1.3",
+                "php": ">=7.1.3",
                 "symfony/dependency-injection": "^4.4|^5.0",
                 "symfony/framework-bundle": "^4.4|^5.0",
                 "symfony/http-foundation": "^4.4|^5.0",
@@ -2055,7 +2055,11 @@
                 "oauth",
                 "oauth2"
             ],
-            "time": "2020-11-21T16:21:33+00:00"
+            "support": {
+                "issues": "https://github.com/knpuniversity/oauth2-client-bundle/issues",
+                "source": "https://github.com/knpuniversity/oauth2-client-bundle/tree/v2.6.0"
+            },
+            "time": "2020-11-25T14:03:26+00:00"
         },
         {
             "name": "laminas/laminas-code",
@@ -2301,6 +2305,61 @@
                 "single sign on"
             ],
             "time": "2020-10-28T02:03:40+00:00"
+        },
+        {
+            "name": "league/oauth2-google",
+            "version": "3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/oauth2-google.git",
+                "reference": "18d1889897a8b18d85ecadacf74c9274d678d943"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-google/zipball/18d1889897a8b18d85ecadacf74c9274d678d943",
+                "reference": "18d1889897a8b18d85ecadacf74c9274d678d943",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^2.0"
+            },
+            "require-dev": {
+                "eloquent/phony-phpunit": "^2.0",
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^6.0",
+                "squizlabs/php_codesniffer": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Woody Gilk",
+                    "email": "woody.gilk@gmail.com",
+                    "homepage": "http://shadowhand.me"
+                }
+            ],
+            "description": "Google OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "Authentication",
+                "authorization",
+                "client",
+                "google",
+                "oauth",
+                "oauth2"
+            ],
+            "support": {
+                "issues": "https://github.com/thephpleague/oauth2-google/issues",
+                "source": "https://github.com/thephpleague/oauth2-google/tree/3.0.3"
+            },
+            "time": "2020-07-24T15:16:12+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -9119,5 +9178,5 @@
         "ext-iconv": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
