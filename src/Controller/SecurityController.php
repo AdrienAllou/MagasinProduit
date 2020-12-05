@@ -60,7 +60,7 @@ class SecurityController extends AbstractController
             ]);
             dd($email);
             //$this->get("security.authenticator.json_login")->authenticate()
-            return $this->redirectToRoute("index");
+            return $this->redirectToRoute("/");
         }
 
         // get the login error if there is one

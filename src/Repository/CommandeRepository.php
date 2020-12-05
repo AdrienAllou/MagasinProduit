@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Commande;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -53,6 +54,21 @@ class CommandeRepository extends ServiceEntityRepository
             ->select("count(lc.prix)")
             ->innerJoin("c.ligneCommandes", "lc")
             ->setParameter("c",$id)
+            ->getQuery()
+            ->getResult();
+    }
+
+    /**
+     * @param $time
+     * @return Collection | Commande[]
+     * @throws \Exception
+     */
+    public function getLastCommandeLastWeek($time)
+    {
+        return $this->createQueryBuilder('c')
+            ->select("c")
+            ->where("c.date > :d")
+            ->setParameter("d",new \DateTime("-".$time."DAY"))
             ->getQuery()
             ->getResult();
     }
