@@ -22,280 +22,25 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="074fb307-b094-4f7d-86ef-eb292289b3f6" name="Default Changelist" comment="Modif">
-      <change afterPath="$PROJECT_DIR$/templates/commande/statsSales.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/console/Output/TrimmedBufferOutput.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/form/FileUploadError.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.af.xlf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.th.xlf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Util/PhpCompatUtil.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.af.xlf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.bs.xlf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.mn.xlf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.pt.xlf" afterDir="false" />
+    <list default="true" id="074fb307-b094-4f7d-86ef-eb292289b3f6" name="Default Changelist" comment="Ajout de focntion">
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/produits/Capture-d-ecran-du-2020-11-23-08-29-27-5fcd110c60e2b.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_11_2020_08_09_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_11_2020_08_09__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_11_2020_08_28_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_11_2020_08_28__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MagasinProduit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MagasinProduit.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/User/CommandeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/User/CommandeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CommandeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CommandeRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/inscription.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/inscription.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/package-versions-deprecated/src/PackageVersions/Versions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/package-versions-deprecated/src/PackageVersions/Versions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/ci/github/ext/install-ibm_db2.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/ci/github/phpunit/ibm_db2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/ci/github/phpunit/mysqli-tls.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/ci/github/phpunit/mysqli.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/ci/github/phpunit/oci8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/ci/github/phpunit/pdo_mysql.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/ci/github/phpunit/pdo_oci.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/ci/github/phpunit/pdo_pgsql.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/ci/github/phpunit/pdo_sqlsrv.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/ci/github/phpunit/sqlite.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/ci/github/phpunit/sqlsrv.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Cache/ResultCacheStatement.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Cache/ResultCacheStatement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOOracle/Driver.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOOracle/Driver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/DriverManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/DriverManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLAnywherePlatform.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLAnywherePlatform.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLServerPlatform.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Platforms/SQLServerPlatform.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/SQLParserUtils.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/SQLParserUtils.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Version.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/dbal/lib/Doctrine/DBAL/Version.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/instantiator/.doctrine-project.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/instantiator/.doctrine-project.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/instantiator/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/instantiator/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/instantiator/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/instantiator/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/instantiator/phpcs.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/instantiator/phpcs.xml.dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/instantiator/phpstan.neon.dist" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/instantiator/phpstan.neon.dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/instantiator/src/Doctrine/Instantiator/Exception/InvalidArgumentException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/instantiator/src/Doctrine/Instantiator/Exception/InvalidArgumentException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/instantiator/src/Doctrine/Instantiator/Exception/UnexpectedValueException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/instantiator/src/Doctrine/Instantiator/Exception/UnexpectedValueException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/instantiator/src/Doctrine/Instantiator/Instantiator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/instantiator/src/Doctrine/Instantiator/Instantiator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/instantiator/src/Doctrine/Instantiator/InstantiatorInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/doctrine/instantiator/src/Doctrine/Instantiator/InstantiatorInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/egulias/email-validator/src/EmailLexer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/egulias/email-validator/src/EmailLexer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/egulias/email-validator/src/Parser/DomainPart.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/egulias/email-validator/src/Parser/DomainPart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/knpuniversity/oauth2-client-bundle/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/knpuniversity/oauth2-client-bundle/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/knpuniversity/oauth2-client-bundle/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/knpuniversity/oauth2-client-bundle/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/knpuniversity/oauth2-client-bundle/tests/DependencyInjection/KnpUOAuth2ClientExtensionTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/knpuniversity/oauth2-client-bundle/tests/DependencyInjection/KnpUOAuth2ClientExtensionTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laminas/laminas-code/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laminas/laminas-code/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laminas/laminas-code/COPYRIGHT.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laminas/laminas-code/COPYRIGHT.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laminas/laminas-code/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laminas/laminas-code/LICENSE.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laminas/laminas-code/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laminas/laminas-code/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laminas/laminas-code/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laminas/laminas-code/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laminas/laminas-code/src/Generator/ClassGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laminas/laminas-code/src/Generator/ClassGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laminas/laminas-code/src/Generator/FileGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laminas/laminas-code/src/Generator/FileGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laminas/laminas-code/src/Reflection/ParameterReflection.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laminas/laminas-code/src/Reflection/ParameterReflection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laminas/laminas-code/src/Scanner/ClassScanner.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laminas/laminas-code/src/Scanner/ClassScanner.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laminas/laminas-code/src/Scanner/MethodScanner.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laminas/laminas-code/src/Scanner/MethodScanner.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laminas/laminas-code/src/Scanner/ParameterScanner.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laminas/laminas-code/src/Scanner/ParameterScanner.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laminas/laminas-code/src/Scanner/TokenArrayScanner.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/laminas/laminas-code/src/Scanner/TokenArrayScanner.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/browser-kit/Cookie.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/browser-kit/Cookie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/cache/Adapter/ChainAdapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/cache/Adapter/ChainAdapter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/cache/Adapter/CouchbaseBucketAdapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/cache/Adapter/CouchbaseBucketAdapter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/cache/Adapter/MemcachedAdapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/cache/Adapter/MemcachedAdapter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/cache/Adapter/PhpArrayAdapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/cache/Adapter/PhpArrayAdapter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/cache/Adapter/ProxyAdapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/cache/Adapter/ProxyAdapter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/cache/Traits/AbstractAdapterTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/cache/Traits/AbstractAdapterTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/cache/Traits/MemcachedTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/cache/Traits/MemcachedTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/cache/Traits/RedisTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/cache/Traits/RedisTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/cache/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/cache/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/config/Definition/ArrayNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/config/Definition/ArrayNode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/config/Definition/Dumper/XmlReferenceDumper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/config/Definition/Dumper/XmlReferenceDumper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/config/Resource/GlobResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/config/Resource/GlobResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Formatter/OutputFormatter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Formatter/OutputFormatter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Helper/Table.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Helper/Table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Output/ConsoleOutput.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Output/ConsoleOutput.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/console/Style/SymfonyStyle.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/console/Style/SymfonyStyle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Parser.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/Parser/Parser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/FunctionExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/css-selector/XPath/Extension/FunctionExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Argument/BoundArgument.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Argument/BoundArgument.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Compiler/AbstractRecursivePass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Compiler/AbstractRecursivePass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Compiler/AnalyzeServiceReferencesPass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Compiler/AnalyzeServiceReferencesPass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Compiler/AutowirePass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Compiler/AutowirePass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Compiler/AutowireRequiredMethodsPass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Compiler/AutowireRequiredMethodsPass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Compiler/DecoratorServicePass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Compiler/DecoratorServicePass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Compiler/ResolveBindingsPass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Compiler/ResolveBindingsPass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Compiler/ResolveInstanceofConditionalsPass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Compiler/ResolveInstanceofConditionalsPass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Compiler/ResolveNamedArgumentsPass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Compiler/ResolveNamedArgumentsPass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/dependency-injection/ContainerBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dependency-injection/ContainerBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Dumper/PhpDumper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Dumper/PhpDumper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Dumper/XmlDumper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Dumper/XmlDumper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Dumper/YamlDumper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Dumper/YamlDumper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Loader/XmlFileLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dependency-injection/Loader/XmlFileLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/doctrine-bridge/DataCollector/DoctrineDataCollector.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/doctrine-bridge/DataCollector/DoctrineDataCollector.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/doctrine-bridge/DependencyInjection/CompilerPass/RegisterEventListenersAndSubscribersPass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/doctrine-bridge/DependencyInjection/CompilerPass/RegisterEventListenersAndSubscribersPass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/doctrine-bridge/Form/DoctrineOrmTypeGuesser.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/doctrine-bridge/Form/DoctrineOrmTypeGuesser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/doctrine-bridge/Form/Type/DoctrineType.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/doctrine-bridge/Form/Type/DoctrineType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/doctrine-bridge/Messenger/DoctrinePingConnectionMiddleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/doctrine-bridge/Messenger/DoctrinePingConnectionMiddleware.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/doctrine-bridge/PropertyInfo/DoctrineExtractor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/doctrine-bridge/PropertyInfo/DoctrineExtractor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/doctrine-bridge/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/doctrine-bridge/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/dotenv/Dotenv.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/dotenv/Dotenv.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/error-handler/DebugClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/error-handler/DebugClassLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/event-dispatcher/Debug/TraceableEventDispatcher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/expression-language/Lexer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/expression-language/Lexer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/filesystem/Filesystem.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/filesystem/Filesystem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/finder/Finder.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/finder/Finder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Extension/Core/Type/FileType.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Extension/Core/Type/FileType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Extension/Core/Type/TextareaType.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Extension/Core/Type/TextareaType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Extension/Validator/Constraints/FormValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Extension/Validator/Constraints/FormValidator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Extension/Validator/ViolationMapper/ViolationMapper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Extension/Validator/ViolationMapper/ViolationMapper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/FormBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/FormBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.az.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.az.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.bs.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.bs.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.ca.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.ca.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.da.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.da.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.el.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.el.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.fi.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.fi.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.gl.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.gl.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.he.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.he.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.hu.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.hu.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.lt.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.lt.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.mn.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.mn.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.nb.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.nb.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.no.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.no.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.pt.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.pt.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.ro.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.ro.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.sk.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.sk.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.sr_Cyrl.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.sr_Cyrl.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.sr_Latn.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.sr_Latn.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.tl.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/Resources/translations/validators.tl.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/form/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/form/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/framework-bundle/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/framework-bundle/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/framework-bundle/Command/TranslationUpdateCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/framework-bundle/Command/TranslationUpdateCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/framework-bundle/DependencyInjection/FrameworkExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/framework-bundle/DependencyInjection/FrameworkExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/framework-bundle/KernelBrowser.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/framework-bundle/KernelBrowser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/framework-bundle/Resources/config/mime_type.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/framework-bundle/Resources/config/mime_type.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/framework-bundle/Resources/config/notifier_transports.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/framework-bundle/Resources/config/notifier_transports.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/framework-bundle/Translation/Translator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/framework-bundle/Translation/Translator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-client/AmpHttpClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-client/AmpHttpClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-client/CurlHttpClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-client/CurlHttpClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-client/NativeHttpClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-client/NativeHttpClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-client/Response/CurlResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-client/Response/CurlResponse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-client/Response/TraceableResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-client/Response/TraceableResponse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/BinaryFileResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/BinaryFileResponse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/IpUtils.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/IpUtils.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/Request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation/ServerBag.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-foundation/ServerBag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Controller/ControllerResolver.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Controller/ControllerResolver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/DataCollector/DumpDataCollector.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/DataCollector/DumpDataCollector.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/DependencyInjection/RegisterControllerArgumentLocatorsPass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/DependencyInjection/RegisterControllerArgumentLocatorsPass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/DependencyInjection/RemoveEmptyControllerArgumentLocatorsPass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/DependencyInjection/RemoveEmptyControllerArgumentLocatorsPass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/EventListener/AbstractSessionListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/EventListener/AbstractSessionListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel/Profiler/FileProfilerStorage.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Profiler/FileProfilerStorage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/mailer/Transport.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/mailer/Transport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/mailer/Transport/Smtp/SmtpTransport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/.github/workflows/ci.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/.php_cs.dist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Docker/DockerDatabaseServices.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Docker/DockerDatabaseServices.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Generator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Generator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Maker/MakeFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Maker/MakeFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/config/services.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/config/services.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/doc/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/doc/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/skeleton/controller/Controller.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/skeleton/controller/Controller.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/skeleton/crud/controller/Controller.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/skeleton/crud/controller/Controller.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/skeleton/registration/RegistrationController.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/skeleton/registration/RegistrationController.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/skeleton/resetPassword/ResetPasswordController.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/skeleton/resetPassword/ResetPasswordController.tpl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Resources/test/.php_cs.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Test/MakerTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Test/MakerTestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Test/MakerTestDetails.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/maker-bundle/src/Test/MakerTestDetails.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/mime/Email.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/mime/Email.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/mime/Part/DataPart.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/mime/Part/DataPart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/DeprecationErrorHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/DeprecationErrorHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/DeprecationErrorHandler/Configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/DeprecationErrorHandler/Configuration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/DeprecationErrorHandler/Deprecation.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/DeprecationErrorHandler/Deprecation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Legacy/ConstraintTraitForV7.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Legacy/ConstraintTraitForV7.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Legacy/SymfonyTestsListenerTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/Legacy/SymfonyTestsListenerTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/bin/simple-phpunit.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/bin/simple-phpunit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/phpunit-bridge/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/property-access/PropertyAccessor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/property-access/PropertyAccessor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/property-info/Extractor/PhpDocExtractor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/property-info/Extractor/PhpDocExtractor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/property-info/Extractor/ReflectionExtractor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/property-info/Extractor/ReflectionExtractor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/property-info/Util/PhpDocTypeHelper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/property-info/Util/PhpDocTypeHelper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Generator/CompiledUrlGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Generator/CompiledUrlGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Loader/XmlFileLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Loader/XmlFileLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/CompiledUrlMatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/CompiledUrlMatcher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/CompiledUrlMatcherDumper.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/CompiledUrlMatcherDumper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/CompiledUrlMatcherTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/CompiledUrlMatcherTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/StaticPrefixCollection.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Matcher/Dumper/StaticPrefixCollection.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-bundle/DependencyInjection/Compiler/RegisterTokenUsageTrackingPass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-bundle/DependencyInjection/Compiler/RegisterTokenUsageTrackingPass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-bundle/DependencyInjection/SecurityExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-bundle/DependencyInjection/SecurityExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Authentication/Token/Storage/TokenStorageInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Authentication/Token/Storage/TokenStorageInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.az.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.az.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.ca.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.ca.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.da.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.da.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.el.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.el.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.fi.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.fi.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.gl.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.gl.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.he.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.he.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.hu.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.hu.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.lt.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.lt.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.nb.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.nb.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.no.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.no.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.pt_PT.xlf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.ro.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.ro.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.sq.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.sq.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.sr_Cyrl.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.sr_Cyrl.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.sr_Latn.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.sr_Latn.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.th.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.th.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.tl.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.tl.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.zh_TW.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/Resources/translations/security.zh_TW.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-core/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-core/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-http/Firewall/ChannelListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-http/Firewall/ChannelListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-http/Logout/LogoutUrlGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-http/Logout/LogoutUrlGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-http/RememberMe/PersistentTokenBasedRememberMeServices.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-http/RememberMe/PersistentTokenBasedRememberMeServices.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/security-http/RememberMe/TokenBasedRememberMeServices.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/security-http/RememberMe/TokenBasedRememberMeServices.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/serializer/Encoder/CsvEncoder.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/serializer/Encoder/CsvEncoder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/serializer/Normalizer/ArrayDenormalizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/serializer/Normalizer/ArrayDenormalizer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/serializer/Normalizer/ConstraintViolationListNormalizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/serializer/Normalizer/ConstraintViolationListNormalizer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/serializer/Normalizer/DataUriNormalizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/serializer/Normalizer/DataUriNormalizer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/serializer/Normalizer/DateIntervalNormalizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/serializer/Normalizer/DateIntervalNormalizer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/serializer/Normalizer/DateTimeNormalizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/serializer/Normalizer/DateTimeNormalizer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/serializer/Normalizer/DateTimeZoneNormalizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/serializer/Normalizer/DateTimeZoneNormalizer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/serializer/Normalizer/ProblemNormalizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/serializer/Normalizer/ProblemNormalizer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/serializer/Serializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/serializer/Serializer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/DependencyInjection/TranslatorPathsPass.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/DependencyInjection/TranslatorPathsPass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Loader/MoFileLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Loader/MoFileLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation/Util/XliffUtils.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/translation/Util/XliffUtils.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/twig-bridge/Command/DebugCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/twig-bridge/Command/DebugCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/twig-bridge/Extension/CodeExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/twig-bridge/Extension/CodeExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/twig-bridge/Node/TransNode.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/twig-bridge/Node/TransNode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/twig-bridge/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/twig-bridge/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Constraints/FileValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Constraints/FileValidator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Constraints/NotCompromisedPasswordValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Constraints/NotCompromisedPasswordValidator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Context/ExecutionContext.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Context/ExecutionContext.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Mapping/Loader/AbstractLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Mapping/Loader/AbstractLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.af.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.af.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.az.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.az.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.ca.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.ca.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.da.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.da.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.el.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.el.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.fi.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.fi.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.gl.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.gl.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.he.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.he.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.hu.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.hu.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.mn.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.mn.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.nb.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.nb.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.no.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.no.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.pt.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.pt.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.th.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.th.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.tl.xlf" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Resources/translations/validators.tl.xlf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Test/ConstraintValidatorTestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Test/ConstraintValidatorTestCase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/validator/Validator/RecursiveContextualValidator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/validator/Validator/RecursiveContextualValidator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Caster/ArgsStub.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Caster/ArgsStub.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Cloner/AbstractCloner.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Cloner/AbstractCloner.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Server/DumpServer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Server/DumpServer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle/Profiler/TemplateManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle/Profiler/TemplateManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml/Parser.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/Parser.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -438,6 +183,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/ckeditor-bundle" />
       <path value="$PROJECT_DIR$/vendor/league/oauth2-google" />
+      <path value="$PROJECT_DIR$/vendor/gregwar/captcha-bundle" />
+      <path value="$PROJECT_DIR$/vendor/gregwar/captcha" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jvEVRBNLudhaqzpPv1eS5bVm2W" />
@@ -526,7 +273,8 @@
       <workItem from="1606748180498" duration="317000" />
       <workItem from="1606748825591" duration="1719000" />
       <workItem from="1607188888159" duration="61000" />
-      <workItem from="1607189000056" duration="2841000" />
+      <workItem from="1607189000056" duration="3082000" />
+      <workItem from="1607273911514" duration="1093000" />
     </task>
     <task id="LOCAL-00001" summary="Install projet">
       <created>1604676645931</created>
@@ -864,7 +612,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606386496998</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Ajout de focntion">
+      <created>1607191945191</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1607191945191</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -884,7 +639,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Corrige bug img" />
     <MESSAGE value="Ajouter des LigneCommandeController.php" />
     <MESSAGE value="Fin de l'ajout de produit" />
     <MESSAGE value="CommandeController.php" />
@@ -909,6 +663,7 @@
     <MESSAGE value="br" />
     <MESSAGE value="Ajout et rectification de bug" />
     <MESSAGE value="Correction js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correction js" />
+    <MESSAGE value="Ajout de focntion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de focntion" />
   </component>
 </project>

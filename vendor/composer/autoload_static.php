@@ -149,6 +149,8 @@ class ComposerStaticInit3e1180e61e03f6170a282d549898976e
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+            'Gregwar\\CaptchaBundle\\' => 22,
+            'Gregwar\\' => 8,
             'Google\\Auth\\' => 12,
             'Google\\' => 7,
         ),
@@ -563,6 +565,14 @@ class ComposerStaticInit3e1180e61e03f6170a282d549898976e
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'Gregwar\\CaptchaBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gregwar/captcha-bundle',
+        ),
+        'Gregwar\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar',
         ),
         'Google\\Auth\\' => 
         array (
@@ -15440,6 +15450,19 @@ class ComposerStaticInit3e1180e61e03f6170a282d549898976e
         'Google_Task_Retryable' => __DIR__ . '/..' . '/google/apiclient/src/aliases.php',
         'Google_Task_Runner' => __DIR__ . '/..' . '/google/apiclient/src/aliases.php',
         'Google_Utils_UriTemplate' => __DIR__ . '/..' . '/google/apiclient/src/aliases.php',
+        'Gregwar\\CaptchaBundle\\Controller\\CaptchaController' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Controller/CaptchaController.php',
+        'Gregwar\\CaptchaBundle\\DependencyInjection\\Configuration' => __DIR__ . '/..' . '/gregwar/captcha-bundle/DependencyInjection/Configuration.php',
+        'Gregwar\\CaptchaBundle\\DependencyInjection\\GregwarCaptchaExtension' => __DIR__ . '/..' . '/gregwar/captcha-bundle/DependencyInjection/GregwarCaptchaExtension.php',
+        'Gregwar\\CaptchaBundle\\Generator\\CaptchaGenerator' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Generator/CaptchaGenerator.php',
+        'Gregwar\\CaptchaBundle\\Generator\\ImageFileHandler' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Generator/ImageFileHandler.php',
+        'Gregwar\\CaptchaBundle\\GregwarCaptchaBundle' => __DIR__ . '/..' . '/gregwar/captcha-bundle/GregwarCaptchaBundle.php',
+        'Gregwar\\CaptchaBundle\\Type\\CaptchaType' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Type/CaptchaType.php',
+        'Gregwar\\CaptchaBundle\\Validator\\CaptchaValidator' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Validator/CaptchaValidator.php',
+        'Gregwar\\Captcha\\CaptchaBuilder' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/CaptchaBuilder.php',
+        'Gregwar\\Captcha\\CaptchaBuilderInterface' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/CaptchaBuilderInterface.php',
+        'Gregwar\\Captcha\\ImageFileHandler' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/ImageFileHandler.php',
+        'Gregwar\\Captcha\\PhraseBuilder' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/PhraseBuilder.php',
+        'Gregwar\\Captcha\\PhraseBuilderInterface' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/PhraseBuilderInterface.php',
         'GuzzleHttp\\BodySummarizer' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/BodySummarizer.php',
         'GuzzleHttp\\BodySummarizerInterface' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/BodySummarizerInterface.php',
         'GuzzleHttp\\Client' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Client.php',

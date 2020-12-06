@@ -99,6 +99,8 @@ return array(
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
     'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
+    'Gregwar\\CaptchaBundle\\' => array($vendorDir . '/gregwar/captcha-bundle'),
+    'Gregwar\\' => array($vendorDir . '/gregwar/captcha/src/Gregwar'),
     'Google\\Auth\\' => array($vendorDir . '/google/auth/src'),
     'Google\\' => array($vendorDir . '/google/apiclient/src'),
     'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),

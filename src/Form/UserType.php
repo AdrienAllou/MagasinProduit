@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\User;
+use Gregwar\CaptchaBundle\Type\CaptchaType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -53,6 +54,7 @@ class UserType extends AbstractType
                     ])
                 ]
             ])
+            ->add('captcha', CaptchaType::class)// That's all !
             ->add("Validation", SubmitType::class,[
                 "attr" => ["class" => "btn btn-primary"]
             ])

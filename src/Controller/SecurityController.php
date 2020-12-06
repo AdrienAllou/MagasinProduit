@@ -102,6 +102,7 @@ class SecurityController extends AbstractController
                 $mailer->send($message);
                 return $this->redirectToRoute("index");
             }catch (\Exception $e){
+                $this->addFlash("erreurInscript","Votre mail / username existe deja veuiller le changer");
                 return $this->render("security/inscription.html.twig", ["form" => $form->createView()]);
             }
 
