@@ -3,6 +3,11 @@
 {% block title %}Inscription{% endblock %}
 
 {% block main %}
+    {% for message in app.flashes('erreurInscript') %}
+        <div class="list-group-item list-group-item-danger">
+            {{ message }}
+        </div>
+    {% endfor %}
     {{ form_start(form) }}
         {{ form_rest(form) }}
     {{ form_end(form) }}

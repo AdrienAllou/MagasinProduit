@@ -149,6 +149,8 @@ class ComposerStaticInit3e1180e61e03f6170a282d549898976e
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+            'Gregwar\\CaptchaBundle\\' => 22,
+            'Gregwar\\' => 8,
             'Google\\Auth\\' => 12,
             'Google\\' => 7,
         ),
@@ -564,6 +566,14 @@ class ComposerStaticInit3e1180e61e03f6170a282d549898976e
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'Gregwar\\CaptchaBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gregwar/captcha-bundle',
+        ),
+        'Gregwar\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar',
         ),
         'Google\\Auth\\' => 
         array (
@@ -15442,6 +15452,19 @@ class ComposerStaticInit3e1180e61e03f6170a282d549898976e
         'Google_Task_Retryable' => __DIR__ . '/..' . '/google/apiclient/src/aliases.php',
         'Google_Task_Runner' => __DIR__ . '/..' . '/google/apiclient/src/aliases.php',
         'Google_Utils_UriTemplate' => __DIR__ . '/..' . '/google/apiclient/src/aliases.php',
+        'Gregwar\\CaptchaBundle\\Controller\\CaptchaController' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Controller/CaptchaController.php',
+        'Gregwar\\CaptchaBundle\\DependencyInjection\\Configuration' => __DIR__ . '/..' . '/gregwar/captcha-bundle/DependencyInjection/Configuration.php',
+        'Gregwar\\CaptchaBundle\\DependencyInjection\\GregwarCaptchaExtension' => __DIR__ . '/..' . '/gregwar/captcha-bundle/DependencyInjection/GregwarCaptchaExtension.php',
+        'Gregwar\\CaptchaBundle\\Generator\\CaptchaGenerator' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Generator/CaptchaGenerator.php',
+        'Gregwar\\CaptchaBundle\\Generator\\ImageFileHandler' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Generator/ImageFileHandler.php',
+        'Gregwar\\CaptchaBundle\\GregwarCaptchaBundle' => __DIR__ . '/..' . '/gregwar/captcha-bundle/GregwarCaptchaBundle.php',
+        'Gregwar\\CaptchaBundle\\Type\\CaptchaType' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Type/CaptchaType.php',
+        'Gregwar\\CaptchaBundle\\Validator\\CaptchaValidator' => __DIR__ . '/..' . '/gregwar/captcha-bundle/Validator/CaptchaValidator.php',
+        'Gregwar\\Captcha\\CaptchaBuilder' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/CaptchaBuilder.php',
+        'Gregwar\\Captcha\\CaptchaBuilderInterface' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/CaptchaBuilderInterface.php',
+        'Gregwar\\Captcha\\ImageFileHandler' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/ImageFileHandler.php',
+        'Gregwar\\Captcha\\PhraseBuilder' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/PhraseBuilder.php',
+        'Gregwar\\Captcha\\PhraseBuilderInterface' => __DIR__ . '/..' . '/gregwar/captcha/src/Gregwar/Captcha/PhraseBuilderInterface.php',
         'GuzzleHttp\\BodySummarizer' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/BodySummarizer.php',
         'GuzzleHttp\\BodySummarizerInterface' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/BodySummarizerInterface.php',
         'GuzzleHttp\\Client' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Client.php',
@@ -16679,6 +16702,7 @@ class ComposerStaticInit3e1180e61e03f6170a282d549898976e
         'Symfony\\Bundle\\MakerBundle\\Util\\ComposeFileManipulator' => __DIR__ . '/..' . '/symfony/maker-bundle/src/Util/ComposeFileManipulator.php',
         'Symfony\\Bundle\\MakerBundle\\Util\\ComposerAutoloaderFinder' => __DIR__ . '/..' . '/symfony/maker-bundle/src/Util/ComposerAutoloaderFinder.php',
         'Symfony\\Bundle\\MakerBundle\\Util\\MakerFileLinkFormatter' => __DIR__ . '/..' . '/symfony/maker-bundle/src/Util/MakerFileLinkFormatter.php',
+        'Symfony\\Bundle\\MakerBundle\\Util\\PhpCompatUtil' => __DIR__ . '/..' . '/symfony/maker-bundle/src/Util/PhpCompatUtil.php',
         'Symfony\\Bundle\\MakerBundle\\Util\\PrettyPrinter' => __DIR__ . '/..' . '/symfony/maker-bundle/src/Util/PrettyPrinter.php',
         'Symfony\\Bundle\\MakerBundle\\Util\\YamlManipulationFailedException' => __DIR__ . '/..' . '/symfony/maker-bundle/src/Util/YamlManipulationFailedException.php',
         'Symfony\\Bundle\\MakerBundle\\Util\\YamlSourceManipulator' => __DIR__ . '/..' . '/symfony/maker-bundle/src/Util/YamlSourceManipulator.php',
@@ -16999,6 +17023,7 @@ class ComposerStaticInit3e1180e61e03f6170a282d549898976e
         'Symfony\\Component\\Console\\Output\\Output' => __DIR__ . '/..' . '/symfony/console/Output/Output.php',
         'Symfony\\Component\\Console\\Output\\OutputInterface' => __DIR__ . '/..' . '/symfony/console/Output/OutputInterface.php',
         'Symfony\\Component\\Console\\Output\\StreamOutput' => __DIR__ . '/..' . '/symfony/console/Output/StreamOutput.php',
+        'Symfony\\Component\\Console\\Output\\TrimmedBufferOutput' => __DIR__ . '/..' . '/symfony/console/Output/TrimmedBufferOutput.php',
         'Symfony\\Component\\Console\\Question\\ChoiceQuestion' => __DIR__ . '/..' . '/symfony/console/Question/ChoiceQuestion.php',
         'Symfony\\Component\\Console\\Question\\ConfirmationQuestion' => __DIR__ . '/..' . '/symfony/console/Question/ConfirmationQuestion.php',
         'Symfony\\Component\\Console\\Question\\Question' => __DIR__ . '/..' . '/symfony/console/Question/Question.php',
@@ -17478,6 +17503,7 @@ class ComposerStaticInit3e1180e61e03f6170a282d549898976e
         'Symfony\\Component\\Form\\Extension\\Validator\\ViolationMapper\\ViolationMapperInterface' => __DIR__ . '/..' . '/symfony/form/Extension/Validator/ViolationMapper/ViolationMapperInterface.php',
         'Symfony\\Component\\Form\\Extension\\Validator\\ViolationMapper\\ViolationPath' => __DIR__ . '/..' . '/symfony/form/Extension/Validator/ViolationMapper/ViolationPath.php',
         'Symfony\\Component\\Form\\Extension\\Validator\\ViolationMapper\\ViolationPathIterator' => __DIR__ . '/..' . '/symfony/form/Extension/Validator/ViolationMapper/ViolationPathIterator.php',
+        'Symfony\\Component\\Form\\FileUploadError' => __DIR__ . '/..' . '/symfony/form/FileUploadError.php',
         'Symfony\\Component\\Form\\Form' => __DIR__ . '/..' . '/symfony/form/Form.php',
         'Symfony\\Component\\Form\\FormBuilder' => __DIR__ . '/..' . '/symfony/form/FormBuilder.php',
         'Symfony\\Component\\Form\\FormBuilderInterface' => __DIR__ . '/..' . '/symfony/form/FormBuilderInterface.php',

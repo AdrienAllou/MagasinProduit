@@ -3,10 +3,13 @@
 
 namespace App\Controller\User;
 
+use App\Entity\Commande;
 use App\Repository\CommandeRepository;
 use App\Repository\EtatRepository;
+use Exception;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -40,7 +43,7 @@ class CommandeController extends \Symfony\Bundle\FrameworkBundle\Controller\Abst
         ],[
             "date" => "ASC"
         ]);
-        return $this->render("user/commandes.html.twig", ["commandes" => $commande]);
+        return $this->render("user/commandes.html.twig", ["commandes" => $commande, "TotalPriceCommande" => $commandeRepository->getAllPrice()]);
     }
 
     /**
@@ -56,6 +59,24 @@ class CommandeController extends \Symfony\Bundle\FrameworkBundle\Controller\Abst
         $commande->setEtat($etatRepository->findOneBy(["nom" => "Expédier"]));
         $this->getDoctrine()->getManager()->flush();
         return $this->redirectToRoute("commande_index");
+    }
+
+    /**
+     * @Route("/stat/last/sales",name="last_sales", methods={"GET", "POST"})
+     * @IsGranted ("ROLE_ADMIN")
+     * @param CommandeRepository $commandeRepository
+     * @param Request $request
+     * @return Response
+     * @throws Exception
+     */
+    public function getLastSales(CommandeRepository $commandeRepository, Request $request){
+        $days = $request->get("days");
+        /** @var Commande[] $data */
+        $data = null;
+        if ($days == null)
+            $days = 7;
+        $data = $commandeRepository->getLastCommandeLastWeek($days);
+        return $this->render("commande/statsSales.html.twig",["data" => $data, "days" => $days]);
     }
 
 }

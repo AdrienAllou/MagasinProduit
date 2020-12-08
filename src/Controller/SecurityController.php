@@ -9,8 +9,6 @@ use Google_Client;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Mailer\MailerInterface;
-use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
@@ -60,8 +58,9 @@ class SecurityController extends AbstractController
             $user = $this->getDoctrine()->getRepository("App:User")->findOneBy([
                 "email" => $email
             ]);
+            dd($email);
             //$this->get("security.authenticator.json_login")->authenticate()
-            return $this->redirectToRoute("index");
+            return $this->redirectToRoute("/");
         }
 
         // get the login error if there is one
@@ -92,7 +91,7 @@ class SecurityController extends AbstractController
                 $this->getDoctrine()->getManager()->persist($user);
                 $this->getDoctrine()->getManager()->flush();
                 $message = (new \Swift_Message('Incription !'))
-                    ->setFrom('adrien.allou.dev@gmail.com')
+                    ->setFrom('adrien.allou.dev@gmail.com', "MagasinProduit.fr")
                     ->setTo($user->getEmail())
                     ->setBody(
                         $this->renderView("email/inscription.html.twig", ["user" => $user]),
@@ -103,6 +102,7 @@ class SecurityController extends AbstractController
                 $mailer->send($message);
                 return $this->redirectToRoute("index");
             }catch (\Exception $e){
+                $this->addFlash("erreurInscript","Votre mail / username existe deja veuiller le changer");
                 return $this->render("security/inscription.html.twig", ["form" => $form->createView()]);
             }
 
