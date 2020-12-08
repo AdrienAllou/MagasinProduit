@@ -5,7 +5,9 @@ namespace App\Controller;
 
 use App\Entity\Commentaire;
 use App\Entity\Produit;
+use App\Entity\ProduitSearch;
 use App\Form\CommentaireType;
+use App\Form\ProduitSearchType;
 use App\Form\ProduitType;
 use App\Repository\CommentaireRepository;
 use App\Repository\PanierRepository;
@@ -29,16 +31,21 @@ class ProduitController extends AbstractController
      * @param ProduitRepository $produitRepository
      * @return Response
      */
-    public function index(ProduitRepository $produitRepository, PanierRepository $panierRepository){
+    public function index(ProduitRepository $produitRepository, PanierRepository $panierRepository, Request $request){
         //dd();
+        $search = new ProduitSearch();
+        $form = $this->createForm(ProduitSearchType::class, $search);
+        $form->handleRequest($request);
+
         $paniers = $panierRepository->findBy(["user" => $this->getUser()]);
         $isValide = true;
         foreach ($paniers as $panier)
             if ($panier->getQuantite() > $panier->getProduit()->getStock()) $isValide = false;
         return $this->render("produit/index.html.twig", [
-            "produits" => $produitRepository->findAll(),
+            "produits" => $produitRepository->findProduits($search),
             "paniers" => $paniers,
-            "isValide" => $isValide
+            "isValide" => $isValide,
+            "form" => $form->createView()
         ]);
     }
 

@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Produit;
+use App\Entity\ProduitSearch;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -17,6 +18,27 @@ class ProduitRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Produit::class);
+    }
+
+
+    public function findProduits(ProduitSearch $search){
+        $query = $this->findProduitsDisponibles();
+
+        if($search->getMinPrice()){
+            $query = $query->andWhere('p.prix >= :minPrice');
+            $query->setParameter('minPrice', $search->getMinPrice());
+        }
+
+        if($search->getMaxPrice()){
+            $query = $query->andWhere('p.prix <= :maxPrice');
+            $query->setParameter('maxPrice', $search->getMaxPrice());
+        }
+        return $query->getQuery()->getResult();
+    }
+
+    public function findProduitsDisponibles(){
+        return $this->createQueryBuilder('p')
+            ->where('p.disponible = true');
     }
 
     // /**

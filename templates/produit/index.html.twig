@@ -1,6 +1,22 @@
 {% extends "base.html.twig" %}
 
 {% block main %}
+
+
+    {% if app.user is not null and is_granted("ROLE_USER") %}
+        {{ form_start(form) }}
+        <div class="form-row">
+                {{ form_row(form.minPrice) }}
+                {{ form_row(form.maxPrice) }}
+            <div class="col">
+                <button class="btn btn-primary">Rechercher</button>
+            </div>
+        </div>
+        {{ form_end(form) }}
+    {% endif %}
+
+
+
     {% if app.user is not null and is_granted("ROLE_ADMIN") %}
         <a href="{{ path('add') }}" style="color: white">
             <button class="btn btn-primary" style="margin-bottom: 15px; margin-top: 15px">Ajouter un produit</button>
