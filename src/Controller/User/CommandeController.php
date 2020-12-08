@@ -6,6 +6,7 @@ namespace App\Controller\User;
 use App\Entity\Commande;
 use App\Repository\CommandeRepository;
 use App\Repository\EtatRepository;
+use App\Repository\UserRepository;
 use Exception;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -37,13 +38,18 @@ class CommandeController extends \Symfony\Bundle\FrameworkBundle\Controller\Abst
      * @param CommandeRepository $commandeRepository
      * @return Response
      */
-    public function indexForUser(CommandeRepository $commandeRepository){
+    public function indexForUser(CommandeRepository $commandeRepository, UserRepository $userRepository){
         $commande = $commandeRepository->findBy([
             "user" => $this->getUser()
         ],[
             "date" => "ASC"
         ]);
-        return $this->render("user/commandes.html.twig", ["commandes" => $commande, "TotalPriceCommande" => $commandeRepository->getAllPrice()]);
+        /*dd($commandeRepository->getAllPrice($userRepository->findOneBy(
+            ["username" => $this->getUser()->getUsername()]
+        )->getId()));*/
+        return $this->render("user/commandes.html.twig", ["commandes" => $commande, "TotalPriceCommande" => $commandeRepository->getAllPrice($userRepository->findOneBy(
+            ["username" => $this->getUser()->getUsername()]
+        )->getId())]);
     }
 
     /**

@@ -5,56 +5,71 @@
 {% endblock %}
 
 {% block main %}
-
-
-
-    <a href="{{ path('user_index') }}"><button class="btn btn-primary" style="margin-top: 15px; margin-bottom: 15px">Retour</button></a>
-    {% for commande in commandes %}
-        {% set totalPriceCommande = 0 %}
-        <h1 style="text-align: center"><button class="js-button" id="togg1" style="display:block;width:100%;height:100%;">Commande n°{{ commande.id }}</button></h1>
-
-        <table id="d1" class="table js-commande" style="display: none">
-            <thead class="thead-dark">
-            <tr>
-                <th>Nom produit</th>
-                <th>Quantité</th>
-                <th>Etat</th>
-                <th>Prix</th>
-                <th>Prix Total</th>
-                <th>Opérations</th>
-            </tr>
-            </thead>
-            <tbody>
-                {% for lc in commande.ligneCommandes %}
+    <a href="{{ path('user_index') }}" style="display: block"><button class="btn btn-primary" style="margin-top: 15px; margin-bottom: 15px">Retour</button></a>
+    <div style="display: inline-flex; width: 100%;">
+        <div style="width: 45%">
+            <table class="table js-commande">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Date</th>
+                    <th>Prix</th>
+                    <th>id</th>
+                    <th>Etat</th>
+                    <th>Detail</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for commande in commandes %}
+                    {% set somme = 0 %}
                     <tr>
-                        <td>{{ lc.produit.nom }}</td>
-                        <td>{{ lc.quantite }}</td>
+                        <td>{{ commande.date | date("d/m/Y") }}</td>
+                        {% for lc in commande.ligneCommandes %}
+                            {% set somme = somme + lc.prix %}
+                        {% endfor %}
+                        <td>{{ somme }}</td>
+                        <td>{{ commande.id }}</td>
                         <td>{{ commande.etat.nom }}</td>
-                        <td>{{ lc.prix }}€</td>
-                        {% set totalPriceCommande = totalPriceCommande + lc.quantite * lc.prix %}
-                        <td>{{ lc.quantite * lc.prix }}€</td>
-                        <td>
-                        </td>
+                        <td><button class="btn btn-primary" onclick="seeCommande('{{ "commande"~commande.id~"-js" }}')">Voir les details</button></td>
                     </tr>
                 {% endfor %}
-            </tbody>
-            <tfoot>
-            <tr>
-                <td>Toutes les commandes</td>
-                <td colspan="3"></td>
-                <td>{{ totalPriceCommande }}€</td>
-                {% if(is_granted("ROLE_ADMIN")) %}
-                    <td>
-                        <form action="{{ path('commande_valide_commande', {'id': commande.id}) }}" method="post">
-                            <input type="submit" class="btn btn-primary" value="Valider">
-                        </form>
-                    </td>
-                {% else %}
-                    <td></td>
-                {% endif %}
-            </tr>
-            </tfoot>
-        </table>
-    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% for commande in commandes %}
+            <div style="width: 45%; display: none" class="detail-js" id="{{ "commande"~commande.id~"-js" }}">
+                <table class="table js-commande">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Nom produit</th>
+                        <th>Quantiter</th>
+                        <th>Prix</th>
+                        <th>Prix total</th>
+                        <th>Image</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {% set somme = 0 %}
+                    {% for lc in commande.ligneCommandes %}
+                        <tr>
+                            <td>{{ lc.produit.nom }}</td>
+                            <td>{{ lc.quantite }}</td>
+                            <td>{{ lc.prix / lc.quantite }}</td>
+                            <td>{{ lc.prix }}</td>
+                            <td>{{ lc.produit.photo }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+                {% for lc in commande.ligneCommandes %}
+                    {% set somme = somme + lc.prix %}
+                {% endfor %}
+                <div>Prix total : {{ somme }}€</div>
+                <div>{{ commande.user.username }}</div>
+                <div>{{ commande.user.email }}</div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
 
