@@ -37,6 +37,7 @@ class ProduitController extends AbstractController
         $form = $this->createForm(ProduitSearchType::class, $search);
         $form->handleRequest($request);
 
+
         $paniers = $panierRepository->findBy(["user" => $this->getUser()]);
         $isValide = true;
         foreach ($paniers as $panier)

@@ -13,6 +13,16 @@ class ProduitSearch {
      */
     private $maxPrice;
 
+
+
+    /**
+     * @param null $type
+     */
+    public function setType($type): void
+    {
+        $this->type = $type;
+    }
+
     /**
      * @return int|null
      */
@@ -44,6 +54,22 @@ class ProduitSearch {
     {
         $this->maxPrice = $maxPrice;
     }
+
+    /**
+     * @var null
+     */
+    private $type;
+
+    /**
+     * @return null
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+
+
 
 
 }

@@ -3,7 +3,10 @@
 namespace App\Form;
 
 use App\Entity\ProduitSearch;
+use App\Entity\TypeProduit;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -27,6 +30,12 @@ class ProduitSearchType extends AbstractType
                 'attr'=> [
                     'placeholder' => 'Prix maximum'
                 ]
+            ])
+            ->add('type', EntityType::class, [
+                "class" => TypeProduit::class,
+                'required' => false,
+                'label' => false,
+                'placeholder' => 'Type de produit'
             ])
         ;
     }

@@ -33,6 +33,12 @@ class ProduitRepository extends ServiceEntityRepository
             $query = $query->andWhere('p.prix <= :maxPrice');
             $query->setParameter('maxPrice', $search->getMaxPrice());
         }
+
+        if($search->getType()){
+            $query = $query->andWhere('p.typeProduit = :type');
+            $query->setParameter('type', $search->getType());
+        }
+
         return $query->getQuery()->getResult();
     }
 
