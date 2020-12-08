@@ -14,7 +14,7 @@
                     <th>Date</th>
                     <th>Prix</th>
                     <th>id</th>
-                    <th>Etat</th>
+                    <th colspan="2">Etat</th>
                     <th>Detail</th>
                 </tr>
                 </thead>
@@ -29,6 +29,11 @@
                         <td>{{ somme }}</td>
                         <td>{{ commande.id }}</td>
                         <td>{{ commande.etat.nom }}</td>
+                        {% if is_granted("ROLE_ADMIN") and commande.etat.nom != "Expédier" %}
+                            <td><form method="post" action="{{ path('commande_valide_commande', {'id': commande.id}) }}"><input type="submit" class="btn btn-danger" value="Expedier"></form></td>
+                        {% else %}
+                            <td></td>
+                        {% endif %}
                         <td><button class="btn btn-primary" onclick="seeCommande('{{ "commande"~commande.id~"-js" }}')">Voir les details</button></td>
                     </tr>
                 {% endfor %}
