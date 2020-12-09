@@ -44,7 +44,8 @@ class ProduitRepository extends ServiceEntityRepository
 
     public function findProduitsDisponibles(){
         return $this->createQueryBuilder('p')
-            ->where('p.disponible = true');
+            //->where('p.disponible = true')
+            ;
     }
 
     // /**
