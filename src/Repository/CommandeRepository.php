@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Commande;
+use DateTime;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Persistence\ManagerRegistry;
@@ -70,7 +71,7 @@ class CommandeRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('c')
             ->select("c")
             ->where("c.date > :d")
-            ->setParameter("d",new \DateTime("-".$time."DAY"))
+            ->setParameter("d",new DateTime("-".$time."DAY"))
             ->getQuery()
             ->getResult();
     }

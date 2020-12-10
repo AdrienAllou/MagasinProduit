@@ -6,6 +6,7 @@ namespace App\Controller\User;
 use App\Entity\Commande;
 use App\Repository\CommandeRepository;
 use App\Repository\EtatRepository;
+use App\Repository\LigneCommandeRepository;
 use App\Repository\UserRepository;
 use Exception;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
@@ -75,14 +76,26 @@ class CommandeController extends \Symfony\Bundle\FrameworkBundle\Controller\Abst
      * @return Response
      * @throws Exception
      */
-    public function getLastSales(CommandeRepository $commandeRepository, Request $request){
+    public function getLastSales(CommandeRepository $commandeRepository, Request $request, LigneCommandeRepository $ligneCommandeRepository){
         $days = $request->get("days");
+        $dateDepart = $request->get("de");
+        $dateFin = $request->get("a");
         /** @var Commande[] $data */
         $data = null;
-        if ($days == null)
-            $days = 7;
-        $data = $commandeRepository->getLastCommandeLastWeek($days);
-        return $this->render("commande/statsSales.html.twig",["data" => $data, "days" => $days]);
+        if ($dateDepart == null)
+            $dateDepart = new \DateTime("-7day");
+        else
+            $dateDepart = new \DateTime($dateDepart);
+        if ($dateFin == null)
+            $dateFin = new \DateTime();
+        else
+            $dateFin = new \DateTime($dateFin);
+        //$data = $commandeRepository->getLastCommandeLastWeek($days);
+        //dd(new \DateTime("-7days"));
+        //dd($ligneCommandeRepository->getStatForCommande(new \DateTime(), new \DateTime("-14days")));
+        return $this->render("commande/statsSales.html.twig",[
+            "data" => $ligneCommandeRepository->getStatForCommande($dateFin,$dateDepart), //Falais inverser
+            "days" => $days]);
     }
 
 }
