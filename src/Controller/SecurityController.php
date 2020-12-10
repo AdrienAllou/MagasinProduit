@@ -24,7 +24,7 @@ class SecurityController extends AbstractController
      * @param AuthenticationUtils $authenticationUtils
      * @return Response
      */
-    public function login(AuthenticationUtils $authenticationUtils, Authenticator $authenticator, GuardAuthenticatorHandler $guard): Response
+    public function login(AuthenticationUtils $authenticationUtils, Authenticator $authenticator, GuardAuthenticatorHandler $guard, Request $request): Response
     {
         if ($this->getUser()) {
             return $this->redirectToRoute('index');
@@ -64,10 +64,10 @@ class SecurityController extends AbstractController
             ]);
             //dd($email);
             //$this->get("security.authenticator.json_login")->authenticate()
-            return $this->redirectToRoute("/");
+            //return $this->redirectToRoute("/");
             //set un token a un user quand je le crée
             //Checker si l'user existe, créer un nouveau user si besoin et récupérer son email
-            //return $guard->authenticateUserAndHandleSuccess($user,$request,$authenticator,'default');
+            return $guard->authenticateUserAndHandleSuccess($user,$request,$authenticator,'default');
         }
 
         // get the login error if there is one
