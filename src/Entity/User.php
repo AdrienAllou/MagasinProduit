@@ -71,6 +71,11 @@ class User implements UserInterface
      */
     private $commentaires;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $tokenMail;
+
     public function __construct()
     {
         $this->paniers = new ArrayCollection();
@@ -285,6 +290,18 @@ class User implements UserInterface
                 $commantaire->setAuteur(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getTokenMail(): ?string
+    {
+        return $this->tokenMail;
+    }
+
+    public function setTokenMail(string $tokenMail): self
+    {
+        $this->tokenMail = $tokenMail;
 
         return $this;
     }
