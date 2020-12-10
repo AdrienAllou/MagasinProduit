@@ -3,7 +3,9 @@
 namespace App\Repository;
 
 use App\Entity\LigneCommande;
+use DateTime;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\QueryBuilder;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -47,4 +49,23 @@ class LigneCommandeRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    /**
+     * @param DateTime $date
+     * @param DateTime $date2
+     * @return QueryBuilder
+     */
+    public function getStatForCommande(DateTime $date, DateTime $date2){
+        return $this->createQueryBuilder("lc")
+            ->select("p.nom", "count(p.nom) as nombreDeCommande", "sum(lc.prix)", "sum(lc.quantite)")
+            ->innerJoin("lc.produit", "p")
+            ->innerJoin("lc.commande","c")
+            ->where("c.date < :date")
+            ->andWhere("c.date > :date2")
+            ->setParameter("date", $date)
+            ->setParameter("date2", $date2)
+            ->groupBy("p.nom")
+            ->getQuery()
+            ->getResult();
+    }
 }
