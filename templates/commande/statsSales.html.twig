@@ -1,20 +1,6 @@
 {% extends "base.html.twig" %}
 
 {% block main %}
-    <!--{# <form action="{{ path('commande_last_sales') }}">
-        <input type="number" name="days">
-        <input type="submit" name="valide" value="valide">
-    </form>
-    {% set prixTotal = 0 %}
-    {% for commande in data %}
-        {% set prixCommande = 0 %}
-        {% for lc in commande.ligneCommandes %}
-            {% set prixCommande = prixCommande + lc.prix %}
-        {% endfor %}
-        <div>Chiffre d'affaire sur la commande {{ commande.id }} : {{ prixCommande }}</div>
-        {% set prixTotal = prixTotal + prixCommande %}
-    {% endfor %}
-    <div>Chiffre total sur {{ days }} jour</div>#}-->
     <form action="{{ path('commande_last_sales') }}" method="get">
         <label>De :
             <input type="date" name="de">
@@ -25,8 +11,8 @@
         <input type="submit" name="valide" value="valide">
     </form>
 
-    <div style="width: 800px; height: 800px;">
-        <canvas id="myChart" width="200" height="200"></canvas>
+    <div style="max-width: 800px; max-height: 800px;">
+        <canvas id="myChart" width="auto" height="auto"></canvas>
     </div>
 {% endblock %}
 
@@ -75,7 +61,7 @@
                             id: "CA",
                             position: 'right',
                             scaleLabel: {
-                                display: false,
+                                display: true,
                                 labelString: 'Revenues (€)'
                             }
                         },

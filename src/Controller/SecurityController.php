@@ -22,6 +22,9 @@ class SecurityController extends AbstractController
     /**
      * @Route("/login", name="app_login")
      * @param AuthenticationUtils $authenticationUtils
+     * @param Authenticator $authenticator
+     * @param GuardAuthenticatorHandler $guard
+     * @param Request $request
      * @return Response
      */
     public function login(AuthenticationUtils $authenticationUtils, Authenticator $authenticator, GuardAuthenticatorHandler $guard, Request $request): Response
@@ -150,6 +153,6 @@ class SecurityController extends AbstractController
             }
             return $this->redirectToRoute('index');
         }
-        return $this->render('index');
+        return $this->redirectToRoute("index");
     }
 }
