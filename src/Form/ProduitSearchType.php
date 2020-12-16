@@ -35,6 +35,8 @@ class ProduitSearchType extends AbstractType
                 "class" => TypeProduit::class,
                 'required' => false,
                 'label' => false,
+                'multiple' => true,
+                'expanded' => true,
                 'placeholder' => 'Type de produit'
             ])
         ;

@@ -35,7 +35,7 @@ class ProduitRepository extends ServiceEntityRepository
         }
 
         if($search->getType()){
-            $query = $query->andWhere('p.typeProduit = :type');
+            $query = $query->andWhere('p.typeProduit in (:type)');
             $query->setParameter('type', $search->getType());
         }
 

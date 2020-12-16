@@ -13,8 +13,6 @@ class ProduitSearch {
      */
     private $maxPrice;
 
-
-
     /**
      * @param null $type
      */
