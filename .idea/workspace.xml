@@ -22,14 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="074fb307-b094-4f7d-86ef-eb292289b3f6" name="Default Changelist" comment="See details commandes">
+    <list default="true" id="074fb307-b094-4f7d-86ef-eb292289b3f6" name="Default Changelist" comment="Sans raison">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Produit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Produit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/LigneCommandeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/LigneCommandeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/commande/statsSales.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/commande/statsSales.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/email/inscription.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/email/inscription.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PanierController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PanierController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/produit/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/produit/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -269,21 +266,10 @@
       <workItem from="1607433027546" duration="1542000" />
       <workItem from="1607630579473" duration="4221000" />
       <workItem from="1607634869577" duration="3324000" />
-      <workItem from="1607694731549" duration="1332000" />
-    </task>
-    <task id="LOCAL-00004" summary="Modification bug requette">
-      <created>1604767193622</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1604767193622</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Ajout des user &amp;&amp; modif dans AppFixtures.php">
-      <created>1604768676819</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1604768676819</updated>
+      <workItem from="1607694731549" duration="2219000" />
+      <workItem from="1607719152504" duration="7000" />
+      <workItem from="1608129185062" duration="2226000" />
+      <workItem from="1608138620720" duration="411000" />
     </task>
     <task id="LOCAL-00006" summary="Mise en place de l'upload. Creation et modification de ProduitType.php ProduitController.php, TypeProduit.php&#10;Ajout du formulaire d'ajout, modification de index.html.twig">
       <created>1604772773167</created>
@@ -614,7 +600,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607637916858</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Sans raison">
+      <created>1607696388839</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1607696388840</updated>
+    </task>
+    <task id="LOCAL-00054" summary="AddCompteOnGoogle">
+      <created>1608130757810</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1608130757810</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -646,8 +646,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Modif" />
-    <MESSAGE value="Modification commandes" />
     <MESSAGE value="Marche pas pour l'image" />
     <MESSAGE value="Bootstrap" />
     <MESSAGE value="Est ce que tu as editProduit.html.twig ?" />
@@ -671,22 +669,8 @@
     <MESSAGE value="Filtre prix" />
     <MESSAGE value="See details commandes" />
     <MESSAGE value="Inscription token mail" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inscription token mail" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/Controller/SecurityController.php</url>
-          <line>148</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/Controller/SecurityController.php</url>
-          <line>149</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Sans raison" />
+    <MESSAGE value="AddCompteOnGoogle" />
+    <option name="LAST_COMMIT_MESSAGE" value="AddCompteOnGoogle" />
   </component>
 </project>

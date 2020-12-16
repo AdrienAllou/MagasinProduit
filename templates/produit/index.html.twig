@@ -107,6 +107,7 @@
                     {% if is_granted("ROLE_USER") and not is_granted("ROLE_ADMIN") %}
                         <td>
                             <form action="{{ path('panier_addProduit', {'id': produit.id}) }}" method="post">
+                                <input type="number" name="quantiter">
                                 <input type="submit" class="btn btn-primary" value="Ajouter au panier">
                                 <input type="hidden" value="{{ csrf_token("addProduitOnPanier") }}" name="token">
                             </form>

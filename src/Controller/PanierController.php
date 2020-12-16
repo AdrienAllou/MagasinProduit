@@ -52,17 +52,21 @@ class PanierController extends \Symfony\Bundle\FrameworkBundle\Controller\Abstra
             "user" => $this->getUser(),
             "produit" => $produitChoisie
         ]);
+        $quantiterAdd = 1;
+        if ($request->request->get("quantiter") != null)
+            $quantiterAdd = $request->request->get("quantiter");
+
         if ($panier == null){
             $panier = new Panier();
             $panier->setDateAchat(new \DateTime());
-            $panier->setQuantite(1);
+            $panier->setQuantite($quantiterAdd);
             $panier->setProduit($produitChoisie);
             $panier->setUser($userRepository->findOneBy(["username" => $this->getUser()->getUsername()]));
             $this->getDoctrine()->getManager()->persist($panier);
             $this->getDoctrine()->getManager()->flush();
             return $this->redirectToRoute("index");
         }
-        $panier->setQuantite($panier->getQuantite() + 1);
+        $panier->setQuantite($panier->getQuantite() + $quantiterAdd);
         $panier->setDateAchat(new \DateTime());
 
         $this->getDoctrine()->getManager()->flush();
