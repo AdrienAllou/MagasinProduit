@@ -22,12 +22,14 @@ class SecurityController extends AbstractController
     /**
      * @Route("/login", name="app_login")
      * @param AuthenticationUtils $authenticationUtils
+     * @param TokenGeneratorInterface $token
      * @param Authenticator $authenticator
      * @param GuardAuthenticatorHandler $guard
      * @param Request $request
+     * @param \Swift_Mailer $mailer
      * @return Response
      */
-    public function login(AuthenticationUtils $authenticationUtils, Authenticator $authenticator, GuardAuthenticatorHandler $guard, Request $request): Response
+    public function login(AuthenticationUtils $authenticationUtils, TokenGeneratorInterface $token, Authenticator $authenticator, GuardAuthenticatorHandler $guard, Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
     {
         if ($this->getUser()) {
             return $this->redirectToRoute('index');
@@ -70,7 +72,38 @@ class SecurityController extends AbstractController
             //return $this->redirectToRoute("/");
             //set un token a un user quand je le crée
             //Checker si l'user existe, créer un nouveau user si besoin et récupérer son email
-            return $guard->authenticateUserAndHandleSuccess($user,$request,$authenticator,'default');
+            if ($user != null)
+                return $guard->authenticateUserAndHandleSuccess($user,$request,$authenticator,'default');
+            else{
+                $user = new User();
+                $user->setRoles(["ROLE_USER"]);
+                $user->setEmail($email);
+                $user->setUsername(explode("@",$email)[0].uniqid());
+                //$user->setTokenMail($token->generateToken());
+                $user->setPassword($passwordEncoder->encodePassword($user,uniqid()));
+                $user->setAdresse("null");
+                $user->setCodePostal("00000");
+                $user->setTokenMail("");
+                $user->setVille("null");
+                $this->getDoctrine()->getManager()->persist($user);
+                $this->getDoctrine()->getManager()->flush();
+                /*$message = (new \Swift_Message('Incription !'))
+                    ->setFrom('adrien.allou.dev@gmail.com', "MagasinProduit.fr")
+                    ->setTo($user->getEmail())
+
+                    ->setBody(
+                        $this->renderView("email/inscription.html.twig", ["user" => $user]),
+                        'text/html'
+                    )
+                ;*/
+                try {
+                    //$mailer->send($message);
+                    return $guard->authenticateUserAndHandleSuccess($user,$request,$authenticator,'default');
+                }catch (\Exception $e){
+                    $this->addFlash("erreurInscript","Votre mail / username existe deja veuiller le changer");
+                    return $this->redirectToRoute("index");
+                }
+            }
         }
 
         // get the login error if there is one
@@ -86,11 +119,13 @@ class SecurityController extends AbstractController
     /**
      * @Route("/inscription",name="app_inscription")
      * @param Request $request
+     * @param TokenGeneratorInterface $token
+     * @param GuardAuthenticatorHandler $guard
      * @param UserPasswordEncoderInterface $passwordEncoder
      * @param \Swift_Mailer $mailer
      * @return Response
      */
-    public function inscription(Request $request, Authenticator $authenticator,TokenGeneratorInterface $token, GuardAuthenticatorHandler $guard, UserPasswordEncoderInterface $passwordEncoder, \Swift_Mailer $mailer){
+    public function inscription(Request $request,TokenGeneratorInterface $token, GuardAuthenticatorHandler $guard, UserPasswordEncoderInterface $passwordEncoder, \Swift_Mailer $mailer){
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
